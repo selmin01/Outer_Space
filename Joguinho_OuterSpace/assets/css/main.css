@@ -1,0 +1,100 @@
+.caixa{
+  margin-top: 115px;
+  width: 400px; 
+  padding:15px; 
+  background-color: #ffffffb3; 
+  border-radius: 20px;
+  font-family: 'Comfortaa', cursive;
+}
+
+.box1{
+  line-height: 40%;
+  margin-top: 40px;
+  width: 500px;
+  padding: 15px;
+  background-color: #ffffffb3;
+  border-radius: 20px;
+  font-family: 'Comfortaa', cursive;
+}
+
+.box2{
+  line-height: 40%;
+  margin-top: 70px;
+  width: 500px;
+  padding: 15px;
+  background-color: #ffffffb3;
+  border-radius: 20px;
+  font-family: 'Comfortaa', cursive;
+}
+
+
+.font{
+  text-shadow: 1px 1px 3px #504f4f;
+  color: #05ffbe;
+}
+
+body{
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-image:url("../imgs/BackSpace.png");
+}
+h3{
+  color: #6D00BF; /*#3BD1D8*/
+}
+
+.naveJog{
+  width: 60px;
+  height: 70px;
+  background-image:url("../imgs/nave.png");
+  position: absolute;
+}
+
+.telaMsg{
+  position: absolute;
+  margin-left: -25%;
+  margin-top: -25px;
+  left: 50%;
+  width: 720px;
+  height: 505px;
+  display: none;
+}
+
+#vidaPlaneta{
+  border: 2px solid #00FF80;
+  width: 300px;
+  height: 20px;
+  background: #fff;
+}
+
+#barraPlaneta{
+  width: 300px;
+  height: 20px;
+  background: #380759;
+}
+
+.tiroJog{
+  width: 8px;
+  height: 8px;
+  background: #F2E205;
+  border-radius: 8px;
+  position: absolute;
+}
+
+.meteoro{
+  width: 50px;
+  height: 50px;
+  background-image:url("../imgs/meteoro_top.png");
+  position: absolute;
+}
+
+.explosaoChao{
+  width: 32px;
+  height: 32px;
+  position: absolute;
+}
+
+.explosaoAr{
+  width: 70px;
+  height: 62px;
+  position: absolute;
+}
