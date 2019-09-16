@@ -15,31 +15,35 @@
                     <label for="formGroupExampleInput">Nome:</label>
 	                <input type="text" class="form-control" name="nome" maxlength="50" required>
                 </div>
-  
+
                 <div class="form-group">
                     <label for="formGroupExampleInput">E-mail:</label>
-                    <input type="email" class="form-control" name="email" maxlength="80" required> 
+                    <input type="email" class="form-control" name="email" maxlength="80" required>
                 </div>
-                
+
                 <div class="form-group">
                     <label for="formGroupExampleInput">Usuário:</label>
-                    <input type="text" class="form-control" name="nick" maxlength="50" required> 
+                    <input type="text" class="form-control" name="nick" maxlength="50" required>
                 </div>
 
                 <div class="form-group">
                     <label for="formGroupExampleInput">Senha:</label>
-                    <input type="password" class="form-control" name="senha" maxlength="50" required> 
+                    <input type="password" class="form-control" name="senha" maxlength="50" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="formGroupExampleInput">Confirmar Senha:</label>                
-                    <input type="password" class="form-control" name="confir_senha" maxlength="50" required> 
+                    <label for="formGroupExampleInput">Confirmar Senha:</label>
+                    <input type="password" class="form-control" name="confir_senha" maxlength="50" required>
                 </div>
-                    <a href" banco.php?cod=1">
-                <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
-                
-                <button type="submit" class="btn btn-dark btn-block">Voltar</button>
+
+                <?php
+                echo "<a href='index.php?pagina=home'><button type='submit' class='btn btn-success btn-block'>Cadastrar</button></a>";
+                ?>
+                </a>
             </form>
+            <?php
+              echo "<a href='index.php?pagina='''><button type='submit' class='btn btn-dark btn-block'>Voltar</button></a>";
+            ?>
         </div>
     </div>
 

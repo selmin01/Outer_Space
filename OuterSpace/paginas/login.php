@@ -17,21 +17,24 @@
 	                <input type="text" class="form-control" name="nick" maxlength="20" required>
                     </div>
                 </div>
-  
+
                 <div class="form-group row">
                     <label class="col-sm-2 col-form-label">Senha:</label>
                     <div class="col-sm-10">
-                    <input type="password" class="form-control" name="senha" maxlength="20" required> 
+                    <input type="password" class="form-control" name="senha" maxlength="20" required>
                     </div>
                 </div>
-            
+
                 <input type="hidden" class="btn btn-link" name="AlteraSenha" value="sim">
-                    <center><a href="esqueciSenha.php">Esqueci Minha Senha</a></center>
-                    <br>
-                <button type="submit" class="btn btn-success btn-block">Entrar</button>
-                
-                <button type="button" class="btn btn-dark btn-block">Cadastrar</button>
+                    <?php
+                    echo "<center><a href='index.php?pagina=esqueciSenha'>Esqueci Minha Senha</a></center><br>";
+                    ?>
+                    <button type="submit" class="btn btn-success btn-block">Entrar</button>
+                </a>
             </form>
+            <?php
+              echo "<a href='index.php?pagina=cadastro'><button type='button' class='btn btn-dark btn-block'>Cadastrar</button></a>";
+            ?>
         </div>
     </div>
 
