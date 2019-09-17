@@ -37,12 +37,12 @@
                 </div>
 
                 <?php
-                echo "<a href='index.php?pagina=home'><button type='submit' class='btn btn-success btn-block'>Cadastrar</button></a>";
+                echo "<a href='../index.php?pagina=home'><button type='submit' class='btn btn-success btn-block'>Cadastrar</button></a>";
                 ?>
                 </a>
             </form>
             <?php
-              echo "<a href='index.php?pagina='''><button type='submit' class='btn btn-dark btn-block'>Voltar</button></a>";
+              echo "<a href='../index.php?pagina='''><button type='submit' class='btn btn-dark btn-block'>Voltar</button></a>";
             ?>
         </div>
     </div>
