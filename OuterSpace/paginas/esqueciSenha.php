@@ -47,8 +47,8 @@
                 </div>
             
                 <button type="submit" class="btn btn-primary btn-block">Alterar</button>
-                <button type="submit" class="btn btn-dark btn-block">Voltar</button>
             </form>
+            <button type="submit" class="btn btn-dark btn-block">Voltar</button>
         </div>
     </div>
 
