@@ -2,15 +2,15 @@
     <head>
         <meta charset="utf-8">
         <title>Outer Space</title>
-        <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="../assets/css/main.css">
+        <link rel="stylesheet" href="../estilo/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../estilo/css/main.css">
     </head>
     <body>
     <div class="container">
         <div class="mx-auto caixa">
             <center><h1>Login</h1></center>
             <br>
-            <form action="../assets/php/validaLogin.php" method="post">
+            <form action="../acao/validaLogin.php" method="post">
                 <div class="form-group row">
                     <label class="col-sm-2 col-form-label">Usuário:</label>
                     <div class="col-sm-10">
@@ -25,15 +25,14 @@
                     </div>
                 </div>
 
-                <input type="hidden" class="btn btn-link" name="AlteraSenha" value="sim">
-                    <?php
-                    echo "<center><a href='index.php?pagina=esqueciSenha'>Esqueci Minha Senha</a></center><br>";
-                    ?>
-                    <button type="submit" class="btn btn-success btn-block">Entrar</button>
-                </a>
+               
+                <?php
+                    echo"<center><a href='../index.php?pagina=esqueciSenha'>Esqueci Minha Senha</a></center><br>";
+                ?>
+                <button type="submit" class="btn btn-success btn-block">Entrar</button>
             </form>
             <?php
-              echo "<a href='index.php?pagina=cadastro'><button type='button' class='btn btn-dark btn-block'>Cadastrar</button></a>";
+              echo "<a href='../index.php?pagina=cadastro'><button type='button' class='btn btn-dark btn-block'>Cadastrar</button></a>";
             ?>
         </div>
     </div>

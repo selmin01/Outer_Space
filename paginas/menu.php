@@ -1,11 +1,12 @@
 <html>
  <head>
    <title>JOGO</title>
-   <link rel="stylesheet" href="../assets/css/main.css">
+   <link rel="stylesheet" href="../estilo/css/bootstrap.min.css" />
+   <link rel="stylesheet" href="../estilo/css/main.css">
  </head>
  <body>
    <div class="container">
-       <div class="mx-auto caixa">
+       <div class="mx-auto">
            <center><h1>OUTER SPACE</h1></center>
            <br>
            <form action="" method="post">
