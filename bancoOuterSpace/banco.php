@@ -1,21 +1,60 @@
 <?php
-$conexao= msqli_connect("localhost","root","root","outerspace");
 
-if(isset($_GET["cod"])&& $_GET["cod"]==1){
-    function cadastrar();
-}elseif(isset($_GET["cod"])&& $_GET["cod"]==2){
-    function alterarSenha();
+// A validação vai ser feita na página, e enviará como parametro o script
+// cadastrarUsuario("INSERT INTO usuario (nome, nick, email, senha) VALUE ('$nome', '$email', '$nick', '$senha')")
+/*
+function cadastrarUsuario($script) {
+
+    $conexao = mysqli_connect("root", "root", "root", "outerspace");
+
+    $cadastro = mysqli_query($conexao, $script) OR die(mysqli_error($conexao));
+
+    $sucesso = mysqli_affected_rows($conexao);
+
+    if($sucesso > 0) {
+        header("Location: index.php?pagina=esqueciSenha&sucesso=1");
+    }
+
+    mysqli_close($conexao);
+
+}
+*/
+
+$conexao = mysqli_connect("localhost", "root", "root", "outerspace");
+
+function inserir($tabela, $dados){
+
+    $campos = array_keys($dados);
+
+    $sql = "INSERT INTO ".$tabela." (";
+
+    foreach($campos as $campo){
+        $sql.=$campo.",";
+    }
+
+    $sql = substr($sql,0, -1);
+
+    $sql.=") VALUES (";
+
+    foreach($dados as $dado){
+        $sql.="'".$dado."',";
+    }
+
+    $sql = substr($sql,0, -1);
+
+    $sql.=")";
+    
+    $resultado = executar($sql);
+    
+    return $resultado;
 }
 
-msqli_close($conexao);
+function executar($sql){
 
-function cadastrar(){
-    $nome = isset($_POST["nome"]) ? $_POST["nome"] : "";
-    $email = isset($_POST["email"]) ? $_POST["email"] : "";
-    $nick = isset($_POST["nick"]) ? $_POST["nick"] : "";
-    $senha = isset($_POST["senha"]) ? $_POST["senha"] : "";
+    global $conexao;
 
-    $query = mysqli_query($conexao, "INSERT INTO usuario(id_usuario,nome,nick,email,senha) 
-    VALUE(DEFAULT,'$nome','$email','$nick','$senha')");
+    return mysqli_query($conexao, $sql);
 }
+?>
+
 ?>
