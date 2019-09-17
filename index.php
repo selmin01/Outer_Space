@@ -29,5 +29,4 @@ switch ($getPagina) {
     break;
 }
 //include '../assets/template/footer.php'
-
 ?>

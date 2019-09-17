@@ -11,24 +11,24 @@
            <br>
            <form action="" method="post">
              <div>
-               <?php
+              <?php
                echo "<a href='index.php?pagina=jogo'><button type='button'>Jogar</button></a>"
-               ?>
+              ?>
              </div>
              <div>
-               <?php
-               echo "<a href='index.php?pagina=grupo'><button type='button'>Grupo</button></a>"
-               ?>
+              <?php
+                echo "<a href='index.php?pagina=grupo'><button type='button'>Grupo</button></a>"
+              ?>
              </div>
              <div>
-               <?php
-               echo "<a href='index.php?pagina=ranking'><button type='button'>Ranking</button></a>"
-               ?>
+              <?php
+                echo "<a href='index.php?pagina=ranking'><button type='button'>Ranking</button></a>"
+              ?>
              </div>
              <div>
-               <?php
-               echo "<a href='index.php?pagina=sair'><button type='button'>Sair</button></a>"
-               ?>
+              <?php
+                echo "<a href='index.php?pagina=sair'><button type='button'>Sair</button></a>"
+              ?>
              </div>
            </form>
 
