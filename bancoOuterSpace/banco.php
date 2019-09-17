@@ -57,4 +57,3 @@ function executar($sql){
 }
 ?>
 
-?>
