@@ -2,15 +2,15 @@
     <head>
         <meta charset="utf-8">
         <title>Outer Space</title>
-        <link rel="stylesheet" href="../estilo/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="../estilo/css/main.css">
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../assets/css/main.css">
     </head>
     <body>
     <div class="container">
         <div class="mx-auto font box1">
             <center><h1>Cadastro de Usuários</h1></center>
             <br>
-            <form action="../index.php" method="post" class="">
+            <form action="index.php" method="post" class="">
                 <div class="form-group">
                     <label for="formGroupExampleInput">Nome:</label>
 	                <input type="text" class="form-control" name="nome" maxlength="50" required>
@@ -37,12 +37,12 @@
                 </div>
 
                 <?php
-                echo "<a href='../index.php?paginas=login'><button type='submit' class='btn btn-success btn-block'>Cadastrar</button></a>";
+                echo "<a href='../index.php?pagina=home'><button type='submit' class='btn btn-success btn-block'>Cadastrar</button></a>";
                 ?>
                 </a>
             </form>
             <?php
-              echo "<a href='../index.php?paginas=login><button type='submit' class='btn btn-dark btn-block'>Voltar</button></a>";
+              echo "<a href='../index.php?pagina='''><button type='submit' class='btn btn-dark btn-block'>Voltar</button></a>";
             ?>
         </div>
     </div>

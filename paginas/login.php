@@ -27,12 +27,12 @@
 
                
                 <?php
-                    echo"<center><a href='../index.php?paginas=esqueciSenha'>Esqueci Minha Senha</a></center><br>";
+                    echo"<center><a href='../index.php?pagina=esqueciSenha'>Esqueci Minha Senha</a></center><br>";
                 ?>
                 <button type="submit" class="btn btn-success btn-block">Entrar</button>
             </form>
             <?php
-              echo "<a href='../index.php?paginas=cadastro'><button type='button' class='btn btn-dark btn-block'>Cadastrar</button></a>";
+              echo "<a href='../index.php?pagina=cadastro'><button type='button' class='btn btn-dark btn-block'>Cadastrar</button></a>";
             ?>
         </div>
     </div>

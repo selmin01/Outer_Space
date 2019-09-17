@@ -3,8 +3,8 @@
 $getPagina = isset($_GET["pagina"]) ? $_GET["pagina"]:"";
 
 switch ($getPagina) {
-  case 'menu':
-    include 'paginas/menu.php';
+  case 'home':
+    include 'paginas/home.php';
     break;
   case 'ranking':
     include 'paginas/ranking.php';
