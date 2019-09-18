@@ -1,6 +1,4 @@
 <?php
-// A validação vai ser feita na página, e enviará como parametro o script
-// cadastrarUsuario("INSERT INTO usuario (nome, nick, email, senha) VALUE ('$nome', '$email', '$nick', '$senha')")
 /*
 function cadastrarUsuario($script) {
 
@@ -50,7 +48,6 @@ function inserir($tabela, $dados){
 function executar($sql){
 
     global $conexao;
-
     return mysqli_query($conexao, $sql);
 }
 ?>

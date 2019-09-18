@@ -3,7 +3,6 @@ session_start();
 //echo $_SESSION["S_usuario"];
 ?>
 
-<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
