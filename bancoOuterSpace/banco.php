@@ -49,10 +49,10 @@ function inserir($tabela, $dados){
     foreach($campos as $campo){
         $sql.=$campo.",";
     }
-    echo $sql;
-    // 
+    
+    // Pega a string do $sql e exclui o último valor
     $sql = substr($sql,0, -1);
-    echo $sql;
+
     $sql.=") VALUES (";
 
     // Monta a 2ª estrutura
