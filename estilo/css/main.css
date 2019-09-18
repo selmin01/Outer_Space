@@ -9,7 +9,7 @@
 
 .box1{
   line-height: 40%;
-  margin-top: 40px;
+  margin-top: 50px;
   width: 500px;
   padding: 15px;
   background-color: #ffffffb3;
@@ -19,7 +19,7 @@
 
 .box2{
   line-height: 40%;
-  margin-top: 70px;
+  margin-top: 82px;
   width: 500px;
   padding: 15px;
   background-color: #ffffffb3;
@@ -27,10 +27,13 @@
   font-family: 'Comfortaa', cursive;
 }
 
+.linkbtn{
+  text-decoration: none !important;
+}
 
 .font{
   text-shadow: 1px 1px 3px #504f4f;
-  color: #05ffbe;
+  color: #00ffaa;
 }
 
 body{
