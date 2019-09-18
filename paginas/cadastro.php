@@ -13,27 +13,27 @@
             <form action="index.php" method="post" class="">
                 <div class="form-group">
                     <label for="formGroupExampleInput">Nome:</label>
-	                <input type="text" class="form-control" name="nome" maxlength="50" required>
+	                <input type="text" class="form-control" name="nome" maxlength="50" value="chambra" required>
                 </div>
 
                 <div class="form-group">
                     <label for="formGroupExampleInput">E-mail:</label>
-                    <input type="email" class="form-control" name="email" maxlength="80" required>
+                    <input type="email" class="form-control" name="email" maxlength="80" value="zika@zika.gmail" required>
                 </div>
 
                 <div class="form-group">
                     <label for="formGroupExampleInput">Usuário:</label>
-                    <input type="text" class="form-control" name="nick" maxlength="50" required>
+                    <input type="text" class="form-control" name="nick" maxlength="50" value="zika" required>
                 </div>
 
                 <div class="form-group">
                     <label for="formGroupExampleInput">Senha:</label>
-                    <input type="password" class="form-control" name="senha" maxlength="50" required>
+                    <input type="password" class="form-control" name="senha" maxlength="50" value="123" required>
                 </div>
 
                 <div class="form-group">
                     <label for="formGroupExampleInput">Confirmar Senha:</label>
-                    <input type="password" class="form-control" name="confir_senha" maxlength="50" required>
+                    <input type="password" class="form-control" name="confir_senha" maxlength="50" value="123" required>
                 </div>
 
                 <?php
