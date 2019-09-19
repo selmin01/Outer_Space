@@ -7,13 +7,18 @@
  <body>
    <div class="container">
        <div class="mx-auto">
-           <center><h1>OUTER SPACE</h1></center>
+           <center><h1 class="font">OUTER SPACE</h1></center>
            <br>
            <form action="" method="post">
-             <div>
+           <div class="form-group row">
+              <div class="col-sm-10">
               <?php
-               echo "<a href='index.php?pagina=jogo'><button type='button'>Jogar</button></a>"
+               echo "<a href='index.php?pagina=jogo'><button type='button'>Jogar</button></a>";
               ?>
+            </div>
+              </div> 
+            <div>
+
              </div>
              <div>
               <?php
