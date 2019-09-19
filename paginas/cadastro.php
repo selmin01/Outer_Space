@@ -4,13 +4,15 @@
         <title>Outer Space</title>
         <link rel="stylesheet" href="../estilo/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="../estilo/css/main.css">
+        
+        <script type="text/javascript" src="../js/funcoes.js"></script>
     </head>
     <body>
         <div class="container">
             <div class="mx-auto font box1">
                 <center><h1>Cadastro de Usuários</h1></center>
                 <br>
-                <form action="../acao/cadastraUsuario.php" method="post" class="">
+                <form action="../acao/cadastraUsuario.php" method="post" onsubmit="return validaCadastro();" name="cadUsuario">
                     <div class="form-group">
                         <label for="formGroupExampleInput">Nome:</label>
                         <input type="text" class="form-control" name="nome" maxlength="50" required/>
@@ -36,12 +38,11 @@
                         <input type="password" class="form-control" name="confir_senha" maxlength="50" required/>
                     </div>
 
-                    <a href="cadastraUsuario.php class="linkbtn"">
-                        <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
-                    </a>
+                    <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
+                  
                 </form>
                 <a href="login.php" class="linkbtn">
-                    <button type="submit" class="btn btn-dark btn-block">Voltar</button>
+                    <button type="button" class="btn btn-dark btn-block">Voltar</button>
                 </a>
             </div>
         </div>
