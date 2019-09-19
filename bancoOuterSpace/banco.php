@@ -13,26 +13,6 @@
 <pre>
 <?php
 
-// A validação vai ser feita na página, e enviará como parametro o script
-// cadastrarUsuario("INSERT INTO usuario (nome, nick, email, senha) VALUE ('$nome', '$email', '$nick', '$senha')")
-/*
-function cadastrarUsuario($script) {
-
-    $conexao = mysqli_connect("root", "root", "root", "outerspace");
-
-    $cadastro = mysqli_query($conexao, $script) OR die(mysqli_error($conexao));
-
-    $sucesso = mysqli_affected_rows($conexao);
-
-    if($sucesso > 0) {
-        header("Location: index.php?pagina=esqueciSenha&sucesso=1");
-    }
-
-    mysqli_close($conexao);
-
-}
-*/
-
 $conexao = mysqli_connect("localhost", "root", "root", "outerspace");
 
 //selecionar("SELECT * FROM usuario");
@@ -101,7 +81,6 @@ function executar($sql, $where=null){
 
     return mysqli_query($conexao, $sql);
 }
-
 
 ?>
 </pre>
