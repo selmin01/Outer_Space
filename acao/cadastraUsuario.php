@@ -6,5 +6,4 @@ unset(_$POST["confir_senha"]);
 
 inserir('usuario', $_POST);
 
-
 ?>
