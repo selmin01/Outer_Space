@@ -12,17 +12,6 @@
 
 <pre>
 <?php
-<<<<<<< Updated upstream
-=======
-/*
-function cadastrarUsuario($script) {
-
-    $conexao = mysqli_connect("root", "root", "root", "outerspace");
-
-    $cadastro = mysqli_query($conexao, $script) OR die(mysqli_error($conexao));
-
-    $sucesso = mysqli_affected_rows($conexao);
->>>>>>> Stashed changes
 
 $conexao = mysqli_connect("localhost", "root", "root", "outerspace");
 
