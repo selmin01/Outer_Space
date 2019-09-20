@@ -2,7 +2,7 @@ create database outerSpace;
 use outerSpace;
 
 create table usuario (
-	idUsuario int AUTO_INCREMENT,
+	idUsuario int AUTO_INCREMENT not null,
     fase_idFase int,
     nome varchar(50),
     nick varchar(20),

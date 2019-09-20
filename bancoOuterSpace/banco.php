@@ -13,7 +13,7 @@
 <pre>
 <?php
 
-$conexao = mysqli_connect("localhost", "root", "root", "outerspace");
+$conexao = mysqli_connect("localhost", "root", "", "outerspace");
 
 //selecionar("SELECT * FROM usuario");
 
@@ -62,10 +62,11 @@ function alterar($tabela, $dados) {
         $sql.=$campo;
         foreach($dados as $dado) {
             $sql.=" = '".$dado."', ";
+            array_shift($dados);
             break;
         }
     }
-
+print_r($dados);
     $sql = substr($sql, 0, -2);
 
     echo $sql;
