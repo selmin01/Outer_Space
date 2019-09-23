@@ -14,7 +14,7 @@ function validaCadastro(){
 
 function esqueciSenha(){
     if(document.altSenha.senha.value == document.altSenha.confir_senha.value){
-        alert("ok"); 
+        alert("Sua senha foi alterada com sucesso!"); 
         return true;
     }else{
         alert("Verifique os campos de senha novamente.");
