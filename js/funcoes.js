@@ -6,6 +6,8 @@ function validaCadastro(){
         return true;
     }else{
         alert("Verifique os campos de senha novamente.");
+        document.cadUsuario.senha.value="";
+        document.cadUsuario.confir_senha.value="";
         return false;
     }
 }
@@ -16,6 +18,8 @@ function esqueciSenha(){
         return true;
     }else{
         alert("Verifique os campos de senha novamente.");
+        document.cadUsuario.senha.value="";
+        document.cadUsuario.confir_senha.value="";
         return false;
     }
 }
