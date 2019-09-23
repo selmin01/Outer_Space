@@ -15,12 +15,7 @@
                         <label for="formGroupExampleInput">Nome:</label>
                         <input type="text" class="form-control" name="nome" maxlength="50" required/>
                     </div>
-    <!--
-                    <div class="form-group">
-                        <label for="formGroupExampleInput">E-mail:</label>
-                        <input type="email" class="form-control" name="email" maxlength="80" required/> 
-                    </div>
-    -->
+                    
                     <div class="form-group">
                         <label for="formGroupExampleInput">Usuário:</label>
                         <input type="text" class="form-control" name="nick" maxlength="50" required/>

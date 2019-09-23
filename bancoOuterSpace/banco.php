@@ -2,8 +2,8 @@
     <body>
         <form action="#" method="post">
             NOME<input type="text" name="nome"/>
-            EMAIL<input type="email" name="email"/>
-            USER<input type="text" name="user"/>
+           <!-- EMAIL<input type="email" name="email"/> -->
+            USUARIO<input type="text" name="nick"/>
             SENHA<input type="password" name="senha"/>
             <button type="submit" value="Enviar">Aperte</button>
         </form>
@@ -17,7 +17,8 @@ $conexao = mysqli_connect("localhost", "root", "root", "outerspace");
 
 //selecionar("SELECT * FROM usuario");
 
-inserir('usuario', $_POST);
+alterar('usuario', $_POST);
+//inserir('usuario', $_POST);
 
 function inserir($tabela, $dados){
     print_r($dados);
@@ -48,26 +49,36 @@ function inserir($tabela, $dados){
 
     return $resultado;
 }
-/*
+// INSERT INTO orcamento VALUES(DEFAULT, '$cliente', $hora, $valorHora)
+// UPDATE orcamento SET cliente = '$cliente', horas = $totalHora, valorHora = $valorHora
+
 function alterar($tabela, $dados) {
+
     $campos = array_keys($dados);
 
-    $sql = "UPDATE" .$tabela. " (";
-
-    $sql.=") SET (";
+    $sql = "UPDATE " .$tabela. " SET ";
 
     foreach($campos as $campo) {
-        $sql.= .$campo. ","
+        $sql.=$campo;
+        foreach($dados as $dado) {
+            $sql.=" = '".$dado."', ";
+            break;
+        }
     }
 
-    $sql = substr($sql, 0, -1);
+    $sql = substr($sql, 0, -2);
 
+    echo $sql;
+
+    $resultado = executar($sql);
+
+    return $resultado;
 }
-*/
+
 function selecionar($sql){
     $consulta = executar($sql);
     $arrayDados = mysqli_fetch_all($consulta, MYSQLI_ASSOC);
-    print_r($arrayDados);
+    //print_r($arrayDados);
     return $arrayDados;
 }
 
