@@ -4,7 +4,6 @@
         <title>Outer Space</title>
         <link rel="stylesheet" href="../estilo/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="../estilo/css/main.css">
-        
         <script type="text/javascript" src="../js/funcoes.js"></script>
     </head>
     <body>
@@ -12,7 +11,7 @@
             <div class="mx-auto font box1">
                 <center><h1>Cadastro de Usuários</h1></center>
                 <br>
-                <form action="../acao/cadastraUsuario.php" method="post" onsubmit="return validaCadastro();" name="cadUsuario">
+                <form action="../acao/cadastraUsuario.php" method="post" name="cadUsuario" onsubmit="return validaCadastro()">
                     <div class="form-group">
                         <label for="formGroupExampleInput">Nome:</label>
                         <input type="text" class="form-control" name="nome" maxlength="50" required/>
