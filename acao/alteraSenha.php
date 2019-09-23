@@ -8,4 +8,3 @@ $nick = $_POST["nick"];
 $id = selecionarId("SELECT * FROM usuario WHERE 'nick' = $nick");
 
 alterar('usuario', $_POST, $id);
-?>
