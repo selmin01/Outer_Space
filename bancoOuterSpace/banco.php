@@ -1,25 +1,24 @@
 <html>
-    <body>
+   <!-- <body>
         <form action="#" method="post">
-            NOME<input type="text" name="nome"/>
-           <!-- EMAIL<input type="email" name="email"/> -->
-            USUARIO<input type="text" name="nick"/>
+            NOME<input type="text" name="nome"/> 
+            EMAIL<input type="email" name="email"/> 
+            USUARIO<input type="text" name="nick"/> 
             SENHA<input type="password" name="senha"/>
             <button type="submit" value="Enviar">Aperte</button>
         </form>
-    </body>
+    </body> -->
 </html>
-
 <pre>
 <?php
 
-$conexao = mysqli_connect("localhost", "root", "root", "outerspace");
-
-//selecionar("SELECT * FROM usuario");
-
-alterar('usuario', $_POST);
+$conexao = mysqli_connect("localhost", "root", "", "outerspace");
+/*
+$idArray = selecionar("SELECT * FROM usuario WHERE nick = 'zika'");
+$id = implode("", $idArray);
+alterar('usuario', $_POST, $id);
 //inserir('usuario', $_POST);
-
+*/
 function inserir($tabela, $dados){
     print_r($dados);
     $campos = array_keys($dados);
@@ -52,7 +51,7 @@ function inserir($tabela, $dados){
 // INSERT INTO orcamento VALUES(DEFAULT, '$cliente', $hora, $valorHora)
 // UPDATE orcamento SET cliente = '$cliente', horas = $totalHora, valorHora = $valorHora
 
-function alterar($tabela, $dados) {
+function alterar($tabela, $dados, $id) {
 
     $campos = array_keys($dados);
 
@@ -62,11 +61,14 @@ function alterar($tabela, $dados) {
         $sql.=$campo;
         foreach($dados as $dado) {
             $sql.=" = '".$dado."', ";
+            array_shift($dados);
             break;
         }
     }
-
+print_r($dados);
     $sql = substr($sql, 0, -2);
+
+    $sql.= " WHERE idUsuario = ". $id;
 
     echo $sql;
 
@@ -78,8 +80,13 @@ function alterar($tabela, $dados) {
 function selecionar($sql){
     $consulta = executar($sql);
     $arrayDados = mysqli_fetch_all($consulta, MYSQLI_ASSOC);
-    //print_r($arrayDados);
     return $arrayDados;
+}
+
+function selecionarId($sql){
+    $arrayDados = selecionar($sql);
+    $id = array_column($arrayDados, 'idUsuario');
+    return $id;
 }
 
 function executar($sql, $where=null){
