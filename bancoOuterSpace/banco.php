@@ -1,25 +1,24 @@
 <html>
-    <body>
+   <!-- <body>
         <form action="#" method="post">
-            <!-- NOME<input type="text" name="nome"/> -->
-            <!-- EMAIL<input type="email" name="email"/> -->
-            <!-- USUARIO<input type="text" name="nick"/> -->
+            NOME<input type="text" name="nome"/> 
+            EMAIL<input type="email" name="email"/> 
+            USUARIO<input type="text" name="nick"/> 
             SENHA<input type="password" name="senha"/>
             <button type="submit" value="Enviar">Aperte</button>
         </form>
-    </body>
+    </body> -->
 </html>
-
 <pre>
 <?php
 
-$conexao = mysqli_connect("localhost", "root", "root", "outerspace");
-
+$conexao = mysqli_connect("localhost", "root", "", "outerspace");
+/*
 $idArray = selecionar("SELECT * FROM usuario WHERE nick = 'zika'");
 $id = implode("", $idArray);
 alterar('usuario', $_POST, $id);
 //inserir('usuario', $_POST);
-
+*/
 function inserir($tabela, $dados){
     print_r($dados);
     $campos = array_keys($dados);
