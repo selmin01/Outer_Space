@@ -7,13 +7,25 @@ unset($_POST["confir_senha"]);
 
 $nick = $_POST["nick"];
 
-$id = selecionarId("SELECT * FROM usuario WHERE nick = '$nick'");
+onConexao();
+
+$arrayDados = selecionar("SELECT * FROM usuario WHERE nick = '$nick'");
+
+$id = array_column($arrayDados, 'idUsuario');
 
 unset($_POST["nick"]);
 
 $id = implode("", $id);
 
-alterar('usuario', $_POST, $id);
+alterar('usuario', $_POST, "idUsuario = ". $id);
 
-header("Location: ../paginas/login.php");
+$sucesso = mysqli_affected_rows($conexao);
+
+offConexao();
+
+if($sucesso >= 1) {
+    header("Location: ../paginas/login.php?msg=3");
+}else {
+    header("Location: ../paginas/cadastro.php?msg=4");
+}
 ?>
