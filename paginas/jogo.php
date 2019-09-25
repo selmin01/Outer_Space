@@ -7,8 +7,8 @@ session_start();
   <head>
     <meta charset="utf-8">
     <title>Outer Space</title>
-    <link rel="stylesheet" href="../assets/css/main.css"/>
-    <script type="text/javascript" src="../assets/js/script.js"></script>
+    <link rel="stylesheet" href="../estilo/css/main.css"/>
+    <script type="text/javascript" src="../js/script.js"></script>
   </head>
   <body>
     <div id="painel">

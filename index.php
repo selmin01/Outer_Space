@@ -18,10 +18,10 @@
         include 'paginas/jogo.php';
         break;
       case 'sair':
-        
+        header("location: paginas/login.php");
         break;
       default:
-        
+        header("location: paginas/login.php");
         break;
     }
     //include '../assets/template/footer.php'
