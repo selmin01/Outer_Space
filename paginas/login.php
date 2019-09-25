@@ -1,14 +1,17 @@
+
 <html>
     <head>
         <meta charset="utf-8">
         <title>Outer Space</title>
-        <link rel="stylesheet" href="../estilo/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../estilo/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="../estilo/css/main.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet"/>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     </head>
     <body>
         <div class="container">
             <div class="mx-auto caixa">
-                <center><h1>Login</h1></center>
+                <center><h1 class="font">Login</h1></center>
                 <br>
                 <form action="../acao/validaLogin.php" method="post">
                     <div class="form-group row">
@@ -35,3 +38,11 @@
         </div>
     </body>
 </html>
+<?php
+$msg= isset($_GET["msg"]) ? ($_GET["msg"]) :"";
+if($msg==1){
+    echo("<script>$(document).ready( function (){ alert('Você foi cadastrado com sucesso!'); });</script>");
+}elseif ($msg==3) {
+    echo("<script>$(document).ready( function (){ alert('Sua senha foi alterada com sucesso!'); });</script>");
+}
+?>

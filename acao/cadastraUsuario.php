@@ -17,5 +17,4 @@ if($sucesso >= 1) {
 }else {
     header("Location: ../paginas/cadastro.php?msg=2");
 }
-
 ?>
