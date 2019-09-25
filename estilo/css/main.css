@@ -37,8 +37,9 @@
 }
 
 body{
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow-x: hidden !important;
+  overflow-y: scroll;
+  white-space: nowrap;
   background-image:url("../imgs/BackSpace.png");
 }
 h3{
@@ -101,3 +102,20 @@ h3{
   height: 62px;
   position: absolute;
 }
+
+/*Tela de Cadastrar Tema*/
+.cadastroTema{
+  margin-top: 0px;
+  width: 500px; 
+  padding:30px; 
+  background-color: #ffffffb3; 
+  border-radius: 30px;
+  font-family: 'Comfortaa', cursive;
+}
+
+
+
+
+
+
+
