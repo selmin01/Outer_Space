@@ -9,7 +9,6 @@ session_start();
     <title>Outer Space</title>
     <link rel="stylesheet" href="../estilo/css/main.css"/>
     <script type="text/javascript" src="../js/script.js"></script>
-    <script type="text/javascript" src="../estilo/js/script.js"></script>
   </head>
   <body>
     <div id="painel">
