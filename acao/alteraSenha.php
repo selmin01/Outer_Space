@@ -26,6 +26,6 @@ offConexao();
 if($sucesso >= 1) {
     header("Location: ../paginas/login.php?msg=3");
 }else {
-    header("Location: ../paginas/cadastro.php?msg=4");
+    header("Location: ../paginas/esqueciSenha.php?msg=4");
 }
 ?>

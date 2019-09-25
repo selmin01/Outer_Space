@@ -4,12 +4,13 @@
         <title>Outer Space</title>
         <link rel="stylesheet" href="../estilo/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="../estilo/css/main.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet"/>
         <script type="text/javascript" src="../js/funcoes.js"></script>
     </head>
     <body>
         <div class="container">
-            <div class="mx-auto font box2">
-                <center><h1>Esqueci Minha Senha</h1></center>
+            <div class="mx-auto box2">
+                <center><h1 class="font">Esqueci Minha Senha</h1></center>
                 <br>
                 <form action="../acao/alteraSenha.php" method="post" name="altSenha" onsubmit="return esqueciSenha()">
                     <div class="form-group">
