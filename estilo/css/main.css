@@ -31,9 +31,18 @@
   text-decoration: none !important;
 }
 
+.botao{
+  width: 370px;
+  text-align: center;
+  padding: 15px 20px;
+  border-radius: 20px;
+  font-size: 18px;
+}
+
 .font{
   text-shadow: 1px 1px 5px #ffee00;
   color: #000000;
+  
 }
 
 body{
