@@ -140,11 +140,11 @@ function criaExplosao(tipo,x,y) { //tipo 1=AR, 2=TERRA
   if(tipo==1){
     att1.value="explosaoAr";
     att2.value="top:"+y+"px;left:"+x+"px";
-    att4.value="../assets/imgs/explosao.png?"+new Date();
+    att4.value="../estilo/imgs/explosao.png?"+new Date();
   }else{
     att1.value="explosaoChao";
     att2.value="top:"+(tamTelaH-48)+"px;left:"+(x-37)+"px";
-    att4.value="../assets/imgs/explosao_chao.png?"+new Date();
+    att4.value="../estilo/imgs/explosao_chao.png?"+new Date();
   }
   //att5.value="";
   //att6.value="som"+iSom;
@@ -167,14 +167,14 @@ function gereciaGame() { //caso ganhar
   if(contMeteoros<=0){
     jogo=false;
     clearInterval(tmpCriaMeteoro);
-    telaMsg.style.backgroundImage="url('../assets/imgs/fundo_Vitoria.jpg')";
+    telaMsg.style.backgroundImage="url('../estilo/imgs/fundo_Vitoria.jpg')";
     telaMsg.style.display="block";
     naveJog.style.display="none";
   }
   if(vidaPlaneta<=0){ //caso perder
     jogo=false;
     clearInterval(tmpCriaMeteoro);
-    telaMsg.style.backgroundImage="url('../assets/imgs/fundo_FimDeJogo.jpg')";
+    telaMsg.style.backgroundImage="url('../estilo/imgs/fundo_FimDeJogo.jpg')";
     telaMsg.style.display="block";
     naveJog.style.display="none";
   }
@@ -238,7 +238,7 @@ function inicia() {
 
   //telas
   telaMsg=document.getElementById("telaMsg");
-  telaMsg.style.backgroundImage="url('../assets/imgs/fundo_Inicio.jpg')";
+  telaMsg.style.backgroundImage="url('../estilo/imgs/fundo_Inicio.jpg')";
   telaMsg.style.display="block";
   document.getElementById("btnJogar").addEventListener("click",start);
 }
