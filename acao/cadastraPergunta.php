@@ -1,12 +1,24 @@
+<pre>
 <?php
-session_start();
-
 include "../bancoOuterSpace/banco.php";
 
-inserir('pergunta', $_POST);
-inserir('tema', $_POST);
+$dados = $_POST;
 
-print_r ($_POST);
+$tema = $dados["tema"];
+unset($dados["tema"]);
 
+$pergunta = $dados["pergunta"];
+unset($dados["pergunta"]);
 
+$alternativa = $dados;
+
+onConexao();
+
+inserir('tema', $tema);
+inserir('pergunta', $pergunta);
+
+offConexao();
+print_r($alternativa);
 ?>
+</pre>
+

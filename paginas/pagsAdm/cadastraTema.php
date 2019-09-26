@@ -8,22 +8,13 @@
     <div class="mx-auto font">
         <center><h2 calss="">Cadastro do Tema</h2></center>
         <br>
-<<<<<<< Updated upstream
-        <form action="" method="post">
+        <form action="../../acao/cadastraPergunta.php" method="post">
             <div class="boxTema">
                 <div class="form-group row">
                     <label class="col-sm-2 col-form-label">Tema:</label>
                     <div class="col-sm-10">
                     <input type="text" class="form-control" name="tema" maxlength="" required> 
                     </div>
-=======
-        <form action="../../acao/cadastraPergunta.php" method="post">
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Tema:</label>
-                <div class="col-sm-10">
-                <input type="text" class="form-control" name="tema" maxlength="" required> 
->>>>>>> Stashed changes
-                </div>
                 <div>
                     <center><h2>Cadastrar Pergunta</h2></center>
                     <br>
