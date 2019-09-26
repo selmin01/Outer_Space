@@ -15,7 +15,7 @@
         include 'paginas/grupo.php';
         break;
       case 'jogo':
-        include 'paginas/jogo.php';
+      header("location: paginas/jogo.php");
         break;
       case 'sair':
         header("location: paginas/login.php");
