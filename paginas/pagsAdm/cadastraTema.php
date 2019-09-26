@@ -5,11 +5,11 @@
 <head>
 <body>
 <div class="container">
-    <div class="mx-auto cadastroTema">
-        <center><h2>Cadastro do Tema</h2></center>
+    <div class="mx-auto font">
+        <center><h2 calss="">Cadastro do Tema</h2></center>
         <br>
         <form action="" method="post">
-            <div class="">
+            <div class="boxTema">
                 <div class="form-group row">
                     <label class="col-sm-2 col-form-label">Tema:</label>
                     <div class="col-sm-10">
@@ -27,7 +27,7 @@
                     </div>
                 </div>
             </div>
-            <div>
+            <div class="boxResposta">
                 <div>
                     <center><h5>Resposta:</h5></center>
                     <br>
@@ -57,9 +57,9 @@
                     </div>
                 </div>
             </div>
-            <button type="submit" class="btn btn-success btn-block">Cadastrar</button>
+            <button type="submit" class="btn btn-dark btn-lg btn-block font">Cadastrar</button>
         </form>
-            <button type="button" class="btn btn-dark btn-block">Voltar</button>
+            <button type="button" class="btn btn-dark btn-lg btn-block font">Voltar</button>
     </div>
 </div>
 </body>
