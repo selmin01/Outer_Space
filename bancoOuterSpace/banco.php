@@ -1,6 +1,5 @@
 <pre>
 <?php
-
 function onConexao() {
     global $conexao;
     $conexao = mysqli_connect("localhost", "root", "root", "outerspace");

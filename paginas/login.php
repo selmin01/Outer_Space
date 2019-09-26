@@ -1,4 +1,3 @@
-
 <html>
     <head>
         <meta charset="utf-8">
@@ -44,5 +43,7 @@ if($msg==1){
     echo("<script>$(document).ready( function (){ alert('Você foi cadastrado com sucesso!'); });</script>");
 }elseif ($msg==3) {
     echo("<script>$(document).ready( function (){ alert('Sua senha foi alterada com sucesso!'); });</script>");
+}elseif ($msg==5) {
+    echo("<script>$(document).ready( function (){ alert('Fala ou se logar!'); });</script>");
 }
 ?>
