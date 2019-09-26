@@ -32,10 +32,51 @@
   text-decoration: none !important;
 }
 
+<<<<<<< Updated upstream
+=======
+.rnk1{
+  width: 470px;
+  text-align: left;
+  padding: 15px 20px;
+  font-size: 23px;
+}
+
+.rnk2{
+  width: 100px;
+  margin-left: -195px;
+  padding: 15px 20px;
+  font-size: 23px;
+}
+
+.rnk3{
+  width: 100px;
+  margin-left: 25px;
+  padding: 15px 20px;
+  font-size: 14px;
+}
+
+.rnk4{
+  width: 100px;
+  margin-left: 200px;
+  padding: 15px 20px;
+  font-size: 14px;
+}
+
+.botao{
+  width: 470px;
+  text-align: center;
+  padding: 15px 20px;
+  border-radius: 20px;
+  font-size: 18px;
+}
+
+>>>>>>> Stashed changes
 .font{
   -webkit-text-stroke-width: 0.8px; /* largura da borda */
   -webkit-text-stroke-color: #ffee00; /* cor da borda */
   color: #000000;
+  font-family: 'Orbitron', sans-serif;
+
   
 }
 
