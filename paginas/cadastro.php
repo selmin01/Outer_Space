@@ -12,7 +12,7 @@
             <div class="mx-auto box1">
                 <center><h1 class="font">Cadastro de Usuários</h1></center>
                 <br>
-                <form action="../acao/cadastraUsuario.php" method="post" name="cadUsuario" onsubmit="return validaCadastro()">
+                <form action="../acao/verificaUsuario.php" method="post" name="cadUsuario" onsubmit="return validaCadastro()">
                     <div class="form-group">
                         <label for="formGroupExampleInput">Nome:</label>
                         <input type="text" class="form-control" name="nome" maxlength="50" required/>
