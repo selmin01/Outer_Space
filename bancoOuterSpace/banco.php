@@ -66,12 +66,5 @@ function apagar($tabela, $condicao = null) {
     return $resultado;
 }
 
-/*
-function selecionarId($sql){
-    $arrayDados = selecionar($sql);
-    $id = array_column($arrayDados, 'idUsuario');
-    return $id;
-}
-*/
 ?>
 </pre>

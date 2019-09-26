@@ -13,9 +13,9 @@ $arrayDados = selecionar("SELECT * FROM usuario WHERE nick = '$nick'");
 
 $id = array_column($arrayDados, 'idUsuario');
 
-unset($_POST["nick"]);
-
 $id = implode("", $id);
+
+unset($_POST["nick"]);
 
 alterar('usuario', $_POST, "idUsuario = ". $id);
 
