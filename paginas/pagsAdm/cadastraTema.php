@@ -8,7 +8,7 @@
     <div class="mx-auto cadastroTema">
         <center><h2>Cadastro do Tema</h2></center>
         <br>
-        <form action="" method="post">
+        <form action="../../acao/cadastraPergunta.php" method="post">
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Tema:</label>
                 <div class="col-sm-10">

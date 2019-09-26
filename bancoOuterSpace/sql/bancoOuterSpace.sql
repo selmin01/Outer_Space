@@ -12,7 +12,7 @@ create table usuario (
     primary key (idUsuario)
 );
 create table fase (
-	idFase int,
+	idFase int AUTO_INCREMENT,
     pergunta_idPergunta int,
     tempo time,
     qtdMeteoro tinyint(100),
@@ -20,55 +20,55 @@ create table fase (
     primary key (idFase)
 );
 create table pergunta (
-	idPergunta int,
+	idPergunta int AUTO_INCREMENT,
     tema_idTema int,
     bonus_idBonus int,
     descricaoPergunta varchar(100),
     primary key (idPergunta)
 );
 create table alternativa (
-	idAlternativa int,
+	idAlternativa int AUTO_INCREMENT,
     pergunta_idPergunta int,
     descricaoAlternativa varchar(100),
     opcaoCorreta bit,
     primary key (idAlternativa)
 );
 create table tema (
-	idTema int,
+	idTema int AUTO_INCREMENT,
     descricaoTema varchar(100),
     primary key (idTema)
 );
 create table bonus (
-	idBonus int,
+	idBonus int AUTO_INCREMENT,
     tipo_idTipo int,
     valor int,
     primary key (idBonus)
 );
 create table tipo (
-	idTipo int,
+	idTipo int AUTO_INCREMENT,
     descricaoTipo varchar(15),
     primary key (idTipo)
 );
 create table usuarioGrupo (
-	idUsuarioGrupo int,
+	idUsuarioGrupo int AUTO_INCREMENT,
     usuario_idUsuario int,
     grupo_idGrupo int,
     primary key (idUsuarioGrupo)
 );
 create table grupo (
-	idGrupo int,
+	idGrupo int AUTO_INCREMENT,
     rankingGrupo_idRankingGrupo int,
     descricaoGrupo varchar(100),
     primary key (idGrupo)
 );
 create table rankingGrupo (
-	idRankingGrupo int,
+	idRankingGrupo int AUTO_INCREMENT,
     usuario int,
     ponto int,
     primary key (idRankingGrupo)
 );
 create table ranking (
-	idRanking int,
+	idRanking int AUTO_INCREMENT,
     usuario int,
     ponto int,
     primary key (idRanking)
