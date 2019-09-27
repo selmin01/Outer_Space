@@ -9,7 +9,7 @@
     </head>
     <body>
         <div class="container">
-            <div class="mx-auto box1">
+            <div class="mx-auto boxCadastro">
                 <center><h1 class="font">Cadastro de Usuários</h1></center>
                 <br>
                 <form action="../acao/verificaUsuario.php" method="post" name="cadUsuario" onsubmit="return validaCadastro()">

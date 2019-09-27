@@ -9,7 +9,7 @@
     </head>
     <body>
         <div class="container">
-            <div class="mx-auto box2">
+            <div class="mx-auto boxEsqueciSenha">
                 <center><h1 class="font">Esqueci Minha Senha</h1></center>
                 <br>
                 <form action="../acao/alteraSenha.php" method="post" name="altSenha" onsubmit="return esqueciSenha()">

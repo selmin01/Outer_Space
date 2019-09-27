@@ -9,7 +9,7 @@
     </head>
     <body>
         <div class="container">
-            <div class="mx-auto caixa">
+            <div class="mx-auto login">
                 <center><h1 class="font">Login</h1></center>
                 <br>
                 <form action="../acao/validaLogin.php" method="post">
