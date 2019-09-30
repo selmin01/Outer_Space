@@ -16,20 +16,26 @@ body{
 }
 
 /*Tela de Cadastrar Tema*/
-.cadastroTema{
-    margin-top: 0px;
-    width: 500px; 
-    padding:30px; 
-    background-color: #ffffffb3; 
-    border-radius: 30px;
-    font-family: 'Comfortaa', cursive;
-}
-
 .boxTema{
     margin-top: 0px;
     width: 500px; 
     padding:30px; 
-    background-color: #ffffffb3; 
+    /*background-color: #ffffffb3; */
     border-radius: 30px;
-    font-family: 'Comfortaa', cursive;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.boxResposta{
+    margin-top: 0px;
+    width: 500px; 
+    padding:30px; 
+    /*background-color: #ffffffb3; */
+    border-radius: 30px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.titulo{
+    margin-top: 0px;
+    left: 270px;
+    /*margin: 20px;*/
 }

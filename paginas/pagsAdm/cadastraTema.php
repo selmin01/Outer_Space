@@ -1,4 +1,5 @@
-<html><head>
+<html>
+    <head>
         <link rel="stylesheet" href="../../estilo/css/bootstrap.min.css">
         <link rel="stylesheet" href="../../estilo/css/cadastroTema.css">
         <link href="https://fonts.googleapis.com/css?family=Orbitron&amp;display=swap" rel="stylesheet">
@@ -6,22 +7,23 @@
     </head><body>
         <div class="container">
             <form action="../../acao/cadastraPergunta.php" method="post">
-                <div class="row font">
-                    <div class="col-md-12 mt-5">
-                        <h2>Cadastro de Perguntas</h2>
+                <div class="row">
+                    <div class="col-md-12 mt-5 titulo font">
+                        <h1>Cadastro de Perguntas</h1>
                     </div>
-                    <div class="col-md-6 boxTema">
+                    <div class="col-md-6 boxTema font">
                         <div class="form-group ">
-                            <label for="formGroupExampleInput">Tema:</label>
+                            <label for="formGroupExampleInput"><h4>Tema:</h4></label>
                             <input type="text" class="form-control" name="tema" maxlength="" required=""> 
                         </div>
                         <div class="form-group">
-                            <label for="formGroupExampleInput">Pergunta:</label>
+                            <label for="formGroupExampleInput"><h4>Pergunta:<h4></label>
                             <input type="text" class="form-control" name="pergunta" maxlength="" required="">
                         </div>
                     </div>
                     <div class="col-md-6 boxResposta">
-                        <h5>Resposta:</h5>
+                        <h4>Resposta:</h4>
+                        <br>
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label">A</label>
                             <div class="col-sm-10">
@@ -54,5 +56,5 @@
                 </div>           
             </form>
         </div>
-    
-</body></html>
+    </body>
+</html>
