@@ -46,6 +46,15 @@
                             <input type="text" class="form-control" name="respostaD" maxlength="" required=""> 
                             </div>
                         </div>
+                        <div>
+                            <label>Selecione a Resposta Certa</label>
+                            <select name="select" class="select">
+                                <option value="respostaA">A</option>
+                                <option value="respostaB">B</option>
+                                <option value="respostaC">C</option>
+                                <option value="respostaD">D</option>
+                            </select>
+                        </div>
                     </div>
                     <div class="col-md-12 pt-5">
                         <button type="submit" class="btn btn-dark btn-lg btn-block font">Cadastrar</button>
