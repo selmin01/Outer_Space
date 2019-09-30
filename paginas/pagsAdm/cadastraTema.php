@@ -12,8 +12,11 @@
                     </div>
                     <div class="col-md-6 boxTema">
                         <div class="form-group ">
-                            <label for="formGroupExampleInput">Tema:</label>
-                            <input type="text" class="form-control" name="tema" maxlength="" required=""> 
+                            <label for="formGroupExampleInput"><h4>Tema:</h4></label>
+                            <select name="select" class="select">
+                                <option value="tecnologia">Tecnologia</option>
+                                <option value="astronomia">Astronomia</option>
+                            </select> 
                         </div>
                         <div class="form-group">
                             <label for="formGroupExampleInput">Pergunta:</label>
@@ -25,34 +28,34 @@
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label">A</label>
                             <div class="col-sm-10">
-                            <input type="text" class="form-control" name="respostaA" maxlength="" required=""> 
+                            <input type="text" class="form-control" name="A" maxlength="" required=""> 
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label">B</label>
                             <div class="col-sm-10">
-                            <input type="text" class="form-control" name="respostaB" maxlength="" required=""> 
+                            <input type="text" class="form-control" name="B" maxlength="" required=""> 
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label">C</label>
                             <div class="col-sm-10">
-                            <input type="text" class="form-control" name="respostaC" maxlength="" required=""> 
+                            <input type="text" class="form-control" name="C" maxlength="" required=""> 
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label">D</label>
                             <div class="col-sm-10">
-                            <input type="text" class="form-control" name="respostaD" maxlength="" required=""> 
+                            <input type="text" class="form-control" name="D" maxlength="" required=""> 
                             </div>
                         </div>
                         <div>
                             <label>Selecione a Resposta Certa</label>
                             <select name="select" class="select">
-                                <option value="respostaA">A</option>
-                                <option value="respostaB">B</option>
-                                <option value="respostaC">C</option>
-                                <option value="respostaD">D</option>
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                                <option value="D">D</option>
                             </select>
                         </div>
                     </div>
