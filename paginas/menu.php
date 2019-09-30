@@ -6,11 +6,7 @@
  <head>
    <title>JOGO</title>
    <link rel="stylesheet" href="../estilo/css/bootstrap.min.css" />
-<<<<<<< Updated upstream
-   <link rel="stylesheet" href="../estilo/css/main.css"/>
-=======
-   <link rel="stylesheet" href="../estilo/css/main.css">
->>>>>>> Stashed changes
+   <link rel="stylesheet" href="../estilo/css/menu.css"/>
    <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet"/>
  </head>
  <body>
