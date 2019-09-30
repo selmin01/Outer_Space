@@ -33,3 +33,8 @@ body{
     border-radius: 30px;
     font-family: 'Comfortaa', cursive;
 }
+
+.select{
+    background: #202020;
+    color: #ffe600;
+}
