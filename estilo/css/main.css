@@ -106,43 +106,6 @@ h3{
   position: absolute;
 }
 
-/*Tela de menu*/
-.menu{
-  margin-top: 95px;
-  width: 400px; 
-  padding:15px; 
-  background-color: #ffffffb3; 
-  border-radius: 20px;
-  font-family: 'Orbitron', sans-serif;
-}
-
-.botao{
-  width: 370px;
-  text-align: center;
-  padding: 15px 20px;
-  border-radius: 20px;
-  font-size: 18px;
-}
-
-/*Tela de Cadastrar Tema*/
-.cadastroTema{
-  margin-top: 0px;
-  width: 500px; 
-  padding:30px; 
-  background-color: #ffffffb3; 
-  border-radius: 30px;
-  font-family: 'Comfortaa', cursive;
-}
-
-.boxTema{
-  margin-top: 0px;
-  width: 500px; 
-  padding:30px; 
-  background-color: #ffffffb3; 
-  border-radius: 30px;
-  font-family: 'Comfortaa', cursive;
-}
-
 
 
 
