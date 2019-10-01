@@ -15,13 +15,11 @@
                     </div>
                     <div class="col-md-6 boxTema font">
                         <div class="form-group ">
-                            <label for="formGroupExampleInput"><h4>Tema:</h4></label>
+                            <label for="formGroupExampleInput"><h5>Tema:</h5></label>
                             <select name="select" class="select">
                                 <option value="tecnologia">Tecnologia</option>
                                 <option value="astronomia">Astronomia</option>
                             </select> 
-                            <label for="formGroupExampleInput"><h5>Tema:</h5></label>
-                            <input type="text" class="form-control" name="tema" maxlength="" required=""> 
                         </div>
                         <div class="form-group">
                             <label for="formGroupExampleInput"><h5>Pergunta:</h5></label>
