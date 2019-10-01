@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="../estilo/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="../estilo/css/main.css"/>
         <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet"/>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script type="text/javascript" src="../js/funcoes.js"></script>
     </head>
     <body>
@@ -48,3 +49,9 @@
         </div>
     </body>
 </html>
+<?php
+$msg= isset($_GET["msg"]) ? ($_GET["msg"]) :"";
+if($msg==1){
+    echo("<script>$(document).ready( function (){ alert('Este usuário já existe!'); });</script>");
+}
+?>

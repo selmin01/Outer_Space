@@ -14,8 +14,6 @@ offConexao();
 if( isset($_SESSION["S_usuario"])){
     $_SESSION["S_usuario"] [] = $usuario;
     header("Location: ../paginas/menu.php");
-    //echo $usuario;
-    //echo $_SESSION["S_usuario"];
 }else{
     $_SESSION["S_usuario"] = array($usuario);
     header("Location: ../paginas/menu.php");
@@ -26,6 +24,4 @@ if($sucesso >= 1) {
 }else {
     header("Location: ../paginas/login.php?msg=5");
 }
-
-
 ?>
