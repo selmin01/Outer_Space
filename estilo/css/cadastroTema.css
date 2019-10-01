@@ -16,21 +16,27 @@ body{
 }
 
 /*Tela de Cadastrar Tema*/
-.cadastroTema{
+.boxTema{
     margin-top: 0px;
     width: 500px; 
     padding:30px; 
-    background-color: #ffffffb3; 
     border-radius: 30px;
-    font-family: 'Comfortaa', cursive;
+    font-family: 'Orbitron', sans-serif;
 }
 
-.boxTema{
+.boxResposta{
     margin-top: 0px;
     width: 500px; 
     padding:30px;  
     border-radius: 30px;
-    font-family: 'Comfortaa', cursive;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.titulo{
+    margin-top: 0px;
+    left: 320px;
+    /*margin: 20px;*/
+    
 }
 
 .select{
