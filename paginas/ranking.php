@@ -1,9 +1,3 @@
-<?php
-
-
-
-
-?>
 <html>
     <head>
         <meta charset="utf-8">
@@ -14,55 +8,45 @@
     </head>
     <body>
         <div class="container">
-            <div class="mx-auto caixa">
+            <div class="mx-auto ranking">
                 <center><h1 class="font">RANKING</h1></center>
                 <br>
-                <div>
-                    <label>Pos</label>
-                    <label class="rnk1">Nome do Jogador</label>
-                    <label class="rnk2">Pontuação</label>
-                </div> 
-                <div>
-                    <label>1º</label>
-                    <label class="rnk3">H3nr1qu3_z1k4</label>
-                    <label class="rnk4">9999</label>
-                    <br>
-                    <label>2º</label>
-                    <label class="rnk3">Ricardin_Gameplays</label>
-                    <label class="rnk4">8888</label>
-                    <br>
-                    <label>3º</label>
-                    <label class="rnk3">Carlao_Dale</label>
-                    <label class="rnk4">7777</label>
-                    <br>
-                    <label>4º</label>
-                    <label class="rnk3">Robertaum_Milos</label>
-                    <label class="rnk4">6666</label>
-                    <br>
-                    <label>5º</label>
-                    <label class="rnk3">Selmin_Br</label>
-                    <label class="rnk4">5555</label>
-                    <br>
-                    <label>6º</label>
-                    <label class="rnk3">Felipe_em_HD</label>
-                    <label class="rnk4">4444</label>
-                    <br>
-                    <label>7º</label>
-                    <label class="rnk3">Koerber_Gui</label>
-                    <label class="rnk4">3333</label>
-                    <br>
-                    <label>8º</label>
-                    <label class="rnk3"> Caio_Bolinho_deCarne</label>
-                    <label class="rnk4">2222</label>
-                    <br>
-                    <label>9º</label>
-                    <label class="rnk3">CoIsA_lInDa</label>
-                    <label class="rnk4">1111</label>
-                    <br>
-                    <label>10º</label>
-                    <label class="rnk3">Xesquedele</label>
-                    <label class="rnk4">0000</label>
-                </div> 
+                <table class="table">
+                    <thead>
+                        <tr>
+                        <th scope="col">Pos</th>
+                        <th scope="col">Nickname</th>
+                        <th scope="col">Pontuação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <th scope="row">1º</th>
+                        <td>H3nr1qu3_z1k4</td>
+                        <td>9999</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">2º</th>
+                        <td>Ricardin_Gameplays</td>
+                        <td>8888</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">3º</th>
+                        <td>Carlao_Dale</td>
+                        <td>7777</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">4º</th>
+                        <td>Robertaum_Milos</td>
+                        <td>6666</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">5º</th>
+                        <td>Selmin_Br</td>
+                        <td>5555</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </body>
