@@ -20,6 +20,8 @@
                                 <option value="tecnologia">Tecnologia</option>
                                 <option value="astronomia">Astronomia</option>
                             </select>  
+                            <label for="formGroupExampleInput"><h5>Tema:</h5></label>
+                            <input type="text" class="form-control" name="tema" maxlength="" required=""> 
                         </div>
                         <div class="form-group">
                             <label for="formGroupExampleInput"><h5>Pergunta:</h5></label>
