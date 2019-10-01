@@ -1,6 +1,7 @@
 <html>
+  <a href="estilo/css/bootstrap.min.css"></a>
   <?php
-    include ("template/header.php");
+    
 
     $getPagina = isset($_GET["pagina"]) ? $_GET["pagina"]:"";
 
@@ -9,7 +10,7 @@
         include 'paginas/menu.php';
         break;
       case 'ranking':
-        include 'paginas/ranking.php';
+        header("location: paginas/ranking.php");        
         break;
       case 'grupo':
         include 'paginas/grupo.php';

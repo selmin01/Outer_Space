@@ -34,7 +34,7 @@ body{
 
 .titulo{
     margin-top: 0px;
-    left: 320px;
+    left: 360px;
     /*margin: 20px;*/
     
 }
@@ -42,4 +42,5 @@ body{
 .select{
     background: #202020;
     color: #ffe600;
+    border-radius: 10px;
 }
