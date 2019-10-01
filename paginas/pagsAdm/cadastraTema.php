@@ -3,7 +3,6 @@
         <link rel="stylesheet" href="../../estilo/css/bootstrap.min.css">
         <link rel="stylesheet" href="../../estilo/css/cadastroTema.css">
         <link href="https://fonts.googleapis.com/css?family=Orbitron&amp;display=swap" rel="stylesheet">
-    
     </head>
     <body>
         <div class="container">
@@ -35,7 +34,6 @@
                         <div class="form-group">
                             <label for="formGroupExampleInput"><h5 class="font">Pergunta</h5></label>
                             <textarea name="pergunta" class="form-control" rows="3" maxlength="" required=""></textarea>
-            
                         </div>
                     </div>
                     <div class="col-md-6 boxResposta font">
