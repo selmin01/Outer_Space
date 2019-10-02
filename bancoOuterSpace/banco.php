@@ -19,6 +19,7 @@ function executar($sql, $condicao = null){
 }
 
 function inserir($tabela, $dados){
+    global $conexao;
     $campos = array_keys($dados);
     $sql = "INSERT INTO ".$tabela." (";
     // Monta a 1ª estrutura
@@ -34,8 +35,11 @@ function inserir($tabela, $dados){
     }
     $sql = substr($sql,0, -1);
     $sql.=")";
+    //echo $sql;
     $resultado = executar($sql);
-    return $resultado;
+
+    $id = mysqli_insert_id($conexao);
+    return $id;
 }
 
 function alterar($tabela, $dados, $condicao = null) {
