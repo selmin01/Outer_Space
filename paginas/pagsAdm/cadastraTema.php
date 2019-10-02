@@ -1,9 +1,13 @@
+<?php
+$msg= isset($_GET["msg"]) ? ($_GET["msg"]) :"";
+?>
 <html>
     <head>
         <link rel="stylesheet" href="../../estilo/css/bootstrap.min.css">
         <link rel="stylesheet" href="../../estilo/css/cadastroTema.css">
         <link href="https://fonts.googleapis.com/css?family=Orbitron&amp;display=swap" rel="stylesheet">
-    </head>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        
     <body>
         <div class="container">
             <form action="../../acao/cadastraPergunta.php" method="post">
@@ -74,3 +78,8 @@
         </div>
     </body>
 </html>
+<?php
+if($msg==1){
+    echo ("<script>$(document).ready( function (){ alert('Cadastro com sucesso!'); });</script>");
+}
+?>
