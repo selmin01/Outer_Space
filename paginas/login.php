@@ -44,6 +44,6 @@ if($msg==1){
 }elseif ($msg==3) {
     echo("<script>$(document).ready( function (){ alert('Sua senha foi alterada com sucesso!'); });</script>");
 }elseif ($msg==5) {
-    echo("<script>$(document).ready( function (){ alert('Senha ou usuário incorreto!'); });</script>");
+    echo("<script>$(document).ready( function (){ alert('Usuário ou Senha incorreto!'); });</script>");
 }
 ?>

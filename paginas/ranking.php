@@ -49,5 +49,11 @@
                 </table>
             </div>
         </div>
+        <br>
+        <div class="col-sm-2">
+            <?php
+              echo "<a class='linkbtn' href='menu.php' ><button type='button' class='btn btn-dark btn-lg btn-block font botao'><< Voltar</button></a>"
+            ?>
+        </div>
     </body>
 </html>
