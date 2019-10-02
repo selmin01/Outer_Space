@@ -30,7 +30,7 @@ create table alternativa (
 	idAlternativa int AUTO_INCREMENT,
     pergunta_idPergunta int,
     descricaoAlternativa varchar(100),
-    opcaoCorreta bit,
+    opcaoCorreta int,
     primary key (idAlternativa)
 );
 create table tema (
