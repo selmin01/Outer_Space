@@ -13,10 +13,10 @@
         header("location: paginas/ranking.php");        
         break;
       case 'grupo':
-        include 'paginas/grupo.php';
+        header("location: paginas/grupo.php");
         break;
       case 'jogo':
-      header("location: paginas/jogo.php");
+        header("location: paginas/jogo.php");
         break;
       case 'sair':
         header("location: paginas/login.php");

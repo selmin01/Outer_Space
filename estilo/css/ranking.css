@@ -16,10 +16,11 @@ body{
 }
 
 .ranking{
-    margin-top: 115px;
+    margin-top: 95px;
     width: 500px; 
     padding:15px; 
     background-color: #ffffffb3; 
     border-radius: 20px;
     font-family: 'Orbitron', sans-serif;
 }
+
