@@ -1,9 +1,13 @@
+<?php
+$msg= isset($_GET["msg"]) ? ($_GET["msg"]) :"";
+?>
 <html>
     <head>
         <link rel="stylesheet" href="../../estilo/css/bootstrap.min.css">
         <link rel="stylesheet" href="../../estilo/css/cadastroTema.css">
         <link href="https://fonts.googleapis.com/css?family=Orbitron&amp;display=swap" rel="stylesheet">
-    </head>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        
     <body>
         <div class="container">
             <form action="../../acao/cadastraPergunta.php" method="post">
@@ -14,22 +18,12 @@
                     </div>
                     <div class="col-md-6 boxTema">
                         <div class="form-group ">
-<<<<<<< HEAD
-                            <label for="formGroupExampleInput"><h5>Tema:</h5></label>
-                            <select name="select" class="select">
-                                <option value="tecnologia">Tecnologia</option>
-                                <option value="astronomia">Astronomia</option>
-                            </select>  
-                            <label for="formGroupExampleInput"><h5>Tema:</h5></label>
-                            <input type="text" class="form-control" name="tema" maxlength="" required=""> 
-=======
                             <label for="formGroupExampleInput"><h5 class="font">Tema</h5></label>
                             <select name="tema" class="form-control">
                                 <option value=""> -- </option>
                                 <option value="tecnologia">Tecnologia</option>
                                 <option value="astronomia">Astronomia</option>
                             </select>
->>>>>>> master
                         </div>
                         <div class="form-group">
                             <label for="formGroupExampleInput"><h5 class="font">Pergunta</h5></label>
@@ -84,3 +78,8 @@
         </div>
     </body>
 </html>
+<?php
+if($msg==1){
+    echo ("<script>$(document).ready( function (){ alert('Cadastro com sucesso!'); });</script>");
+}
+?>
