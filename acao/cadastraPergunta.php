@@ -3,35 +3,35 @@
 include "../bancoOuterSpace/banco.php";
 
 $dados = $_POST;
-print_r($dados);
 
-$opcaoCorreta = $dados["select"];
-unset($dados["select"]);
-echo $opcaoCorreta;
+unset($dados["tema"]);
 
-$pergunta = $dados["pergunta"];
-echo $pergunta;
+$opcaoCorreta = $dados["resposta"];
+unset($dados["resposta"]);
+
+$pergunta = array("descricaoPergunta" => $dados["pergunta"]);
 unset($dados["pergunta"]);
 
 $alternativa = $dados;
-print_r($alternativa);
 
-$teste = array_keys($alternativa);
-print_r($teste);
+onConexao();
+
+$id = inserir('pergunta', $pergunta);
 
 foreach($alternativa as $chave => $valor) {
        if($chave == $opcaoCorreta) {
-           echo $valor;
+            $certa = array("descricaoAlternativa" => $valor, "opcaoCorreta" => 1, "pergunta_idPergunta" => $id);
+            inserir('alternativa', $certa);
+            unset($alternativa[$chave]);
+       }else {
+           $errada = array("descricaoAlternativa" => $valor, "opcaoCorreta" => 0, "pergunta_idPergunta" => $id);
+           inserir('alternativa', $errada);
        }
 }
-/*
-onConexao();
-
-inserir('tema', $tema);
-inserir('pergunta', $pergunta);
 
 offConexao();
-*/
+
+header("Location: ../paginas/pagsAdm/cadastraTema.php?msg=1");
 ?>
 </pre>
 
