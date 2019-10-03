@@ -1,5 +1,16 @@
 <?php
 
+
+include("menuAdm.php")
+
+?>
+<html>
+<head>
+</head>
+<body>
+    
+</body>
+</html>
 // Matriz com todos os participantes
 $participantes = array("Rafael", "João", "Maria", "Pedro", "Patricia", "Camila", "Roberto");
  
@@ -41,3 +52,4 @@ echo "<b>2°</b> - " . $sorteado[2] . "<br />";
 echo "<b>3°</b> - " . $sorteado[3] . "<br />";
 
 ?>
+
