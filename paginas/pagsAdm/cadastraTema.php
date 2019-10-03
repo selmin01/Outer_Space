@@ -19,7 +19,7 @@ $msg= isset($_GET["msg"]) ? ($_GET["msg"]) :"";
                     <div class="col-md-6 boxTema">
                         <div class="form-group ">
                             <label for="formGroupExampleInput"><h5 class="font">Tema</h5></label>
-                            <select name="tema" class="form-control">
+                            <select name="tema" class="form-control" required="">
                                 <option value=""> -- </option>
                                 <option value="tecnologia">Tecnologia</option>
                                 <option value="astronomia">Astronomia</option>
@@ -59,7 +59,7 @@ $msg= isset($_GET["msg"]) ? ($_GET["msg"]) :"";
                         <div class="form-group row">
                             <label class="col-sm-8 col-form-label"><h5>Selecione a Resposta Certa</h5></label>
                             <div class="col-sm-4">
-                            <select name="resposta" class="select form-control">
+                            <select name="resposta" class="select form-control" required="">
                                 <option value=""> -- </option>
                                 <option value="A">A</option>
                                 <option value="B">B</option>
