@@ -15,15 +15,15 @@
             <div class="form-group row">
                 <div class="col-sm-12">
                     <center>
-                    <form action="" method="post" name="" onsubmit="">
+                    <form action="../../acao/validaGrupo.php" method="post" name="" onsubmit="">
                         <div class="form-group">
                             <label for="formGroupExampleInput">Nome do Grupo:</label>
-                            <input type="text" class="form-control" name="nomeGrupo" maxlength="50" required/>
+                            <input type="text" class="form-control" name="descricaoGrupo" maxlength="50" required/>
                         </div>
 
                         <div class="form-group">
                             <label for="formGroupExampleInput">Adicionar Membro:</label>
-                            <input type="text" class="form-control" name="membroGrupo" maxlength="50" required/>
+                            <input type="text" class="form-control" name="usuario_idUsuario" maxlength="50" required/>
                         </div>
                         <button type="submit" class="btn btn-dark btn-lg btn-block font botoes">Criar</button>
                     </form>
