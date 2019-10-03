@@ -30,7 +30,7 @@ $msg= isset($_GET["msg"]) ? ($_GET["msg"]) :"";
                             <textarea name="pergunta" class="form-control" rows="3" maxlength="" required=""></textarea>
                         </div>
                     </div>
-                    <div class="col-md-6 boxResposta font">
+                    <div class="col-md-6 boxResposta">
                         <h5>Resposta</h5>
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label">A</label>
