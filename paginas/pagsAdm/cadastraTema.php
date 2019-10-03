@@ -1,5 +1,8 @@
 <?php
 $msg= isset($_GET["msg"]) ? ($_GET["msg"]) :"";
+
+include("menuAdm.php");
+
 ?>
 <html>
     <head>
@@ -70,11 +73,13 @@ $msg= isset($_GET["msg"]) ? ($_GET["msg"]) :"";
                         </div>
                     </div>
                     <div class="col-md-12">
-                        <button type="submit" class="btn btn-dark btn-lg btn-block font">Cadastrar</button>
-                        <button type="button" class="btn btn-dark btn-lg btn-block font">Voltar</button>
+                        <button type="submit" class="btn btn-dark btn-lg btn-block font">Cadastrar</button> 
                     </div>
                 </div>           
             </form>
+            <a href="menuAdm.php">
+                <button type="button" class="btn btn-dark btn-block">Voltar</button>
+            </a> 
         </div>
     </body>
 </html>
