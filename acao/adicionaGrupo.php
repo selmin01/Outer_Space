@@ -1,3 +1,4 @@
+<pre>
 <?php
 session_start();
 include "../bancoOuterSpace/banco.php";
@@ -11,17 +12,31 @@ print_r($grupo);
 $membro = $dados["usuario_idUsuario"];
 print_r($membro);
 
-$arrayDados = selecionar("SELECT * FROM usuario WHERE nick = '$membro'");
 
-$id = array_column($arrayDados, 'idUsuario');
+$dadosRanking = array("usuario_idUsuario" => $membro, "ponto" => 0);
+print_r($dadosRanking);
 
-$id = implode("", $id);
-
-echo($id);
 onConexao();
 
+$idRanking = inserir('rankinggrupo', $dadosRanking);
 
+$dadosGrupo = array("rankingGrupo_idRankingGrupo" => $idRanking, "descricaoGrupo" => $grupo);
+print_r($dadosGrupo);
 
+$idGrupo = inserir('grupo', $grupo, $idRanking);
 
+$arrayDados = selecionar("SELECT * FROM usuario WHERE nick = '$membro'");
+
+$idUsuario = array_column($arrayDados, 'idUsuario');
+
+$idUsuario = implode("", $idUsuario);
+
+$dadosUsuarioGrupo = array("usuario_idUsuario" => $idUsuario, "grupo_idGrupo" => $idGrupo);
+print_r($dadosUsuarioGrupo);
+
+inserir('usuariogrupo', $membro, $idGrupo);
+
+offConexao();
 
 ?>
+</pre>
