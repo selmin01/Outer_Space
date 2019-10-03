@@ -9,15 +9,13 @@ include("menuAdm.php");
         <link rel="stylesheet" href="../../estilo/css/bootstrap.min.css">
         <link rel="stylesheet" href="../../estilo/css/cadastroTema.css">
         <link href="https://fonts.googleapis.com/css?family=Orbitron&amp;display=swap" rel="stylesheet">
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>    
     <body>
         <div class="container">
             <form action="../../acao/cadastraPergunta.php" method="post">
                 <div class="row">
-                    <div class="col-md-12 mt-5 font titulo">
-                        <h2>Cadastro de Perguntas</h2>
-                        <br>
+                    <div class="col-md-12 mt-4 md-6 mx-auto font">
+                        <div class="mx-auto" style="width: 514px;"><h1>Cadastro de Perguntas</h1></div>
                     </div>
                     <div class="col-md-6 boxTema">
                         <div class="form-group ">
@@ -33,34 +31,34 @@ include("menuAdm.php");
                             <textarea name="pergunta" class="form-control" rows="3" maxlength="" required=""></textarea>
                         </div>
                     </div>
-                    <div class="col-md-6 boxResposta font">
-                        <h5>Resposta</h5>
+                    <div class="col-md-6 boxResposta">
+                        <h5 class="font">Resposta</h5>
                         <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">A</label>
+                            <label class="col-sm-2 col-form-label font">A</label>
                             <div class="col-sm-10">
                             <input type="text" class="form-control" name="A" maxlength="" required=""> 
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">B</label>
+                            <label class="col-sm-2 col-form-label font">B</label>
                             <div class="col-sm-10">
                             <input type="text" class="form-control" name="B" maxlength="" required=""> 
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">C</label>
+                            <label class="col-sm-2 col-form-label font">C</label>
                             <div class="col-sm-10">
                             <input type="text" class="form-control" name="C" maxlength="" required=""> 
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">D</label>
+                            <label class="col-sm-2 col-form-label font">D</label>
                             <div class="col-sm-10">
                             <input type="text" class="form-control" name="D" maxlength="" required=""> 
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label class="col-sm-8 col-form-label"><h5>Selecione a Resposta Certa</h5></label>
+                            <label class="col-sm-8 col-form-label font"><h5>Selecione a Resposta Certa</h5></label>
                             <div class="col-sm-4">
                             <select name="resposta" class="select form-control" required="">
                                 <option value=""> -- </option>
