@@ -57,13 +57,14 @@ create table usuarioGrupo (
 );
 create table grupo (
 	idGrupo int AUTO_INCREMENT,
+    codigo int,
     rankingGrupo_idRankingGrupo int,
     descricaoGrupo varchar(100),
     primary key (idGrupo)
 );
 create table rankingGrupo (
 	idRankingGrupo int AUTO_INCREMENT,
-    usuario int,
+    usuario varchar(50),
     ponto int,
     primary key (idRankingGrupo)
 );
