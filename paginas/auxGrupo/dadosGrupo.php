@@ -2,8 +2,8 @@
 session_start();
 include "../../bancoOuterSpace/banco.php"; 
 if(isset($_SESSION["dadosGrupo"])){
-    $codGrupo=$_SESSION["dadosGrupo"] [0];
-    $nomeGrupo=$_SESSION["dadosGrupo"] [1] [0];
+    $codGrupo=$_SESSION["dadosGrupo"][0];
+    $nomeGrupo=$_SESSION["dadosGrupo"][1][0];
 }
 ?>
 <html>
