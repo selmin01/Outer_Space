@@ -36,13 +36,13 @@ inserir('usuariogrupo', $usuarioGrupo);
 $sucesso = mysqli_affected_rows($conexao);
 
 offConexao();
-$dadosGrupo = array($codigo, $grupo);
-//print_r($dadosGrupo);
+
+$pagGrupo = array($codigo, $grupo, $idRanking);
 
 if($sucesso >= 1) {
-    $_SESSION["dadosGrupo"] = $dadosGrupo;
+    $_SESSION["dadosGrupo"] = $pagGrupo;
     header("Location: ../paginas/auxGrupo/dadosGrupo.php");
- }else {
+ }else{
     header("Location: ../paginas/auxGrupo/criaGrupo.php?msg=2");
  }
 
