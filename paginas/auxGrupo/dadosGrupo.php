@@ -2,8 +2,9 @@
 session_start();
 include "../../bancoOuterSpace/banco.php"; 
 if(isset($_SESSION["dadosGrupo"])){
-    $codGrupo=$_SESSION["dadosGrupo"] [0];
-    $nomeGrupo=$_SESSION["dadosGrupo"] [1] [0];
+    $codGrupo=$_SESSION["dadosGrupo"][0];
+    $nomeGrupo=$_SESSION["dadosGrupo"][1][0];
+    $idRankingGrupo = $_SESSION["dadosGrupo"][2];
 }
 ?>
 <html>
@@ -23,12 +24,14 @@ if(isset($_SESSION["dadosGrupo"])){
             <div class="form-group row">
                 <div class="col-sm-12">
                     <center><h4><?php echo($nomeGrupo)?></h4></center>
-                    <?php 
-                        onConexao();
-                        $rankingGrupo = selecionar("SELECT * FROM rankinggrupo WHERE codigo = '$codGrupo'");
-                        offConexao();
-                        echo $rankingGrupo;
-                    ?>
+                    <pre>
+                        <?php 
+                            onConexao();
+                            $rankingGrupo = selecionar("SELECT * FROM rankinggrupo WHERE idRankingGrupo = '$idRankingGrupo'");
+                            offConexao();
+                            print_r($rankingGrupo);
+                        ?>
+                    </pre>
                     <center><h5>Código do grupo: <?php echo($codGrupo)?></h5></center>
                 </div>
             </div>

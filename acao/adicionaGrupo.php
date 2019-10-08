@@ -37,7 +37,7 @@ $sucesso = mysqli_affected_rows($conexao);
 
 offConexao();
 
-$pagGrupo = array($codigo, $membro);
+$pagGrupo = array($codigo, $membro, $idRanking);
 
 if($sucesso >= 1) {
     $_SESSION["dadosGrupo"] = $pagGrupo;
