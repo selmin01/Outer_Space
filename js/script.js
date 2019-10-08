@@ -228,7 +228,7 @@ function inicia() {
   tamTelaW=window.innerWidth;
   // Ini Jogador
   dirxJ=diryJ=0;
-  velJ=velT=5;
+  velJ=velT=10;
   jog=document.getElementById("naveJog"); 
   naveJog.style.display="none";
   //controle do planeta*
