@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="../../estilo/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="../../estilo/css/grupo.css"/>
         <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet"/>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     </head>
     <body>
     <div class="mx-auto boxCriaGrupo">
@@ -42,3 +43,8 @@
         </center>
     </body>
 </html>
+<?php
+$msg= isset($_GET["msg"]) ? ($_GET["msg"]) :"";
+if($msg==1){
+    echo("<script>$(document).ready( function (){ alert('Grupo não criado! Verifique campos preenchidos novamente.'); });</script>");
+}
