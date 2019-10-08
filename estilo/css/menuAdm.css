@@ -14,3 +14,13 @@ body{
     color: #000000;
     font-family: 'Orbitron', sans-serif; 
 }
+
+.logo{
+    position: absolute;
+    top: 250px;
+    left: 400px; 
+}
+
+.adm{
+    left: 800px;
+}
