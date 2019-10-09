@@ -40,9 +40,9 @@
 <?php
 $msg= isset($_GET["msg"]) ? ($_GET["msg"]) :"";
 if($msg==1){
-    echo("<script>$(document).ready( function (){ alert('Você foi cadastrado com sucesso!'); });</script>");
+    echo("<script>$(document).ready( function (){ alert('Você foi cadastrado com SUCESSO!'); });</script>");
 }elseif ($msg==3) {
-    echo("<script>$(document).ready( function (){ alert('Sua senha foi alterada com sucesso!'); });</script>");
+    echo("<script>$(document).ready( function (){ alert('Sua senha foi alterada com SUCESSO!'); });</script>");
 }elseif ($msg==5) {
     echo("<script>$(document).ready( function (){ alert('Usuário ou Senha incorreto!'); });</script>");
 }

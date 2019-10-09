@@ -1,14 +1,11 @@
 <html>
   <a href="estilo/css/bootstrap.min.css"></a>
+  
   <?php
-    
 
     $getPagina = isset($_GET["pagina"]) ? $_GET["pagina"]:"";
 
     switch ($getPagina) {
-      case 'menu':
-        include 'paginas/menu.php';
-        break;
       case 'ranking':
         header("location: paginas/ranking.php");        
         break;

@@ -25,6 +25,10 @@
                     <?php
                         echo "<a class='linkbtn' href='auxGrupo/criaGrupo.php'><button type='button' class='btn btn-dark btn-lg btn-block font botoes'>Criar Grupo</button></a>"
                     ?>
+                    <br>
+                    <?php
+                        echo "<a class='linkbtn' href='auxGrupo/dadosGrupo.php'><button type='button' class='btn btn-dark btn-lg btn-block font botoes'>Visualizar Grupo</button></a>"
+                    ?>
                     </center>
                 </div>
             </div>
