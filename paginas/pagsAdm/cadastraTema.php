@@ -15,7 +15,7 @@ include("../../acao/navbar.php");
             <form action="../../acao/cadastraPergunta.php" method="post">
                 <div class="row">
                     <div class="col-md-12 mt-4 md-6 mx-auto font">
-                        <div class="mx-auto" style="width: 514px;"><h1>Cadastro de Perguntas</h1></div>
+                        <div class="mx-auto" style="width: 412px;"><h2>Cadastro de Perguntas</h2></div>
                     </div>
                     <div class="col-md-6 boxTema">
                         <div class="form-group ">
@@ -73,10 +73,9 @@ include("../../acao/navbar.php");
                     <div class="col-md-12">
                         <button type="submit" class="btn btn-dark btn-lg btn-block font">Cadastrar</button> 
                     </div>
-
                 </div>           
             </form>
-            <a href="menuAdm.php">
+            <a class="linkbtn" href="menuAdm.php">
                 <button type="button" class="btn btn-dark btn-lg btn-block font">Voltar</button>
             </a> 
         </div>

@@ -6,28 +6,26 @@
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="menuAdm.php">ADIMINISTRADOR >> </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item ">
-                            <a class="nav-link" href="cadastraTema.php">Cadastrar Pergunta<span class="sr-only">(página atual)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="cadastraFase.php">Cadastrar Fase</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">xesquedele</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#">
-                                <button type="submit" class="btn btn-danger">Sair</button>
-                            </a>
-                        </li>
-
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <a class="navbar-brand font font" href="menuAdm.php">ADIMINISTRADOR >> </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link letra" href="cadastraTema.php">Cadastrar Pergunta<span class="sr-only">(página atual)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link letra" href="cadastraFase.php">Cadastrar Fase</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link letra" href="../menu.php">Jogo</a>
+                    </li>
+                </ul>
+                <a href="../login.php">
+                    <button type="submit" class="btn btn-outline-danger my-2 my-sm-0 letra">Sair</button>
+                </a>
         <!--
             <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -50,7 +48,8 @@
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
         </form>
         -->
-        </div>
+                    
+            </div>
         </nav>
     </body>
 </html>
