@@ -1,7 +1,7 @@
 <?php
 
 
-include("menuAdm.php")
+include("../../acao/navbar.php")
 
 ?>
 <html>

@@ -1,6 +1,8 @@
 <?php
 $msg= isset($_GET["msg"]) ? ($_GET["msg"]) :"";
-include("menuAdm.php");
+
+include("../../acao/navbar.php");
+
 ?>
 <html>
     <head>
@@ -13,7 +15,7 @@ include("menuAdm.php");
             <form action="../../acao/cadastraPergunta.php" method="post">
                 <div class="row">
                     <div class="col-md-12 mt-4 md-6 mx-auto font">
-                        <div class="mx-auto" style="width: 514px;"><h1>Cadastro de Perguntas</h1></div>
+                        <div class="mx-auto" style="width: 412px;"><h2>Cadastro de Perguntas</h2></div>
                     </div>
                     <div class="col-md-6 boxTema">
                         <div class="form-group ">
@@ -73,8 +75,8 @@ include("menuAdm.php");
                     </div>
                 </div>           
             </form>
-            <a href="menuAdm.php">
-                <button type="button" class="btn btn-dark btn-block">Voltar</button>
+            <a class="linkbtn" href="menuAdm.php">
+                <button type="button" class="btn btn-dark btn-lg btn-block font">Voltar</button>
             </a> 
         </div>
     </body>
