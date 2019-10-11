@@ -11,11 +11,11 @@ $sucesso = mysqli_affected_rows($conexao);
 offConexao();
 
 
-if( isset($_SESSION["S_usuario"])){
-    $_SESSION["S_usuario"] [] = $usuario;
+if( isset($_SESSION["usuario"])){
+    $_SESSION["usuario"] [] = $usuario;
     header("Location: ../paginas/menu.php");
 }else{
-    $_SESSION["S_usuario"] = array($usuario);
+    $_SESSION["usuario"] = array($usuario);
     header("Location: ../paginas/menu.php");
 }
 

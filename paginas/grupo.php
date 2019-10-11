@@ -19,11 +19,11 @@
                 <div class="col-sm-12">
                     <center>
                     <?php
-                        echo "<a class='linkbtn' href='auxGrupo/codigoGrupo.php'><button type='button' class='btn btn-dark btn-lg btn-block font botoes'>Entrar em Grupo</button></a>"
+                        echo "<a class='linkbtn' href='auxGrupo/codigoGrupo.php'><button type='button' class='btn btn-dark btn-lg btn-block font botoes'>Entrar em um Novo Grupo</button></a>"
                     ?>
                     <br>
                     <?php
-                        echo "<a class='linkbtn' href='auxGrupo/criaGrupo.php'><button type='button' class='btn btn-dark btn-lg btn-block font botoes'>Criar Grupo</button></a>"
+                        echo "<a class='linkbtn' href='auxGrupo/telaGrupo.php'><button type='button' class='btn btn-dark btn-lg btn-block font botoes'>Criar Grupo</button></a>"
                     ?>
                     <br>
                     <?php

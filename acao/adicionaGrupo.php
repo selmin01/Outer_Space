@@ -3,48 +3,41 @@
 session_start();
 include "../bancoOuterSpace/banco.php";
 
-$dados = $_SESSION["post"];
+$usuario = $_SESSION["usuario"];
 
-$grupo = array($dados["descricaoGrupo"]);
+$grupo = $_SESSION["dadosGrupo"];
 
-$membro = $dados["usuario_idUsuario"];
+$idGrupo = $grupo[0]["idGrupo"];
 
-$codigo = rand(1, 1000);
+$nick = $usuario[0]["nick"];
 
 onConexao();
 
-$dadosRanking = array("usuario" => $membro, "ponto" => 0);
+$arrayUsuario = selecionar("SELECT * FROM usuario WHERE nick = '$nick'");
 
-$idRanking = inserir('rankinggrupo', $dadosRanking);
-
-$dadosGrupo = array("codigo" => $codigo, "rankingGrupo_idRankingGrupo" => $idRanking, "descricaoGrupo" => $dados["descricaoGrupo"]);
-
-$idGrupo = inserir('grupo', $dadosGrupo);
-
-$arrayDados = selecionar("SELECT * FROM usuario WHERE nick = '$membro'");
-
-$idUsuario = array_column($arrayDados, 'idUsuario');
+$idUsuario = array_column($arrayUsuario, "idUsuario");
 
 $idUsuario = implode("", $idUsuario);
 
-//$dadosUsuarioGrupo = array("usuario_idUsuario" => $idUsuario, "grupo_idGrupo" => $idGrupo);
-
 $usuarioGrupo = array("usuario_idUsuario" => $idUsuario, "grupo_idGrupo" => $idGrupo);
 
-inserir('usuariogrupo', $usuarioGrupo);
+inserir('usuarioGrupo', $usuarioGrupo);
+
+$rankingGrupo = array("usuario" => $nick, "ponto" => 0);
+
+inserir('rankinggrupo', $rankingGrupo);
 
 $sucesso = mysqli_affected_rows($conexao);
 
 offConexao();
 
-$pagGrupo = array($codigo, $grupo, $idRanking);
-
 if($sucesso >= 1) {
-    $_SESSION["dadosGrupo"] = $pagGrupo;
     header("Location: ../paginas/auxGrupo/dadosGrupo.php");
- }else{
-    header("Location: ../paginas/auxGrupo/criaGrupo.php?msg=2");
- }
+} else {
+    header("Location: ../paginas/auxGrupo/codigoGrupo.php?msg=2");
+}
+
+
 
 ?>
 </pre>
