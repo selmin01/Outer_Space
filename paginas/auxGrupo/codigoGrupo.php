@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="../../estilo/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="../../estilo/css/grupo.css"/>
         <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet"/>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     </head>
     <body>
     <div class="mx-auto box">
@@ -15,9 +16,9 @@
             <div class="form-group row">
                 <div class="col-sm-12">
                     <center>
-                    <form>
+                    <form action="../../acao/validaCodigo.php" method="post">
                         <div class="form-group">
-                            <input type="text" class="form-control" name="codigoGrupo" maxlength="50" required/>
+                            <input type="text" class="form-control" name="codigo" maxlength="50" required/>
                         </div>
                         <button type="submit" class="btn btn-dark btn-lg btn-block font botoes">Enviar</button>
                     </form>
@@ -36,3 +37,11 @@
         </center>
     </body>
 </html>
+<?php
+$msg= isset($_GET["msg"]) ? ($_GET["msg"]) :"";
+if($msg == 1){
+    echo("<script>$(document).ready( function (){ alert('Código de Grupo Inexistente.'); });</script>");
+} elseif($msg == 2) {
+    echo("<script>$(document).ready( function (){ alert('Erro ao cadastrar.'); });</script>");
+}
+?>
