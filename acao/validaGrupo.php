@@ -1,3 +1,4 @@
+<pre>
 <?php
 session_start();
 include "../bancoOuterSpace/banco.php";
@@ -16,10 +17,13 @@ $usuario = selecionar("SELECT * FROM usuario WHERE nick = '$membro'");
 
 offConexao();
 
-if(($grupo == $descricaoGrupo) || empty($usuario)) {
-    header("Location: ../paginas/auxGrupo/criaGrupo.php?msg=1");
+$nomeGrupo = $grupo[0]["descricaoGrupo"];
+
+if(($nomeGrupo == $descricaoGrupo) || empty($usuario)) {
+    header("Location: ../paginas/auxGrupo/telaGrupo.php?msg=1");
 }else {
     $_SESSION["post"] = $_POST;
-    header("Location: adicionaGrupo.php");
+    header("Location: criaGrupo.php");
 }
 ?>
+</pre>

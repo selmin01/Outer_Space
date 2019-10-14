@@ -35,7 +35,7 @@
         </div>
         <div class="col-sm-10">
           <?php
-            echo "<a class='linkbtn' href='../index.php?pagina=sair' ><button type='button' class='btn btn-dark btn-lg btn-block font botao'>Sair</button></a>"
+            echo "<a class='linkbtn' href='../acao/logoutUsuario.php' ><button type='button' class='btn btn-dark btn-lg btn-block font botao'>Sair</button></a>"
           ?>
         </div>
       </div>

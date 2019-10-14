@@ -27,8 +27,6 @@ $idUsuario = array_column($arrayDados, 'idUsuario');
 
 $idUsuario = implode("", $idUsuario);
 
-//$dadosUsuarioGrupo = array("usuario_idUsuario" => $idUsuario, "grupo_idGrupo" => $idGrupo);
-
 $usuarioGrupo = array("usuario_idUsuario" => $idUsuario, "grupo_idGrupo" => $idGrupo);
 
 inserir('usuariogrupo', $usuarioGrupo);

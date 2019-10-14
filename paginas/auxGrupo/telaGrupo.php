@@ -46,5 +46,5 @@
 <?php
 $msg= isset($_GET["msg"]) ? ($_GET["msg"]) :"";
 if($msg==1){
-    echo("<script>$(document).ready( function (){ alert('Grupo não criado! Verifique campos preenchidos novamente.'); });</script>");
+    echo("<script>$(document).ready( function (){ alert('Já existe um grupo com esse nome ou esse usuário não existe.'); });</script>");
 }
