@@ -5,11 +5,48 @@ include("../../acao/navbar.php")
 
 ?>
 <html>
-<head>
-</head>
-<body>
-    
-</body>
+	<head>
+        <link rel="stylesheet" href="../../estilo/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../estilo/css/cadastroTema.css">
+        <link href="https://fonts.googleapis.com/css?family=Orbitron&amp;display=swap" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>    
+
+	<body>
+		<div class="container">
+            <form action="../../acao/cadastraFase.php" method="post">
+                <div class="row">
+                    <div class="col-md-12 mt-4 md-6 mx-auto font">
+                        <div class="mx-auto" style="width: 350px;"><h2>Cadastro de Fase</h2></div>
+                    </div>
+                    <div class="col-md-6 boxTema">
+                        <div class="form-group ">
+                            <label for="formGroupExampleInput"><h5 class="font">Velocidade da Nave</h5></label>
+                            <select name="tema" class="form-control" required="">
+                                <option value=""> -- </option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+								<option value="3">3</option>
+                                <option value="4">4</option>
+								<option value="5">5</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput"><h5 class="font">Quantidade de meteoros</h5></label>
+                            <input type="number" >
+                        </div>
+                    </div>
+                    
+                    </div>
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-dark btn-lg btn-block font">Cadastrar</button> 
+                    </div>
+                </div>           
+            </form>
+            <a class="linkbtn" href="menuAdm.php">
+                <button type="button" class="btn btn-dark btn-lg btn-block font">Voltar</button>
+            </a> 
+        </div>
+	</body>
 </html>
 // Matriz com todos os participantes
 $participantes = array("Rafael", "João", "Maria", "Pedro", "Patricia", "Camila", "Roberto");
