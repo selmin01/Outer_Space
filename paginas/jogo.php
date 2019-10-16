@@ -24,5 +24,6 @@ session_start();
     </div>
 
     <div id="naveJog" class="naveJog"></div>
-  </body>
+
+    </body>
 </html>

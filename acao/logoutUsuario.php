@@ -6,4 +6,5 @@ if(!empty($_SESSION["usuario"])) {
     header("Location: ../index.php?pagina=sair");
 }
 
+
 ?>
