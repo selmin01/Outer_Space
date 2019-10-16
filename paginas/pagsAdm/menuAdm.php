@@ -6,7 +6,7 @@ include("../../acao/navbar.php");
 <head>
 </head>
 <body>
-    <div class="logo">
+    <div class="logo fadeImg">
         <img src="../../estilo/imgs/outerspace_logo.png" height= "200px" width= "600px">
     </div>
 </body>
