@@ -5,7 +5,7 @@ include "../bancoOuterSpace/banco.php";
 
 $dados = $_SESSION["post"];
 
-$grupo = array($dados["descricaoGrupo"]);
+$grupo = $dados["descricaoGrupo"];
 
 $membro = $dados["usuario_idUsuario"];
 
@@ -35,11 +35,9 @@ $sucesso = mysqli_affected_rows($conexao);
 
 offConexao();
 
-$pagGrupo = array($codigo, $grupo, $idRanking);
-
 if($sucesso >= 1) {
-    $_SESSION["dadosGrupo"] = $pagGrupo;
-    header("Location: ../paginas/auxGrupo/dadosGrupo.php");
+    $_SESSION["rankingGrupo"] = $dados;
+    header("Location: rankingGrupo.php");
  }else{
     header("Location: ../paginas/auxGrupo/criaGrupo.php?msg=2");
  }
