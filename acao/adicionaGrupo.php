@@ -30,14 +30,13 @@ inserir('rankinggrupo', $rankingGrupo);
 $sucesso = mysqli_affected_rows($conexao);
 
 offConexao();
-
+$descricaoGrupo = $grupo[0]["descricaoGrupo"];
+$ranking = array("nick" => $nick,"descricaoGrupo" => $descricaoGrupo);
 if($sucesso >= 1) {
-    header("Location: ../paginas/auxGrupo/dadosGrupo.php");
+    $_SESSION["rankingGrupo"] = $ranking;
+    header("Location: rankingGrupo.php");
 } else {
     header("Location: ../paginas/auxGrupo/codigoGrupo.php?msg=2");
 }
-
-
-
 ?>
 </pre>

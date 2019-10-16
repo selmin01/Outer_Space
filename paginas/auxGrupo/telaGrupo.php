@@ -23,7 +23,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="formGroupExampleInput">Adicionar Membro:</label>
+                            <label for="formGroupExampleInput">Seu Nick:</label>
                             <input type="text" class="form-control" name="usuario_idUsuario" maxlength="50" required/>
                         </div>
                         <button type="submit" class="btn btn-dark btn-lg btn-block font botoes">Criar</button>

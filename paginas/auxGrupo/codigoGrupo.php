@@ -20,7 +20,7 @@
                         <div class="form-group">
                             <input type="text" class="form-control" name="codigo" maxlength="50" required/>
                         </div>
-                        <button type="submit" class="btn btn-dark btn-lg btn-block font botoes">Enviar</button>
+                        <button type="submit" class="btn btn-dark btn-lg btn-block font botoes">Entrar</button>
                     </form>
                     </center>
                 </div>

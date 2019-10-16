@@ -1,10 +1,11 @@
 <?php
 session_start();
 include "../../bancoOuterSpace/banco.php"; 
-if(isset($_SESSION["dadosGrupo"])){
-    $codGrupo=$_SESSION["dadosGrupo"][0];
-    $nomeGrupo=$_SESSION["dadosGrupo"][1][0];
-    $idRankingGrupo = $_SESSION["dadosGrupo"][2];
+if(isset($_SESSION["rankingGrupo"])){
+    $dados = $_SESSION["rankingGrupo"];
+    $codGrupo= $dados[0]["codigo"];
+    $nomeGrupo= $dados[0]["descricaoGrupo"];
+    $integranteGrupo = $dados[0]["nick"];
 }
 ?>
 <html>
@@ -39,11 +40,6 @@ if(isset($_SESSION["dadosGrupo"])){
                 <div class="col-sm-12">
                     <center><h3 class="font2"> >> <?php echo($nomeGrupo)?> << </h3></center>
                     <br>
-                        <?php 
-                            onConexao();
-                            $rankingGrupo = selecionar("SELECT * FROM rankinggrupo WHERE idRankingGrupo = '$idRankingGrupo'");
-                            offConexao();
-                        ?>
                         <div class="container">
                             <div class="mx-auto RankingGrupo">
                                 <table class="table table-sm">
@@ -56,15 +52,15 @@ if(isset($_SESSION["dadosGrupo"])){
                                 </thead>
                                 <tbody>
                                 <?php
-                                    if(isset($_SESSION["dadosGrupo"])){
-                                        foreach ($rankingGrupo as $key => $usu){
+                                    if(isset($_SESSION["rankingGrupo"])){
+                                        foreach ($dados as $key => $usu){
                                             $key++;
                                             echo "<tr>";
                                             echo "<td>";
                                             echo $key."º";
                                             echo "</td>";
                                             echo "<td>";
-                                            echo $usu["usuario"];
+                                            echo $usu["nick"];
                                             echo "</td>";
                                             echo "<td>";
                                             echo $usu["ponto"];
@@ -87,7 +83,12 @@ if(isset($_SESSION["dadosGrupo"])){
         <br>
         <div class="col-sm-2">
             <?php
-              echo "<a class='linkbtn' href='../grupo.php'><button type='button' class='btn btn-dark btn-lg btn-block font botao'><< Voltar</button></a>"
+                echo "<a class='linkbtn' href='../grupo.php'><button type='button' class='btn btn-dark btn-lg btn-block font botao'><< Voltar</button></a>";
+            ?>
+        </div>
+        <div class="col-sm-2">
+            <?php
+                echo "<a class='linkbtn' href=''><button type='button' class='btn btn-dark btn-lg btn-block font botao'>Sair do Grupo</button></a>";
             ?>
         </div>
     </body>
