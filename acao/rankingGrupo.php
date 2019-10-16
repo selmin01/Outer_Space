@@ -13,7 +13,7 @@ echo $grupo;
 
 onConexao();
 
-$arrayDados = selecionar("SELECT u.nick, g.descricaoGrupo, rg.ponto 
+$arrayDados = selecionar("SELECT u.nick, g.descricaoGrupo, g.codigo, rg.ponto 
                             FROM usuario u INNER JOIN usuariogrupo ug 
                             ON u.idUsuario = ug.usuario_idUsuario 
                             INNER JOIN grupo g 
@@ -23,11 +23,11 @@ $arrayDados = selecionar("SELECT u.nick, g.descricaoGrupo, rg.ponto
                             WHERE g.descricaoGrupo = '$grupo' 
                             ORDER BY rg.ponto;");
 
+$sucesso = mysqli_affected_rows($conexao);
 offConexao();
 
-$sucesso = mysqli_affected_rows($conexao);
-
 if($sucesso >= 1) {
+    $_SESSION["rankingGrupo"] = $arrayDados;
     header("Location: ../paginas/auxGrupo/dadosGrupo.php");
 } else {
     header("Location: ../paginas/auxGrupo/telaGrupo.php?msg=5");
