@@ -9,7 +9,7 @@ $grupo = $_SESSION["dadosGrupo"];
 
 $idGrupo = $grupo[0]["idGrupo"];
 
-$nick = $usuario[0]["nick"];
+$nick = $usuario["nick"];
 
 onConexao();
 

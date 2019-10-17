@@ -1,7 +1,10 @@
 <?php
 session_start();
 include "../../bancoOuterSpace/banco.php"; 
-print_r($_SESSION["rankingGrupo"]);
+if(isset($_SESSION["usuario"])){
+    $usuario = $_SESSION["usuario"];
+    $nick = $usuario["nick"];
+}
 if(isset($_SESSION["rankingGrupo"])){
     $dados = $_SESSION["rankingGrupo"];
     $codGrupo= $dados[0]["codigo"];
@@ -30,7 +33,7 @@ if(isset($_SESSION["rankingGrupo"])){
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-            <a class="navbar-brand font" href="menuAdm.php"><?php echo $integranteGrupo; ?> </a>
+            <a class="navbar-brand font" href="menuAdm.php"><?php echo $nick; ?> </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
                 <span class="navbar-toggler-icon"></span>
             </button>
