@@ -4,6 +4,7 @@ use outerSpace;
 create table usuario (
 	idUsuario int AUTO_INCREMENT not null,
     fase_idFase int,
+    permissao int,
     nome varchar(50),
     nick varchar(20),
     email varchar(60),
@@ -118,13 +119,14 @@ references rankingGrupo (idRankingGrupo);
 
 insert into usuario (
 	idUsuario,
+    permissao,
     nome,
     nick,
     email,
-    senha,
-    maxPonto
+    senha
 )
-value (1, "Henrique", "hacker", "henrique@mail.com", "java=1000", "1999999");
+
+value (1, 0, "Administrador", "admin", "admin@mail.com", "123");
     
 insert into usuarioGrupo (
 	idUsuarioGrupo
