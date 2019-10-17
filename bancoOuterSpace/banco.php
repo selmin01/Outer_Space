@@ -1,4 +1,3 @@
-<pre>
 <?php
 function onConexao() {
     global $conexao;
@@ -69,6 +68,5 @@ function apagar($tabela, $condicao = null) {
     $resultado = executar($sql, $condicao);
     return $resultado;
 }
-
 ?>
-</pre>
+
