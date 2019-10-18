@@ -1,5 +1,4 @@
 <?php
-
 ?>
 <html>
     <head>
@@ -8,6 +7,7 @@
         <link rel="stylesheet" href="../estilo/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="../estilo/css/grupo.css"/>
         <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet"/>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     </head>
     <body>
         <div class="mx-auto box">
@@ -27,7 +27,7 @@
                     ?>
                     <br>
                     <?php
-                        echo "<a class='linkbtn' href='auxGrupo/dadosGrupo.php'><button type='button' class='btn btn-dark btn-lg btn-block font botoes'>Visualizar Grupo</button></a>"
+                        echo "<a class='linkbtn' href='../acao/contemGrupo.php'><button type='button' class='btn btn-dark btn-lg btn-block font botoes'>Visualizar Grupo</button></a>"
                     ?>
                     </center>
                 </div>
@@ -45,3 +45,9 @@
         </center>
     </body>
 </html>
+<?php
+$msg= $_GET["msg"];
+if($msg==1){
+    echo("<script>$(document).ready( function (){ alert('Você NÃO possui grupo!'); });</script>");
+}
+?>
