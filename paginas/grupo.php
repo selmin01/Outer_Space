@@ -46,7 +46,7 @@
     </body>
 </html>
 <?php
-$msg= isset($_GET["msg"]);
+$msg = isset($_GET["msg"]) ? ($_GET["msg"]) :"";
 if($msg==1){
     echo("<script>$(document).ready( function (){ alert('Você NÃO possui grupo!'); });</script>");
 }
