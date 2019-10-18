@@ -19,5 +19,4 @@ if($id_usuario==$usuario_idUsuario){
 }else{
     header ("Location: ../paginas/Grupo.php?msg=1");
 }
-
 ?>
