@@ -4,6 +4,7 @@ include "../../bancoOuterSpace/banco.php";
 if(isset($_SESSION["usuario"])){
     $usuario = $_SESSION["usuario"];
     $nick = $usuario["nick"];
+    $id = $usuario["idUsuario"];
 }
 if(isset($_SESSION["rankingGrupo"])){
     $dados = $_SESSION["rankingGrupo"];
@@ -16,6 +17,18 @@ if(isset($_SESSION["rankingGrupo"])){
     $nomeGrupo="";
     $integranteGrupo="";
 }
+
+onConexao();
+
+$arrayDados = selecionar("SELECT g.descricaoGrupo
+                        FROM usuario u 
+                        INNER JOIN usuariogrupo ug
+                        ON u.idUsuario = ug.usuario_idUsuario
+                        INNER JOIN grupo g
+                        ON ug.grupo_idGrupo = g.idGrupo
+                        WHERE ug.usuario_idUsuario = '$id'");
+
+print_r($arrayDados);
 ?>
 <html>
     <head>
@@ -45,7 +58,7 @@ if(isset($_SESSION["rankingGrupo"])){
                         <a class="dropdown-item" href="#">Action</a>
                         <a class="dropdown-item" href="#">Another action</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="#">Something else here</a> 
                         </div>
                     </li>
                     <li class="nav-item">
