@@ -20,6 +20,7 @@ if(isset($_SESSION["rankingGrupo"])){
 
 onConexao();
 
+
 $arrayDados = selecionar("SELECT g.descricaoGrupo, g.idGrupo
                             FROM usuario u
                             INNER JOIN usuariogrupo ug

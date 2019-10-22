@@ -34,23 +34,12 @@ include("../../acao/navbar.php")
                             <input type="number" class="meteoro" name="qtdMeteoro">
                         </div>
                         <div class="form-group">
-                            <label for="formGroupExampleInput"><h5 class="font">Tempo da Fase</h5></label>
-                            <input type="time" class="tempo" name="tempo" >
+                            <label for="formGroupExampleInput"><h5 class="font">Tempo da Fase (Em Minutos)</h5></label>
+                            <input type="time" class="tempo" name="tempo" min="00:01:00" max="00:30:00">
                         </div>
                     </div>
                     
                     </div>
-                    <div class="form-group ">
-                            <label for="formGroupExampleInput"><h5 class="font">Pergunta da Fase</h5></label>
-                            <select name="pergunta_idPergunta" class="form-control" required="">
-                                <option value=""> -- </option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-								<option value="3">3</option>
-                                <option value="4">4</option>
-								<option value="5">5</option>
-                            </select>
-                        </div>
                         <div class="col-md-12">
                         <button type="submit" class="btn btn-dark btn-lg btn-block font">Cadastrar</button> 
                     </div>
