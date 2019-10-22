@@ -1,17 +1,14 @@
-<pre>
 <?php
 include "../bancoOuterSpace/banco.php";
 session_start();
 
+$idGrupo = $_GET["id"];
+
 $dados = $_SESSION["rankingGrupo"];
 
-print_r($dados);
-
-$grupo = $dados["descricaoGrupo"];
-
-echo $grupo;
-
 onConexao();
+
+$arrayGrupo = selecionar("SELECT * FROM");
 
 $arrayDados = selecionar("SELECT u.nick, g.descricaoGrupo, g.codigo, rg.ponto 
                             FROM usuario u INNER JOIN usuariogrupo ug 
@@ -20,7 +17,7 @@ $arrayDados = selecionar("SELECT u.nick, g.descricaoGrupo, g.codigo, rg.ponto
                             ON ug.grupo_idGrupo = g.idGrupo 
                             INNER JOIN rankinggrupo rg 
                             ON g.rankingGrupo_idRankingGrupo = rg.idRankingGrupo 
-                            WHERE g.descricaoGrupo = '$grupo' 
+                            WHERE g.idGrupo = '$idGrupo' 
                             ORDER BY rg.ponto;");
 
 $sucesso = mysqli_affected_rows($conexao);
@@ -34,4 +31,3 @@ if($sucesso >= 1) {
 }
 
 ?>
-</pre>
