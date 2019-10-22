@@ -17,7 +17,7 @@
                         <a class="nav-link letra" href="cadastraTema.php">Cadastrar Pergunta<span class="sr-only">(página atual)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link letra" href="cadastraFase.php">Cadastrar Fase</a>
+                        <a class="nav-link letra" href="telaFase.php">Cadastrar Fase</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link letra" href="../menu.php">Jogo</a>
