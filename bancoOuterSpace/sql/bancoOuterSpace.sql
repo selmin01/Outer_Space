@@ -126,7 +126,7 @@ insert into usuario (
     senha
 )
 
-value (1, 0, "Administrador", "admin", "admin@mail.com", "123");
+value (1, 1, "Administrador", "admin", "admin@mail.com", "123");
     
 insert into usuarioGrupo (
 	idUsuarioGrupo

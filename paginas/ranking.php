@@ -1,3 +1,18 @@
+<?php
+
+include "../bancoOuterSpace/banco.php";
+
+$select = selecionar("SELECT * FROM usuario");
+
+
+//if()
+
+
+?>
+
+
+
+<!--
 <html>
     <head>
         <meta charset="utf-8">
@@ -52,8 +67,8 @@
         <br>
         <div class="col-sm-2">
             <?php
-              echo "<a class='linkbtn' href='menu.php' ><button type='button' class='btn btn-dark btn-lg btn-block font botao'><< Voltar</button></a>"
+              //echo "<a class='linkbtn' href='menu.php' ><button type='button' class='btn btn-dark btn-lg btn-block font botao'><< Voltar</button></a>"
             ?>
         </div>
     </body>
-</html>
+</html>-->

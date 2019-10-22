@@ -2,6 +2,7 @@
 session_start();
 include "../bancoOuterSpace/banco.php";
 
+
 $dados = $_SESSION["post"];
 
 unset($dados["confir_senha"]);

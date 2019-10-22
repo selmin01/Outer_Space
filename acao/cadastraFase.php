@@ -10,8 +10,5 @@ onConexao();
 
 inserir('fase', $dados);
 
-$perguntas = selecionar("SELECT * FROM pergunta");
-
-print_r($perguntas);
 ?>
 </pre>
