@@ -4,14 +4,26 @@ include "../../bancoOuterSpace/banco.php";
 if(isset($_SESSION["usuario"])){
     $usuario = $_SESSION["usuario"];
     $nick = $usuario["nick"];
+    $idUsuario = $usuario["idUsuario"];
 }
 if(isset($_SESSION["rankingGrupo"])){
     $dados = $_SESSION["rankingGrupo"];
     $codGrupo= $dados[0]["codigo"];
     $nomeGrupo= $dados[0]["descricaoGrupo"];
 }
-?>
 
+onConexao();
+
+$arrayDados = selecionar("SELECT g.descricaoGrupo, g.idGrupo
+                            FROM usuario u
+                            INNER JOIN usuariogrupo ug
+                            ON u.idUsuario = ug.usuario_idUsuario
+                            INNER JOIN grupo g
+                            ON ug.grupo_idGrupo = g.idGrupo
+                            WHERE ug.usuario_idUsuario = '$idUsuario'");
+
+offConexao();
+?>
 
 <html>
     <head>
@@ -46,17 +58,16 @@ if(isset($_SESSION["rankingGrupo"])){
                                 </thead>
                                 <tbody>
                                 <?php
-                                    if(isset($_SESSION["rankingGrupo"])){
-                                        foreach ($dados as $key => $grupo){
-                                            $key++;
-                                            echo "<tr>";
-                                            echo "<td>";
-                                            echo "<h5>".$key."º</h5>";
-                                            echo "</td>";
-                                            echo "<td>";
-                                            echo "<a href='../../acao/rankingGrupo.php?codigo=$codGrupo'><h5>".$grupo['descricaoGrupo']."</h5></a>";
-                                            echo "</td>";
-                                        }
+                                    foreach ($arrayDados as $chave => $valor){
+                                        $chave++;
+                                        $idGrupo = $valor["idGrupo"];
+                                        echo "<tr>";
+                                        echo "<td>";
+                                        echo "<h5>".$chave."º</h5>";
+                                        echo "</td>";
+                                        echo "<td>";
+                                        echo "<a href='../../acao/rankingGrupo.php?id=$idGrupo'><h5>".$valor['descricaoGrupo']."</h5></a>";
+                                        echo "</td>";
                                     }
                                 ?>
                                 </tbody>

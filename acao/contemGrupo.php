@@ -15,7 +15,7 @@ offConexao();
 $usuario_idUsuario = $grupo[0]["usuario_idUsuario"];
 echo $usuario_idUsuario;
 if($id_usuario==$usuario_idUsuario){
-    header ("Location: ../paginas/auxGrupo/dadosGrupo.php");
+    header ("Location: ../paginas/auxGrupo/carregaGrupo.php");
 }else{
     header ("Location: ../paginas/Grupo.php?msg=1");
 }
