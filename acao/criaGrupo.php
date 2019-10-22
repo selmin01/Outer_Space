@@ -1,4 +1,3 @@
-<pre>
 <?php
 session_start();
 include "../bancoOuterSpace/banco.php";
@@ -43,4 +42,3 @@ if($sucesso >= 1) {
  }
 
 ?>
-</pre>

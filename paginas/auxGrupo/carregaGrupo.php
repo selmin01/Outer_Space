@@ -27,26 +27,21 @@ offConexao();
 
 <html>
     <head>
-
         <meta charset="utf-8">
         <title>Outer Space</title>
         <link rel="stylesheet" href="../../estilo/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="../../estilo/css/grupo.css"/>
         <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet"/>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-
     </head>
     <body>
-    
     <div class="mx-auto box">
             <center>
                 <h1 class="font titulo">SEUS GRUPOS</h1>
             </center>
             <div class="form-group row">
                 <div class="col-sm-12">
-                    <!--<center><h3 class="font2"> >> <?php //echo($nomeGrupo)?> << </h3></center>-->
                     <br>
-                    
                         <div class="container">
                             <div class="mx-auto RankingGrupo">
                                 <table class="table">
@@ -79,10 +74,5 @@ offConexao();
                 </div>
             </div>
         </div>
-
-
-
-
-
     </body>
 </html>
