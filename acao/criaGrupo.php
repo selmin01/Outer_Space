@@ -34,9 +34,10 @@ $sucesso = mysqli_affected_rows($conexao);
 
 offConexao();
 
+
 if($sucesso >= 1) {
     $_SESSION["rankingGrupo"] = $dados;
-    header("Location: rankingGrupo.php");
+    header("Location: rankingGrupo.php?id=$idGrupo");
  }else{
     header("Location: ../paginas/auxGrupo/criaGrupo.php?msg=2");
  }
