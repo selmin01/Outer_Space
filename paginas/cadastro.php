@@ -38,6 +38,7 @@
                         <label for="formGroupExampleInput">Confirmar Senha:</label>
                         <input type="password" class="form-control" name="confir_senha" maxlength="50" required/>
                     </div>
+                    <input type="hidden" name="permissao" value="0">
                     <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
                 </form>
                 <a href="login.php" class="linkbtn">

@@ -9,9 +9,12 @@ $arrayUsu = selecionar("SELECT * FROM usuario WHERE senha='$senha' and nick='$ni
 offConexao();
 //print_r($arrayUsu);
 $id_usuario = $arrayUsu [0]["idUsuario"];
-$usuario = array("idUsuario"=>$id_usuario ,"nick"=>$nick, "senha"=>$senha);
+$permissao = $arrayUsu [0]["permissao"];
+$usuario = array("idUsuario"=>$id_usuario ,"nick"=>$nick, "senha"=>$senha, "permissao"=>$permissao);
 //print_r($usuario);
-if(count($arrayUsu)==1){
+if ($usuario["permissao"] == 1){
+    header("Location: sessaoAdm.php");
+}else if(count($arrayUsu)==1){
     $_SESSION["usuario"] = $usuario;
     header("Location: ../paginas/menu.php");
 }else{
