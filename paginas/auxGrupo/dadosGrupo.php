@@ -4,7 +4,7 @@ include "../../bancoOuterSpace/banco.php";
 if(isset($_SESSION["usuario"])){
     $usuario = $_SESSION["usuario"];
     $nick = $usuario["nick"];
-    $id = $usuario["idUsuario"];
+    $idUsuario = $usuario["idUsuario"];
 }
 if(isset($_SESSION["rankingGrupo"])){
     $dados = $_SESSION["rankingGrupo"];
@@ -20,15 +20,16 @@ if(isset($_SESSION["rankingGrupo"])){
 
 onConexao();
 
-$arrayDados = selecionar("SELECT g.descricaoGrupo
-                        FROM usuario u 
-                        INNER JOIN usuariogrupo ug
-                        ON u.idUsuario = ug.usuario_idUsuario
-                        INNER JOIN grupo g
-                        ON ug.grupo_idGrupo = g.idGrupo
-                        WHERE ug.usuario_idUsuario = '$id'");
 
-print_r($arrayDados);
+$arrayDados = selecionar("SELECT g.descricaoGrupo, g.idGrupo
+                            FROM usuario u
+                            INNER JOIN usuariogrupo ug
+                            ON u.idUsuario = ug.usuario_idUsuario
+                            INNER JOIN grupo g
+                            ON ug.grupo_idGrupo = g.idGrupo
+                            WHERE ug.usuario_idUsuario = '$idUsuario'");
+
+offConexao();
 ?>
 <html>
     <head>
@@ -55,10 +56,12 @@ print_r($arrayDados);
                         Grupos
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a> 
+                        <?php
+                            foreach($arrayDados as $chave => $valor) {
+                                $idGrupo = $valor["idGrupo"];
+                                echo "<a class='dropdown-item' href='../../acao/rankingGrupo.php?id=$idGrupo'>". $valor["descricaoGrupo"] ."</a>";
+                            }
+                        ?>
                         </div>
                     </li>
                     <li class="nav-item">
