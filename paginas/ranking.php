@@ -8,10 +8,6 @@ $select = selecionar("SELECT * FROM usuario");
 
 
 ?>
-
-
-
-
 <html>
     <head>
         <meta charset="utf-8">
