@@ -8,7 +8,7 @@ $dados = $_SESSION["rankingGrupo"];
 
 onConexao();
 
-$arrayGrupo = selecionar("SELECT * FROM");
+//$arrayGrupo = selecionar("SELECT * FROM");
 
 $arrayDados = selecionar("SELECT u.nick, g.descricaoGrupo, g.codigo, rg.ponto 
                             FROM usuario u INNER JOIN usuariogrupo ug 
