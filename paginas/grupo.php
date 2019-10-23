@@ -1,4 +1,6 @@
 <?php
+session_start();
+include "../acao/persistenciaUsuario.php";
 ?>
 <html>
     <head>
