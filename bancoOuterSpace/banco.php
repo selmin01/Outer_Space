@@ -1,7 +1,7 @@
 <?php
 function onConexao() {
     global $conexao;
-    $conexao = mysqli_connect("localhost","root", "root","outerspace");
+    $conexao = mysqli_connect("localhost","root", "","outerspace");
 }
 
 function offConexao() {
@@ -63,8 +63,7 @@ function selecionar($sql){
     return $arrayDados;
 }
 
-function apagar($tabela, $condicao = null) {
-    $sql = "DELETE FROM ". $tabela;
+function apagar($sql, $condicao = null) {
     $resultado = executar($sql, $condicao);
     return $resultado;
 }

@@ -68,7 +68,9 @@ offConexao();
                         <a class="nav-link letra" href="../menu.php">Menu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link letra" href="">Sair do Grupo</a>
+                        <?php
+                            echo "<a class='nav-link letra' href='../../acao/deixarGrupo.php?id=$idGrupo'>Sair do Grupo</a>";
+                        ?>
                     </li>
                 </ul>
                 <a href="../grupo.php">

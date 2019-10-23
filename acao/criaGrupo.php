@@ -16,7 +16,7 @@ $dadosRanking = array("usuario" => $membro, "ponto" => 0);
 
 $idRanking = inserir('rankinggrupo', $dadosRanking);
 
-$dadosGrupo = array("codigo" => $codigo, "rankingGrupo_idRankingGrupo" => $idRanking, "descricaoGrupo" => $dados["descricaoGrupo"]);
+$dadosGrupo = array("codigo" => $codigo, "descricaoGrupo" => $dados["descricaoGrupo"]);
 
 $idGrupo = inserir('grupo', $dadosGrupo);
 
@@ -30,10 +30,14 @@ $usuarioGrupo = array("usuario_idUsuario" => $idUsuario, "grupo_idGrupo" => $idG
 
 inserir('usuariogrupo', $usuarioGrupo);
 
+$idGrupo = array("grupo_idGrupo" => $idGrupo);
+alterar('rankinggrupo', $idGrupo, "idRankingGrupo = ". $idRanking);
+
 $sucesso = mysqli_affected_rows($conexao);
 
 offConexao();
 
+$idGrupo = implode("", $idGrupo);
 
 if($sucesso >= 1) {
     $_SESSION["rankingGrupo"] = $dados;

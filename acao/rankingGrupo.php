@@ -16,7 +16,7 @@ $arrayDados = selecionar("SELECT u.nick, g.descricaoGrupo, g.codigo, rg.ponto
                             INNER JOIN grupo g 
                             ON ug.grupo_idGrupo = g.idGrupo 
                             INNER JOIN rankinggrupo rg 
-                            ON g.rankingGrupo_idRankingGrupo = rg.idRankingGrupo 
+                            ON g.idGrupo = rg.grupo_idGrupo 
                             WHERE g.idGrupo = '$idGrupo' 
                             ORDER BY rg.ponto;");
 
