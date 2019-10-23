@@ -65,7 +65,7 @@ create table grupo (
 );
 create table rankingGrupo (
 	idRankingGrupo int AUTO_INCREMENT,
-    /*grupo_idGrupo int,*/
+    grupo_idGrupo int,
     usuario varchar(50),
     ponto int,
     primary key (idRankingGrupo)
@@ -80,12 +80,16 @@ create table ranking (
 alter table usuario
 add constraint fk_fase
 foreign key (fase_idFase)
-references fase (idFase);
+references fase (idFase)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
 
 alter table fase
 add constraint fk_pergunta
 foreign key (pergunta_idPergunta)
-references pergunta (idPergunta);
+references pergunta (idPergunta)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
 
 alter table pergunta 
 add constraint fk_tema
@@ -93,17 +97,23 @@ foreign key (tema_idTema)
 references tema (idTema),
 add constraint fk_bonus
 foreign key (bonus_idBonus)
-references bonus (idBonus);
+references bonus (idBonus)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
 
 alter table alternativa
 add constraint fk_pergunta_alternativa
 foreign key (pergunta_idPergunta)
-references pergunta (idPergunta);
+references pergunta (idPergunta)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
 
 alter table bonus
 add constraint fk_tipo
 foreign key (tipo_idTipo)
-references tipo (idTipo);
+references tipo (idTipo)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
 
 alter table usuarioGrupo
 add constraint fk_usuario
@@ -111,17 +121,16 @@ foreign key (usuario_idUsuario)
 references usuario(idUsuario),
 add constraint fk_grupo
 foreign key (grupo_idGrupo)
-references grupo (idGrupo);
+references grupo (idGrupo)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
 
-alter table grupo 
-add constraint fk_rankingGrupo
-foreign key (rankingGrupo_idRankingGrupo)
-references rankingGrupo (idRankingGrupo);
-/*
 alter table rankinggrupo
 add constraint fk_grupo_RankingGrupo
 foreign key (grupo_idGrupo)
-references grupo (idGrupo); */
+references grupo (idGrupo)
+ON DELETE CASCADE
+ON UPDATE CASCADE; 
 
 insert into usuario (
 	idUsuario,
@@ -198,24 +207,3 @@ value	(1, "Distribui endereço de rede.", 1),
 		(2, "Tradução de enderço.", 0),
 		(3, "Controla o acesso a internet.", 0),
 		(4, "Imprimi arquivos.", 0);
-
-
-/*
-DELETE FROM usuariogrupo
-WHERE usuario_idUsuario = 2
-AND grupo_idGrupo = 2;
-
-DELETE FROM rankinggrupo
-WHERE grupo_idGrupo = 1
-AND idRankingGrupo = 2;
-
-DELETE rankinggrupo FROM rankinggrupo 
-INNER JOIN grupo 
-ON rankinggrupo.idRankingGrupo = grupo.rankingGrupo_idRankingGrupo
-WHERE grupo.idGrupo = 3
-AND grupo.rankingGrupo_idRankingGrupo = 3;
-
-UPDATE rankinggrupo SET grupo_idGrupo = 1 WHERE idRankingGrupo = 2;
-
-SELECT * FROM rankinggrupo; 
-*/
