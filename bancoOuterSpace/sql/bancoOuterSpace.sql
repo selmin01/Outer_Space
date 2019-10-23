@@ -65,6 +65,7 @@ create table grupo (
 );
 create table rankingGrupo (
 	idRankingGrupo int AUTO_INCREMENT,
+    /*grupo_idGrupo int,*/
     usuario varchar(50),
     ponto int,
     primary key (idRankingGrupo)
@@ -116,6 +117,11 @@ alter table grupo
 add constraint fk_rankingGrupo
 foreign key (rankingGrupo_idRankingGrupo)
 references rankingGrupo (idRankingGrupo);
+/*
+alter table rankinggrupo
+add constraint fk_grupo_RankingGrupo
+foreign key (grupo_idGrupo)
+references grupo (idGrupo); */
 
 insert into usuario (
 	idUsuario,
@@ -196,13 +202,20 @@ value	(1, "Distribui endereço de rede.", 1),
 
 /*
 DELETE FROM usuariogrupo
-WHERE usuario_idUsuario = 3
+WHERE usuario_idUsuario = 2
 AND grupo_idGrupo = 2;
+
+DELETE FROM rankinggrupo
+WHERE grupo_idGrupo = 1
+AND idRankingGrupo = 2;
 
 DELETE rankinggrupo FROM rankinggrupo 
 INNER JOIN grupo 
 ON rankinggrupo.idRankingGrupo = grupo.rankingGrupo_idRankingGrupo
 WHERE grupo.idGrupo = 3
-AND grupo.rankingGrupo_idRankingGrupo = 4;
+AND grupo.rankingGrupo_idRankingGrupo = 3;
 
-SELECT * FROM rankinggrupo; */
+UPDATE rankinggrupo SET grupo_idGrupo = 1 WHERE idRankingGrupo = 2;
+
+SELECT * FROM rankinggrupo; 
+*/

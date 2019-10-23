@@ -19,7 +19,7 @@ $idUsuario = array_column($arrayUsuario, "idUsuario");
 
 $idUsuario = implode("", $idUsuario);
 
-$usuarioGrupo = array("usuario_idUsuario" => $idUsuario, "grupo_idGrupo" => $idGrupo);
+$usuarioGrupo = array("grupo_idGrupo" => $idGrupo, "usuario_idUsuario" => $idUsuario, "grupo_idGrupo" => $idGrupo);
 
 inserir('usuarioGrupo', $usuarioGrupo);
 
