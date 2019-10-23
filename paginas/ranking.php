@@ -1,18 +1,3 @@
-<?php
-
-include "../bancoOuterSpace/banco.php";
-
-$select = selecionar("SELECT * FROM usuario");
-
-
-//if()
-
-
-?>
-
-
-
-<!--
 <html>
     <head>
         <meta charset="utf-8">
@@ -71,4 +56,4 @@ $select = selecionar("SELECT * FROM usuario");
             ?>
         </div>
     </body>
-</html>-->
+</html>

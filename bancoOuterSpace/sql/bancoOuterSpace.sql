@@ -192,3 +192,17 @@ value	(1, "Distribui endereço de rede.", 1),
 		(2, "Tradução de enderço.", 0),
 		(3, "Controla o acesso a internet.", 0),
 		(4, "Imprimi arquivos.", 0);
+
+
+/*
+DELETE FROM usuariogrupo
+WHERE usuario_idUsuario = 3
+AND grupo_idGrupo = 2;
+
+DELETE rankinggrupo FROM rankinggrupo 
+INNER JOIN grupo 
+ON rankinggrupo.idRankingGrupo = grupo.rankingGrupo_idRankingGrupo
+WHERE grupo.idGrupo = 3
+AND grupo.rankingGrupo_idRankingGrupo = 4;
+
+SELECT * FROM rankinggrupo; */
