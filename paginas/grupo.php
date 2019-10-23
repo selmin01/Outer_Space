@@ -1,4 +1,6 @@
 <?php
+session_start();
+include "../acao/persistenciaUsuario.php";
 ?>
 <html>
     <head>
@@ -49,5 +51,7 @@
 $msg = isset($_GET["msg"]) ? ($_GET["msg"]) :"";
 if($msg==1){
     echo("<script>$(document).ready( function (){ alert('Você NÃO possui grupo!'); });</script>");
+} elseif($msg == 2) {
+    echo("<script>$(document).ready( function (){ alert('Você saiu do grupo.'); });</script>");
 }
 ?>

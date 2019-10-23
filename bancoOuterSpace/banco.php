@@ -63,8 +63,7 @@ function selecionar($sql){
     return $arrayDados;
 }
 
-function apagar($tabela, $condicao = null) {
-    $sql = "DELETE FROM ". $tabela;
+function apagar($sql, $condicao = null) {
     $resultado = executar($sql, $condicao);
     return $resultado;
 }

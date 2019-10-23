@@ -1,6 +1,6 @@
 <?php
 session_start();
-//echo $_SESSION["S_usuario"];
+include "../acao/persistenciaUsuario.php";
 ?>
 
 <html>
