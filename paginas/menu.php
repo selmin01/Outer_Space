@@ -1,5 +1,5 @@
 <?php
-  session_start();
+  
   //print_r ($_SESSION["S_usuario"]);
   include "../acao/persistenciaUsuario.php";
 ?>
