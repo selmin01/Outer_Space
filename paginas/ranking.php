@@ -1,11 +1,6 @@
 <?php
-include "../bancoOuterSpace/banco.php";
 
-$select = selecionar("SELECT * FROM usuario");
-
-
-//if()
-
+include "../acao/persistenciaUsuario.php";
 
 ?>
 <html>

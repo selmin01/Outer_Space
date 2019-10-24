@@ -1,5 +1,8 @@
 <?php
-session_start();
+
+include "../../acao/persistenciaGrupo.php";
+
+//session_start();
 include "../../bancoOuterSpace/banco.php"; 
 if(isset($_SESSION["usuario"])){
     $usuario = $_SESSION["usuario"];
