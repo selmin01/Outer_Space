@@ -3,6 +3,8 @@ $msg= isset($_GET["msg"]) ? ($_GET["msg"]) :"";
 
 include("../../acao/navbar.php");
 
+include "../../acao/persistenciaUsuario.php";
+
 ?>
 <html>
     <head>
