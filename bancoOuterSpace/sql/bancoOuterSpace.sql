@@ -168,9 +168,14 @@ insert into rankingGrupo (
 value	(1);
 
 insert into ranking (
-	idRanking
+	idRanking,
+    usuario,
+    ponto
 )
-value	(1);
+value	(1, "ricardin", "300"),
+		(2, "selmin", "600"),
+		(3, "henrique zika", "400"),
+        (4, "carlao", "500");
 
 insert into pergunta (
 	idPergunta,
