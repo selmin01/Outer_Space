@@ -72,7 +72,7 @@ create table rankingGrupo (
 );
 create table ranking (
 	idRanking int AUTO_INCREMENT,
-    usuario int,
+    usuario varchar(40),
     ponto int,
     primary key (idRanking)
 );
@@ -172,10 +172,10 @@ insert into ranking (
     usuario,
     ponto
 )
-value	(1, "ricardin", "300"),
-		(2, "selmin", "600"),
-		(3, "henrique zika", "400"),
-        (4, "carlao", "500");
+value	(1, "ricardin", 300),
+		(2, "selmin", 600),
+		(3, "henrique zika", 400),
+        (4, "carlao", 500);
 
 insert into pergunta (
 	idPergunta,
