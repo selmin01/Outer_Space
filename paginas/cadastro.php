@@ -46,11 +46,37 @@
                 </a>
             </div>
         </div>
+
+        <!-- Tratamento de erro! -->
+        <div id="Modal" class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Outer Space Informa.</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Este usuário já existe!</p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="cadastro.php">
+                        <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                        </a>
+                        <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Tratamento de erro! -->
     </body>
 </html>
 <?php
 $msg= isset($_GET["msg"]) ? ($_GET["msg"]) :"";
 if($msg==1){
-    echo("<script>$(document).ready( function (){ alert('Este usuário já existe!'); });</script>");
+    //echo("<script>$(document).ready( function (){ alert('Este usuário já existe!'); });</script>");
+    echo("<script>$(document).ready( function (){ $('#Modal').show('slow'); });</script>");
+    //$("#Modal").show("slow");
 }
 ?>
