@@ -213,7 +213,3 @@ value	(1, "Distribui endereço de rede.", 1),
 		(2, "Tradução de enderço.", 0),
 		(3, "Controla o acesso a internet.", 0),
 		(4, "Imprimi arquivos.", 0);
-        
-        
-        
-        SELECT usuario, ponto FROM ranking ORDER BY ponto Desc Limit 10;
