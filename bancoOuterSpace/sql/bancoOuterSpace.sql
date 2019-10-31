@@ -175,7 +175,8 @@ insert into ranking (
 value	(1, "ricardin", 300),
 		(2, "selmin", 600),
 		(3, "henrique zika", 400),
-        (4, "carlao", 500);
+        (4, "carlao", 500),
+        (5, "zikao", 800);
 
 insert into pergunta (
 	idPergunta,
@@ -212,3 +213,7 @@ value	(1, "Distribui endereço de rede.", 1),
 		(2, "Tradução de enderço.", 0),
 		(3, "Controla o acesso a internet.", 0),
 		(4, "Imprimi arquivos.", 0);
+        
+        
+        
+        SELECT usuario, ponto FROM ranking ORDER BY ponto Desc Limit 10;
