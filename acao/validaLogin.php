@@ -10,7 +10,7 @@ onConexao();
 $arrayUsu = selecionar("SELECT * FROM usuario WHERE senha='$senha' and nick='$nick'");
 
 offConexao();
-    
+
 if(empty($arrayUsu)) {
     header("Location: ../paginas/login.php?msg=1");
 }else {
