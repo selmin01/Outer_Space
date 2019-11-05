@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="../estilo/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="../estilo/css/main.css"/>
         <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet"/>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script type="text/javascript" src="../js/funcoes.js"></script>
     </head>
     <body>
@@ -56,12 +57,12 @@
                             <?php
                                 $msg= isset($_GET["msg"]) ? ($_GET["msg"]) :"";
                                 if($msg==4){
-                                    echo "<p>Sua senha não pode ser alterada.</p>";
+                                    echo "<p>Sua senha não pode ser alterada. Tente novamente!</p>";
                                 }
                             ?>
                         </div>
                         <div class="modal-footer">
-                            <a href="cadastro.php">
+                            <a href="esqueciSenha.php">
                             <button type="onclick" class="btn btn-warning" data-dismiss="modal">OK</button>
                             </a>
                             <!--<button type="button" class="btn btn-primary">Save changes</button>-->
@@ -73,3 +74,8 @@
 
     </body>
 </html>
+<?php
+$msg= isset($_GET["msg"]) ? ($_GET["msg"]) :"";
+if($msg==4){
+    echo("<script>$(document).ready( function (){ $('#Modal').show(1); });</script>");
+}

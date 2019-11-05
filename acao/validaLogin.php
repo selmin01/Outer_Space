@@ -16,7 +16,7 @@ if ($usuario["permissao"] == 1){
     header("Location: sessaoAdm.php");
 }else if(count($arrayUsu)==1){
     $_SESSION["usuario"] = $usuario;
-    header("Location: ../paginas/menu.php");
+    header("Location: ../paginas/menu.php?msg=saudacoes");
 }else{
     unset($_SESSION["usuario"]);
     header("Location: ../paginas/login.php?msg=1");
