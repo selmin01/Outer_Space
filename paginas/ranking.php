@@ -1,8 +1,9 @@
+<pre>
 <?php
-
 include "../acao/persistenciaUsuario.php";
-
+include "../acao/rankingGeral.php";
 ?>
+</pre>
 <html>
     <head>
         <meta charset="utf-8">
@@ -27,28 +28,38 @@ include "../acao/persistenciaUsuario.php";
                     <tbody>
                         <tr>
                         <th scope="row">1º</th>
-                        <td>H3nr1qu3_z1k4</td>
-                        <td>9999</td>
+                        <?php
+                            echo "<td>". $ranking[0]['usuario']. "</td>";
+                            echo "<td>". $ranking[0]['ponto']. "</td>";
+                        ?> 
                         </tr>
                         <tr>
                         <th scope="row">2º</th>
-                        <td>Ricardin_Gameplays</td>
-                        <td>8888</td>
+                        <?php
+                            echo "<td>". $ranking[1]['usuario']."</td>";
+                            echo "<td>".$ranking[1]['ponto']."</td>";
+                        ?>
                         </tr>
                         <tr>
                         <th scope="row">3º</th>
-                        <td>Carlao_Dale</td>
-                        <td>7777</td>
+                        <?php
+                            echo "<td>". $ranking[2]['usuario']."</td>";
+                            echo "<td>".$ranking[2]['ponto']."</td>";
+                        ?>
                         </tr>
                         <tr>
                         <th scope="row">4º</th>
-                        <td>Robertaum_Milos</td>
-                        <td>6666</td>
+                        <?php
+                            echo "<td>". $ranking[3]['usuario']."</td>";
+                            echo "<td>".$ranking[3]['ponto']."</td>";
+                        ?>
                         </tr>
                         <tr>
                         <th scope="row">5º</th>
-                        <td>Selmin_Br</td>
-                        <td>5555</td>
+                        <?php
+                            echo "<td>". $ranking[4]['usuario']."</td>";
+                            echo "<td>".$ranking[4]['ponto']."</td>";
+                        ?>
                         </tr>
                     </tbody>
                 </table>
