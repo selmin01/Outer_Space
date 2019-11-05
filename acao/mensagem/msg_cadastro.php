@@ -17,7 +17,7 @@
                     <br>
                 </center>
                 <a href="../../paginas/login.php" class="linkbtn">
-                    <button type='button' class='btn btn-warning btn-block'>Voltar </button>
+                    <button type='button' class='btn btn-warning btn-block'>OK</button>
                 </a> 
             </div>
         </div>
