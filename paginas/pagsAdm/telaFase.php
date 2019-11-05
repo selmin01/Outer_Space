@@ -1,6 +1,6 @@
 <?php
 
-include("../../acao/navbar.php");
+include "../../acao/navbar.php";
 
 include "../../acao/persistenciaGrupo.php";
 
@@ -11,6 +11,7 @@ include "../../acao/persistenciaGrupo.php";
         <link rel="stylesheet" href="../../estilo/css/cadastroFase.css">
         <link href="https://fonts.googleapis.com/css?family=Orbitron&amp;display=swap" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>    
+    </head>
 
     <body>
 		<div class="container">
