@@ -19,7 +19,7 @@ if ($usuario["permissao"] == 1){
     header("Location: ../paginas/menu.php");
 }else{
     unset($_SESSION["usuario"]);
-    header("Location: ../paginas/login.php?msg=5");
+    header("Location: ../paginas/login.php?msg=1");
 }
 //print_r( $_SESSION["usuario"]);
 ?>
