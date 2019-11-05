@@ -16,7 +16,7 @@
                     <h5>Você foi cadastrado com sucesso!</h5>
                     <br>
                 </center>
-                <a href="../../paginas/cadastro.php" class="linkbtn">
+                <a href="../../paginas/login.php" class="linkbtn">
                     <button type='button' class='btn btn-warning btn-block'>Voltar </button>
                 </a> 
             </div>
