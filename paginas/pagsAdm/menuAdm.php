@@ -1,5 +1,8 @@
 <?php
 include("../../acao/navbar.php");
+
+include "../../acao/persistenciaGrupo.php";
+
 ?>
  
 <html>

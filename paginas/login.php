@@ -35,17 +35,52 @@
                 </a> 
             </div>
         </div>
+
+        <!-- Tratamento de erro! -->
+        <div id="Modal" class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Outer Space Informa.</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <?php
+                            $msg= isset($_GET["msg"]) ? ($_GET["msg"]) :"";
+                            if($msg==1){
+                                echo "<p>Usuário ou Senha incorreto!</p>";
+                            }elseif ($msg==3){
+                                echo "<p>Sua senha foi alterada com sucesso!</p>";
+                            }elseif($msg==2){
+                                echo "<p>Usuário não logado.</p>";
+                            }
+                        ?>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="login.php">
+                        <button type="onclick" class="btn btn-warning" data-dismiss="modal" onclick="return window.history.back()">OK</button>
+                        </a>
+                        <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Tratamento de erro! -->
+
     </body>
 </html>
 <?php
 $msg= isset($_GET["msg"]) ? ($_GET["msg"]) :"";
 if($msg==1){
-    echo("<script>$(document).ready( function (){ alert('Você foi cadastrado com SUCESSO!'); });</script>");
+    //echo("<script>$(document).ready( function (){ alert('Usuário ou Senha incorreto!'); });</script>");
+    echo("<script>$(document).ready( function (){ $('#Modal').show(1); });</script>");
 }elseif ($msg==3) {
-    echo("<script>$(document).ready( function (){ alert('Sua senha foi alterada com SUCESSO!'); });</script>");
-}elseif ($msg==5) {
-    echo("<script>$(document).ready( function (){ alert('Usuário ou Senha incorreto!'); });</script>");
-}elseif ($msg==7) {
-    echo("<script>$(document).ready( function (){ alert('Usuário não logado!'); });</script>");
+    //echo("<script>$(document).ready( function (){ alert('Sua senha foi alterada com SUCESSO!'); });</script>");
+    echo("<script>$(document).ready( function (){ $('#Modal').show(1); });</script>");
+}elseif ($msg==2) {
+    //echo("<script>$(document).ready( function (){ alert('Usuário não logado!'); });</script>");
+    echo("<script>$(document).ready( function (){ $('#Modal').show(1); });</script>");
 }
 ?>
