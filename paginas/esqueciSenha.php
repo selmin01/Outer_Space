@@ -62,7 +62,7 @@
                             ?>
                         </div>
                         <div class="modal-footer">
-                            <a href="esqueciSenha.php">
+                            <a href="javascript:history.back()">
                             <button type="onclick" class="btn btn-warning" data-dismiss="modal">OK</button>
                             </a>
                             <!--<button type="button" class="btn btn-primary">Save changes</button>-->
