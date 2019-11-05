@@ -2,14 +2,14 @@
 
 include "../bancoOuterSpace/banco.php";
 
-unset($_POST["nome"]);
+//unset($_POST["nome"]);
 unset($_POST["confir_senha"]);
-
+$nome = $_POST["nome"];
 $nick = $_POST["nick"];
 
 onConexao();
 
-$arrayDados = selecionar("SELECT * FROM usuario WHERE nick = '$nick'");
+$arrayDados = selecionar("SELECT * FROM usuario WHERE nick = '$nick' AND nome = '$nome'");
 
 $id = array_column($arrayDados, 'idUsuario');
 

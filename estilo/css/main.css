@@ -28,6 +28,15 @@
   font-family: 'Orbitron', sans-serif;
 }
 
+.boxMsg{
+  margin-top: 200px;
+  width: 500px; 
+  padding:15px; 
+  background-color: #ffffffb3; 
+  border-radius: 20px;
+  font-family: 'Orbitron', sans-serif;
+}
+
 .linkbtn{
   text-decoration: none !important;
 }
