@@ -3,7 +3,7 @@
 session_start();
 
 if(!isset($_SESSION["usuario"])){
-    header("Location: ../login.php?msg=7");
+    header("Location: ../login.php?msg=2");
 }
 
 ?>

@@ -18,6 +18,6 @@ $usuario_idUsuario = $grupo[0]["usuario_idUsuario"];
 if($id_usuario==$usuario_idUsuario){
     header ("Location: ../paginas/auxGrupo/carregaGrupo.php");
 }else{
-    header ("Location: ../paginas/Grupo.php?msg=1");
+    header ("Location: ../acao/mensagem/msg_grupo.php");
 }
 ?>

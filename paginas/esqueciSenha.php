@@ -49,9 +49,6 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title">Outer Space Informa.</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                            </button>
                         </div>
                         <div class="modal-body">
                             <?php
@@ -71,7 +68,6 @@
                 </div>
             </div>
             <!-- Tratamento de erro! -->
-
     </body>
 </html>
 <?php
@@ -79,3 +75,4 @@ $msg= isset($_GET["msg"]) ? ($_GET["msg"]) :"";
 if($msg==4){
     echo("<script>$(document).ready( function (){ $('#Modal').show(1); });</script>");
 }
+?>

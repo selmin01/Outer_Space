@@ -15,7 +15,7 @@ $sucesso = mysqli_affected_rows($conexao);
 offConexao();
 
 if($sucesso >= 1) {
-   header("Location: ../acao/mensagem/msg_cadastro.php?msg=1");
+   header("Location: ../acao/mensagem/msg_cadastro.php");
 }else {
    header("Location: ../paginas/cadastro.php?msg=2");
 }
