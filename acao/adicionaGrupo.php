@@ -19,11 +19,11 @@ $idUsuario = array_column($arrayUsuario, "idUsuario");
 
 $idUsuario = implode("", $idUsuario);
 
-$usuarioGrupo = array("grupo_idGrupo" => $idGrupo, "usuario_idUsuario" => $idUsuario, "grupo_idGrupo" => $idGrupo);
+$usuarioGrupo = array("grupo_idGrupo" => $idGrupo, "usuario_idUsuario" => $idUsuario);
 
 inserir('usuarioGrupo', $usuarioGrupo);
 
-$rankingGrupo = array("usuario" => $nick, "ponto" => 0);
+$rankingGrupo = array("grupo_idGrupo" => $idGrupo, "usuario" => $nick, "ponto" => 0);
 
 inserir('rankinggrupo', $rankingGrupo);
 

@@ -1,3 +1,4 @@
+<pre>
 <?php
 session_start();
 include "../bancoOuterSpace/banco.php";
@@ -16,7 +17,7 @@ $dadosRanking = array("usuario" => $membro, "ponto" => 0);
 
 $idRanking = inserir('rankinggrupo', $dadosRanking);
 
-$dadosGrupo = array("codigo" => $codigo, "descricaoGrupo" => $dados["descricaoGrupo"]);
+$dadosGrupo = array("codigo" => $codigo, "descricaoGrupo" => $grupo, "rankingGrupo_idRankingGrupo" => $idRanking);
 
 $idGrupo = inserir('grupo', $dadosGrupo);
 
@@ -40,10 +41,11 @@ offConexao();
 $idGrupo = implode("", $idGrupo);
 
 if($sucesso >= 1) {
-    $_SESSION["rankingGrupo"] = $dados;
-    header("Location: rankingGrupo.php?id=$idGrupo");
+   $_SESSION["rankingGrupo"] = $dados;
+   header("Location: rankingGrupo.php?id=$idGrupo");
  }else{
     header("Location: ../acao/mensagem/msg_banco.php");
  }
 
 ?>
+</pre>
