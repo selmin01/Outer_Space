@@ -17,11 +17,20 @@ body{
 
 /*Tela de cadastro de Fase*/
 
-
 .vel{
-    margin-right: 300px;
+    width: 225px;
+}
+.botoes{
+    margin-left: 175px;
 }
 
+.lado{
+    margin-top: 0px;
+    width: 500px; 
+    padding:30px; 
+    border-radius: 30px;
+    font-family: 'Orbitron', sans-serif;
+}
 .meteoro{
-    left: 50px;
+    width: 275px;
 }

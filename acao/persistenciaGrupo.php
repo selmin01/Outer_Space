@@ -1,6 +1,6 @@
 <?php
 session_start();
 if(!isset($_SESSION["usuario"])){
-    header("Location: ../login.php?msg=2");
+    header("Location: ../../acao/mensagem/msg_permicao.php");
 }
 ?>
