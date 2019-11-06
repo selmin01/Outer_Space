@@ -8,15 +8,15 @@ $dados = $_SESSION["rankingGrupo"];
 
 onConexao();
 
-$arrayDados = selecionar("SELECT u.nick, g.descricaoGrupo, g.codigo, rg.ponto 
+$arrayDados = selecionar("SELECT u.nick, g.descricaoGrupo, rg.ponto, g.codigo
                             FROM usuario u INNER JOIN usuariogrupo ug 
                             ON u.idUsuario = ug.usuario_idUsuario 
                             INNER JOIN grupo g 
-                            ON ug.grupo_idGrupo = g.idGrupo 
+                            ON ug.grupo_idGrupo = g.idGrupo
                             INNER JOIN rankinggrupo rg 
                             ON g.idGrupo = rg.grupo_idGrupo 
-                            WHERE g.idGrupo = '$idGrupo' 
-                            ORDER BY rg.ponto;");
+                            WHERE g.idGrupo = $idGrupo AND u.nick = rg.usuario
+                            ORDER BY rg.ponto DESC;");
 
 $sucesso = mysqli_affected_rows($conexao);
 offConexao();
