@@ -213,3 +213,22 @@ value	(1, "Distribui endereço de rede.", 1),
 		(2, "Tradução de enderço.", 0),
 		(3, "Controla o acesso a internet.", 0),
 		(4, "Imprimi arquivos.", 0);
+        
+        SELECT u.nick, g.descricaoGrupo
+                            FROM usuario u INNER JOIN usuariogrupo ug 
+                            ON u.idUsuario = ug.usuario_idUsuario 
+                            INNER JOIN grupo g 
+                            ON ug.grupo_idGrupo = g.idGrupo 
+                            WHERE g.idGrupo = 2;
+                            
+                            SELECT u.nick, g.descricaoGrupo, sum(rg.ponto)
+                            FROM usuario u INNER JOIN usuariogrupo ug 
+                            ON u.idUsuario = ug.usuario_idUsuario 
+                            INNER JOIN grupo g 
+                            ON ug.grupo_idGrupo = g.idGrupo
+                            INNER JOIN rankinggrupo rg 
+                            ON g.idGrupo = rg.grupo_idGrupo 
+                            WHERE g.idGrupo = 2 AND u.nick=rg.usuario
+                            ORDER BY rg.ponto;
+                            
+                            
