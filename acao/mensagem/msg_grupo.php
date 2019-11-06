@@ -13,10 +13,10 @@
                 <center>
                     <h1 class="font">Outer Space Informa.</h1>
                     <br>
-                    <h5>Você foi cadastrado com sucesso!</h5>
+                    <h5>Você NÃO possui grupo!</h5>
                     <br>
                 </center>
-                <a href="../../paginas/login.php" class="linkbtn">
+                <a href="../../paginas/grupo.php" class="linkbtn">
                     <button type='button' class='btn btn-warning btn-block'>OK</button>
                 </a> 
             </div>

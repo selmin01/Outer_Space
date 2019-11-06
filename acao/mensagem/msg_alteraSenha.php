@@ -13,7 +13,7 @@
                 <center>
                     <h1 class="font">Outer Space Informa.</h1>
                     <br>
-                    <h5>Você foi cadastrado com sucesso!</h5>
+                    <h5>Sua senha foi alterada com sucesso!</h5>
                     <br>
                 </center>
                 <a href="../../paginas/login.php" class="linkbtn">

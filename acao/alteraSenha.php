@@ -24,7 +24,7 @@ $sucesso = mysqli_affected_rows($conexao);
 offConexao();
 
 if($sucesso >= 1) {
-    header("Location: ../paginas/login.php?msg=3");
+    header("Location:  ../acao/mensagem/msg_alteraSenha.php");
 }else {
     header("Location: ../paginas/esqueciSenha.php?msg=4");
 }
