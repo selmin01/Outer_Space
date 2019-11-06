@@ -50,6 +50,7 @@
 
 /*Tela de jogo*/
 body{
+  /* Não mostra a barra de rolagem */
   overflow-x: hidden;
   overflow-y: hidden;
   background-image:url("../imgs/BackSpace.png");
@@ -59,8 +60,10 @@ h3{
 }
 
 .naveJog{
+  /* Dimensão da imagem da nave */
   width: 60px;
   height: 70px;
+  /* Imagem da nave */
   background-image:url("../imgs/nave.png");
   position: absolute;
 }
