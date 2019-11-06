@@ -1,7 +1,6 @@
 <?php
 
 include "../../acao/persistenciaGrupo.php";
-
 //session_start();
 include "../../bancoOuterSpace/banco.php"; 
 if(isset($_SESSION["usuario"])){
@@ -14,9 +13,7 @@ if(isset($_SESSION["rankingGrupo"])){
     $codGrupo= $dados[0]["codigo"];
     $nomeGrupo= $dados[0]["descricaoGrupo"];
 }
-
 onConexao();
-
 $arrayDados = selecionar("SELECT g.descricaoGrupo, g.idGrupo
                             FROM usuario u
                             INNER JOIN usuariogrupo ug
@@ -24,10 +21,8 @@ $arrayDados = selecionar("SELECT g.descricaoGrupo, g.idGrupo
                             INNER JOIN grupo g
                             ON ug.grupo_idGrupo = g.idGrupo
                             WHERE ug.usuario_idUsuario = '$idUsuario'");
-
 offConexao();
 ?>
-
 <html>
     <head>
         <meta charset="utf-8">

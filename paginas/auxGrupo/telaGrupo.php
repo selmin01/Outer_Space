@@ -45,10 +45,32 @@ include "../../acao/persistenciaGrupo.php";
             ?>
         </div>
         </center>
+
+        <!-- Tratamento de erro! -->
+        <div id="Modal" class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Outer Space Informa.</h5>
+                    </div>
+                    <div class="modal-body">
+                        <p>Já existe um grupo com esse nome ou esse usuário não existe.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="telaGrupo.php">
+                        <button type="onclick" class="btn btn-warning" data-dismiss="modal" onclick="return window.history.back()">OK</button>
+                        </a>
+                        <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Tratamento de erro! -->
+
     </body>
 </html>
 <?php
 $msg= isset($_GET["msg"]) ? ($_GET["msg"]) :"";
 if($msg==1){
-    echo("<script>$(document).ready( function (){ alert('Já existe um grupo com esse nome ou esse usuário não existe.'); });</script>");
+    echo("<script>$(document).ready( function (){ $('#Modal').show(1); });</script>");
 }

@@ -18,13 +18,13 @@
         <div class="form-group row">
           <div class="col-sm-10">
             <?php
-            echo "<a class='linkbtn' href='../index.php?pagina=jogo'><button type='button' class='btn btn-dark btn-lg btn-block font botao'>Jogar</button></a>";
+              echo "<a class='linkbtn' href='../index.php?pagina=jogo'><button type='button' class='btn btn-dark btn-lg btn-block font botao'>Jogar</button></a>";
             ?>
             <br>
           </div>
           <div class="col-sm-10">
-          <?php
-            echo "<a class='linkbtn' href='../index.php?pagina=grupo'><button type='button' class='btn btn-dark btn-lg btn-block font botao'>Grupo</button></a>"
+            <?php
+              echo "<a class='linkbtn' href='../index.php?pagina=grupo'><button type='button' class='btn btn-dark btn-lg btn-block font botao'>Grupo</button></a>"
             ?>
             <br>
           </div>
@@ -49,9 +49,6 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Outer Space Informa.</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
             </div>
             <div class="modal-body">
                 <?php
