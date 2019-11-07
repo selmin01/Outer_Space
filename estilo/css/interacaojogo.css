@@ -17,3 +17,17 @@
 .linkbtn{
     text-decoration: none !important;
 }
+
+body{
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-image:url("../imgs/BackSpace.png");
+}
+
+.fontResposta{
+    -webkit-text-stroke-width: 0.8px; /* largura da borda */
+    -webkit-text-stroke-color: #000000; /* cor da borda */
+    color: #000000;
+    font-family: 'Orbitron', sans-serif; 
+
+}
