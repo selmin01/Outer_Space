@@ -25,7 +25,7 @@ if($sucesso >= 1) {
     $_SESSION["rankingGrupo"] = $arrayDados;
     header("Location: ../paginas/auxGrupo/dadosGrupo.php");
 } else {
-    header("Location: ../paginas/auxGrupo/telaGrupo.php?msg=5");
+    header("Location: ../acao/mensagem/msg_banco.php");
 }
 
 ?>

@@ -51,7 +51,7 @@ include "../../acao/persistenciaGrupo.php";
                         <?php
                             $msg= isset($_GET["msg"]) ? ($_GET["msg"]) :"";
                             if($msg==1){
-                                echo "<p>Este código de grupo Não existente.</p>";
+                                echo "<p>Este código de grupo NÃO existente.</p>";
                             }elseif($msg==2){
                                 echo "<p>Erro ao cadastrar.</p>";
                             }
