@@ -8,10 +8,16 @@ include "../acao/persistenciaUsuario.php";
     <title>Outer Space</title>
     <link rel="stylesheet" href="../estilo/css/main.css"/>
     <script type="text/javascript" src="../js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        start();
+      })
+    </script>
   </head>
   <body>
     <div id="painel">
-      <h3>Planeta</h3>
+      <!--<h3>Planeta</h3>-->
       <div id="vidaPlaneta">
         <div id="barraPlaneta"></div>
       </div>
@@ -24,6 +30,5 @@ include "../acao/persistenciaUsuario.php";
     </div>
     <!-- Nave a ser controlada -->
     <div id="naveJog" class="naveJog"></div>
-
     </body>
 </html>
