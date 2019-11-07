@@ -24,13 +24,13 @@ body{
     margin-left: 175px;
 }
 
-.lado{
-    margin-top: 0px;
-    width: 500px; 
-    padding:30px; 
-    border-radius: 30px;
-    font-family: 'Orbitron', sans-serif;
+.titulo{
+    width: 350px;
+    margin-bottom: 50px;
+    margin-top: 25px;
+    margin-left: 50px;
 }
+
 .meteoro{
     width: 275px;
 }
