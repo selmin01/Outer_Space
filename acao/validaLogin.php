@@ -12,7 +12,7 @@ $arrayUsu = selecionar("SELECT * FROM usuario WHERE senha='$senha' and nick='$ni
 offConexao();
 
 if(empty($arrayUsu)) {
-    //header("Location: ../paginas/login.php?msg=1");
+    header("Location: ../paginas/login.php?msg=1");
 }else {
     $id_usuario = $arrayUsu[0]["idUsuario"];
 

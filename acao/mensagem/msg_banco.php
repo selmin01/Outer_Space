@@ -16,7 +16,7 @@
                     <h5>Erro de interação.</h5>
                     <br>
                 </center>
-                <a href="../../paginas/grupo.php" class="linkbtn">
+                <a href="../../paginas/menu.php" class="linkbtn">
                     <button type='button' class='btn btn-warning btn-block'>OK</button>
                 </a> 
             </div>
