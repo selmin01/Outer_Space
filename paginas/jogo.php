@@ -24,11 +24,11 @@ include "../acao/persistenciaUsuario.php";
       <div id="contBombas"></div>
     </div>
     <!-- Mostra a imagem de vitoria ou derrota -->
-    <!--
+    
     <div id="telaMsg" class="telaMsg">
-      <button id="btnJogar" class="btnJogar">Jogar</button>
+      <!--<button id="btnJogar" class="btnJogar">Jogar</button>-->
     </div>
-    -->
+    
     <!-- Nave a ser controlada -->
     <div id="naveJog" class="naveJog"></div>
     </body>

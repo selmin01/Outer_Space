@@ -240,7 +240,7 @@ function inicia() {
   telaMsg=document.getElementById("telaMsg");
   telaMsg.style.backgroundImage="url('../estilo/imgs/fundo_Inicio.jpg')";
   telaMsg.style.display="block";
-  document.getElementById("btnJogar").addEventListener("click",start);
+  //document.getElementById("btnJogar").addEventListener("click",start);
 }
 
 window.addEventListener("load",inicia); 
