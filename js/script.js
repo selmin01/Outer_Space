@@ -237,7 +237,7 @@ function inicia() {
   barraPlaneta.style.width=vidaPlaneta+"px";
 
   //telas
-  telaMsg=document.getElementById("telaMsg");
+  //telaMsg=document.getElementById("telaMsg");
   telaMsg.style.backgroundImage="url('../estilo/imgs/fundo_Inicio.jpg')";
   telaMsg.style.display="block";
   //document.getElementById("btnJogar").addEventListener("click",start);
