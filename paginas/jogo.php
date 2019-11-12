@@ -10,7 +10,8 @@ include "../acao/persistenciaUsuario.php";
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script>
       $(document).ready(function(){
-        start();
+        inicia();
+        
       })
     </script>
   </head>
