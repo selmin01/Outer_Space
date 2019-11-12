@@ -4,6 +4,16 @@ include "../bancoOuterSpace/banco.php";
 
 $dados = $_POST;
 
+$tema = $dados["tema"];
+
+if($tema == "tecnologia") {
+    $idTema = 1;
+} else {
+    $idTema = 2;
+}
+
+$tema = array("tema_idTema" => $idTema);
+
 unset($dados["tema"]);
 
 $opcaoCorreta = $dados["resposta"];
@@ -17,6 +27,8 @@ $alternativa = $dados;
 onConexao();
 
 $id = inserir('pergunta', $pergunta);
+
+alterar('pergunta', $tema, "idPergunta = ". $id);
 
 foreach($alternativa as $chave => $valor) {
        if($chave == $opcaoCorreta) {
