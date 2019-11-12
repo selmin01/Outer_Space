@@ -10,13 +10,15 @@ include "../acao/persistenciaUsuario.php";
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script>
       $(document).ready(function(){
-        start();
+        inicia();
+        
       })
     </script>
   </head>
   <body>
     <div id="painel">
       <!--<h3>Planeta</h3>-->
+      <div style="color: yellow;">VIDA DO PLANETA</div>
       <div id="vidaPlaneta">
         <div id="barraPlaneta"></div>
       </div>
