@@ -160,7 +160,8 @@ insert into tema(
 	idTema,
     descricaoTema
 )
-value	(1, "Tecnologia");
+value	(1, "Tecnologia"),
+		(2, "Astronomia");
 
 insert into rankingGrupo (
 	idRankingGrupo
@@ -230,5 +231,4 @@ value	(1, "Distribui endereço de rede.", 1),
                             ON g.idGrupo = rg.grupo_idGrupo 
                             WHERE g.idGrupo = 2 AND u.nick=rg.usuario
                             ORDER BY rg.ponto;
-                            
                             
