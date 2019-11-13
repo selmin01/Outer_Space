@@ -79,7 +79,7 @@ h3{
 }
 
 #vidaPlaneta{
-  border: 2px solid #00FF80;
+  border: 2px solid #fff;
   width: 300px;
   height: 20px;
   background: #fff;
@@ -88,7 +88,7 @@ h3{
 #barraPlaneta{
   width: 300px;
   height: 20px;
-  background: #380759;
+  background-color: #cc0a0a;
 }
 
 

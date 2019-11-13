@@ -8,8 +8,10 @@ var iExplosao,iSom;
 var vidaPlaneta,barraPlaneta;
 var pontuacao = 0;
 
+// Essa função controla a movimentação da Nave
 function teclaDw() {
   var tecla=event.keyCode;
+
   if (tecla==38) {//cima
     diryJ=-1;
   }else if (tecla==40) {//baixo
@@ -20,13 +22,16 @@ function teclaDw() {
   }else if (tecla==39) {//direita
     dirxJ=1;
   }
-  if (tecla==32) {//espaço/tiro
-    //TIRO
+  if (tecla==32) {//espaço
+    // Passando para função do tiro a posição da nave
     atirar(pJx+25.5,pJy);
   }
 }
+
+// Essa função Para a movimentação da Nave quando a tecla deixa de ser pressionada
 function teclaUp() {
   var tecla=event.keyCode;
+
   if ((tecla==38)||(tecla==40)) {
     diryJ=0;
   }
@@ -231,10 +236,12 @@ function start() {
 
 function inicia() {
   jogo=false;
-  //Ini tela
-  tamTelaH=window.innerHeight;
-  tamTelaW=window.innerWidth;
-  // Ini Jogador
+  
+  // Tamanho da Tela
+  tamTelaH= window.innerHeight;
+  tamTelaW= window.innerWidth;
+
+  // Definindo posição da Nave
   dirxJ=diryJ=0;
   velJ=velT=10;
   jog=document.getElementById("naveJog"); 
