@@ -1,13 +1,14 @@
 <?php
 include "../acao/persistenciaUsuario.php";
+
 ?>
 <html>
   <head>
     <meta charset="utf-8">
     <title>Outer Space</title>
     <link rel="stylesheet" href="../estilo/css/main.css"/>
-    <script type="text/javascript" src="../js/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="../js/script.js"></script>
     <script>
       $(document).ready(function(){
         inicia();
@@ -27,6 +28,14 @@ include "../acao/persistenciaUsuario.php";
       <!-- Contagem de bombas que faltam a ser lançadas -->
       <div id="contBombas"></div>
 
+    </div>
+    <div class="pontuacao">
+      <?php
+        echo "Meteoros Destruídos: 0";
+      ?>
+    </div>
+    <div class="maxponto">
+  
     </div>
 
     <!-- Mostra a imagem de vitoria ou derrota -->

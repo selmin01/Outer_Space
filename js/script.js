@@ -6,6 +6,7 @@ var frames;
 var contMeteoros,painelContMeteoros,velM,meteorosTotal,tmpCriaMeteoro;
 var iExplosao,iSom;
 var vidaPlaneta,barraPlaneta;
+var pontuacao = 0;
 
 // Essa função controla a movimentação da Nave
 function teclaDw() {
@@ -115,13 +116,21 @@ function colisaoTM(tiro) {
       ((tiro.offsetTop+12)>=(meteorosTotal[i].offsetTop))) 
       &&
       ((tiro.offsetLeft<=(meteorosTotal[i].offsetLeft+54))&& 
-      ((tiro.offsetLeft+12)>=(meteorosTotal[i].offsetLeft)))){ 
+      ((tiro.offsetLeft+12)>=(meteorosTotal[i].offsetLeft)))){
         criaExplosao(1,meteorosTotal[i].offsetLeft-5,meteorosTotal[i].offsetTop);
         meteorosTotal[i].remove();
         tiro.remove();
+        pontuacao = pontuacao + 1;
+        console.log(pontuacao);
+        document.querySelector('.pontuacao').innerHTML = "Meteoros Destruídos: " + pontuacao
+        
+
       }
     }
+  
   }
+  
+  
 }
 
 function criaExplosao(tipo,x,y) { //tipo 1=AR, 2=TERRA
@@ -196,6 +205,7 @@ function gameLoop() {
   frames=requestAnimationFrame(gameLoop);
 }
 
+
 function start() {
   //controle dos meteoros
   contMeteoros=150;
@@ -242,6 +252,9 @@ function inicia() {
   vidaPlaneta=300;
   barraPlaneta=document.getElementById("barraPlaneta")
   barraPlaneta.style.width=vidaPlaneta+"px";
+  
+  
+
 
   //telas
   //telaMsg=document.getElementById("telaMsg");

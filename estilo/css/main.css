@@ -91,6 +91,8 @@ h3{
   background-color: #cc0a0a;
 }
 
+
+
 .tiroJog{
   width: 8px;
   height: 8px;
@@ -118,7 +120,24 @@ h3{
   position: absolute;
 }
 
+.pontuacao{
+  position : absolute;
+  top: 20px;
+  left: 1175px;
+  color:yellow;
+  z-index: 9999999;
+  font-family: 'Orbitron', sans-serif;
 
+}
+.maxponto{
+  position : absolute;
+  top: 20px;
+  left: 1000px;
+  color:yellow;
+  z-index: 9999999;
+  font-family: 'Orbitron', sans-serif;
+
+}
 
 
 
