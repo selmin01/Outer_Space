@@ -1,5 +1,6 @@
 <?php
 include "../acao/persistenciaUsuario.php";
+
 ?>
 <html>
   <head>
@@ -28,10 +29,13 @@ include "../acao/persistenciaUsuario.php";
       <div id="contBombas"></div>
 
     </div>
-    <div class="pontuacao" style="color: white;">
+    <div class="pontuacao">
       <?php
-        echo "Pontuação: ". "<script>document.write(pontuacao)</script>";
+        echo "Meteoros Destruídos: 0";
       ?>
+    </div>
+    <div class="maxponto">
+  
     </div>
 
     <!-- Mostra a imagem de vitoria ou derrota -->

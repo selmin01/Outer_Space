@@ -122,7 +122,9 @@ function colisaoTM(tiro) {
         tiro.remove();
         pontuacao = pontuacao + 1;
         console.log(pontuacao);
-        document.querySelector('.pontuacao').innerHTML = pontuacao
+        document.querySelector('.pontuacao').innerHTML = "Meteoros Destruídos: " + pontuacao
+        
+
       }
     }
   
@@ -250,6 +252,7 @@ function inicia() {
   vidaPlaneta=300;
   barraPlaneta=document.getElementById("barraPlaneta")
   barraPlaneta.style.width=vidaPlaneta+"px";
+  
   
 
 
