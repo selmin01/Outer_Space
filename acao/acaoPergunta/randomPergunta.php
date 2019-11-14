@@ -5,12 +5,31 @@ include "../../bancoOuterSpace/banco.php";
 
 onConexao();
 
+//$pergunta = selecionar("SELECT pergunta.idPergunta, pergunta.descricaoPergunta, alternativa.descricaoAlternativa, alternativa.opcaoCorreta FROM pergunta, alternativa ORDER BY rand() limit 1");
+
+//print_r ($pergunta);
+
+$pergunta = selecionar("SELECT idPergunta, descricaoPergunta FROM pergunta ORDER BY rand() limit 1");
+
+//print_r ($pergunta);
+
 $arrayPergunta = selecionar("SELECT * FROM pergunta");
+
+$idpergunta = $pergunta[0]["idPergunta"];
+
+$alternativas = selecionar("SELECT descricaoAlternativa, opcaoCorreta FROM alternativa WHERE pergunta_idPergunta = $idpergunta ");
 
 offconexao();
 
-print_r ($arrayPergunta);
+//echo $idpergunta;
 
+//print_r ( $alternativas );
+
+//print_r ($arrayPergunta);
+
+
+
+/*
 foreach($arrayPergunta as $array) {
     foreach($array as $chave => $valor) {
         if($chave == "idPergunta") {
@@ -20,7 +39,9 @@ foreach($arrayPergunta as $array) {
     $random = array_rand($idPergunta, 1);
 
     foreach($array as $chave => $valor) {
-        if($chave == "idPergunta" && $valor == $random) {
+        echo $valor;
+        if($chave == "idPergunta" && $valor != $random) {
+            echo $chave[$valor];
             $pergunta[] = $chave[$valor];
         }
     }
@@ -29,6 +50,9 @@ foreach($arrayPergunta as $array) {
 print_r($idPergunta);
 echo $random;
 
-print_r($pergunta);
+//echo $pergunta["descricaoPergunta"];
+*/
+
+header("Location: ../../interacaoJogo/telaPergunta.php");
 ?>
 </pre>
