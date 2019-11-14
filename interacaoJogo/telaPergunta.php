@@ -1,4 +1,9 @@
+<?php
+
+
+?>
 <html>
+
 <head>
 <meta charset="utf-8">
         <title>Outer Space</title>
@@ -44,7 +49,10 @@
                 <br>
                 <form class="font" action="" method="post">
                     <div class="fontResposta" id="pergunta">
-                        Quanto é 2+2 ?
+                        <?php
+                           
+                        
+                        ?>
                     </div>
                     <div class="input-group mb-3">
                         <input type="submit" class="form-control fontResposta" value="12" id="txtResposta">
