@@ -53,7 +53,7 @@ body{
   /* Não mostra a barra de rolagem */
   overflow-x: hidden;
   overflow-y: hidden;
-  background-image:url("../imgs/BackSpace.png");
+  background-image:url("../imgs/BackSpace.jpg");
 }
 h3{
   color: #6D00BF; /*#3BD1D8*/
