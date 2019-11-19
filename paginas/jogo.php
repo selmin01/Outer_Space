@@ -1,6 +1,17 @@
 <?php
 include "../acao/persistenciaUsuario.php";
 
+include "../bancoOuterSpace/banco.php";
+if(isset($_SESSION["usuario"])){
+  $usuario = $_SESSION["usuario"];
+  $nick = $usuario["nick"];
+  $idUsuario = $usuario["idUsuario"];
+}
+onConexao();
+$pontos = selecionar("SELECT maxponto FROM usuario WHERE idUsuario = $idUsuario");
+$recorde = $pontos[0]["maxponto"];
+offConexao();
+
 ?>
 <html>
   <head>
@@ -35,7 +46,9 @@ include "../acao/persistenciaUsuario.php";
       ?>
     </div>
     <div class="maxponto">
-  
+    <?php 
+        echo "Seu Recorde: ".$recorde;
+      ?>
     </div>
 
     <!-- Mostra a imagem de vitoria ou derrota -->
