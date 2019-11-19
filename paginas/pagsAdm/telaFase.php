@@ -17,7 +17,7 @@ include "../../acao/persistenciaGrupo.php";
                        <center><div class="mx-auto titulo"><h2>Cadastro de Fase</h2></div></center>
                     </div>
                     <div class="col-md-12" >
-                        <div class="mx-auto" style="width: 350px;">
+                        <div class="mx-auto" style="width: 300px;">
                         <center>
                             <div class="form-group">
                                 <label for="formGroupExampleInput"><h5 class="font ">Velocidade da Nave</h5></label>
@@ -36,9 +36,9 @@ include "../../acao/persistenciaGrupo.php";
                                     <input type="number" class="form-control" max="100" maxlength="3" name="qtdMeteoro" required="">
                                 </div>
                             </div>
-                            <div class="form-group row">
+                            <div class="form-group">
                                 <label class="col-sm-12 col-form-label"><h5 class="font">Tempo da Fase</h5></label>
-                                <div class="col-sm-12">
+                                <div class="col-sm-6 md-12">
                                     <input type="time" class="form-control" name="tempo" min="00:01:00" max="00:30:00" required="">
                                 <br>
                                 </div>
@@ -46,14 +46,14 @@ include "../../acao/persistenciaGrupo.php";
                         </div>
                     </center>
                     </div>
-                    <center>
-                    <div class="col-md-8 botoes">
+                
+                    <div class="col-md-4 botoes">
                         <button type="submit" class="btn btn-dark btn-lg btn-block font">Cadastrar</button> 
-                            <a class="linkbtn col-md-12" href="menuAdm.php">
+                            <a class="linkbtn col-md-6" href="menuAdm.php">
                         <button type="button" class="btn btn-dark btn-lg btn-block font">Voltar</button>
                         </a>
                     </div>
-                    </center>
+                    
                 </div>           
             </form>
         </div>
