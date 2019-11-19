@@ -48,12 +48,14 @@ include "../../acao/persistenciaGrupo.php";
                             </div>
                         </div>
                     </div>
+                    <center>
                     <div class="col-md-8 botoes">
                         <button type="submit" class="btn btn-dark btn-lg btn-block font">Cadastrar</button> 
                             <a class="linkbtn col-md-12" href="menuAdm.php">
                         <button type="button" class="btn btn-dark btn-lg btn-block font">Voltar</button>
-                        </a> 
+                        </a>
                     </div>
+                    </center>
                 </div>           
             </form>
         </div>
