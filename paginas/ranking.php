@@ -17,7 +17,7 @@ include "../acao/rankingGeral.php";
             <div class="mx-auto ranking">
                 <center><h1 class="font">RANKING</h1></center>
                 <br>
-                <table class="table">
+                <table class="table table-overflow">
                     <thead>
                         <tr>
                         <th scope="col">Pos</th>
@@ -39,16 +39,18 @@ include "../acao/rankingGeral.php";
                                 echo "<tr>";
                             }
                         ?>
-                       
                     </tbody>
                 </table>
             </div>
         </div>
         <br>
-        <div class="col-sm-2">
+        <center>
+        <div class="col-sm-12">
             <?php
-                echo "<a class='linkbtn' href='menu.php' ><button type='button' class='btn btn-dark btn-lg btn-block font botao'><< Voltar</button></a>"
+                echo "<a class='linkbtn' href='menu.php' ><button type='button' class='btn btn-dark btn-lg btn-block font botoes'><< Voltar</button></a>"
             ?>
         </div>
+        </center>
+        <br>
     </body>
 </html>

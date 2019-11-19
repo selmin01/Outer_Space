@@ -1,5 +1,4 @@
 <?php
-
 include "../../acao/persistenciaGrupo.php";
 //session_start();
 include "../../bancoOuterSpace/banco.php"; 
@@ -71,5 +70,14 @@ offConexao();
                 </div>
             </div>
         </div>
+        <br>
+        <br>
+        <center>
+        <div class="col-sm-12">
+            <?php
+                echo "<a class='linkbtn' href='../grupo.php'><button type='button' class='btn btn-dark btn-lg btn-block font botoes'><< Voltar</button></a>"
+            ?>
+        </div>
+        </center>
     </body>
 </html>

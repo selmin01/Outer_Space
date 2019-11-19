@@ -32,6 +32,7 @@ $arrayDados = selecionar("SELECT g.descricaoGrupo, g.idGrupo
                             WHERE ug.usuario_idUsuario = '$idUsuario'");
 offConexao();
 ?>
+
 <html>
     <head>
         <meta charset="utf-8">
@@ -100,7 +101,6 @@ offConexao();
                     </div>
                 </div>
             </div>
-
             <center>
                 <h1 class="font titulo">SEU GRUPO</h1>
             </center>

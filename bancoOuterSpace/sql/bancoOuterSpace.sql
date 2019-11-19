@@ -177,7 +177,13 @@ value	(1, "ricardin", 300),
 		(2, "selmin", 600),
 		(3, "henrique zika", 400),
         (4, "carlao", 500),
-        (5, "zikao", 800);
+        (5, "zikao", 800),
+        (6, "thor", 100),
+        (7, "Tonny", 900),
+        (8, "ricardao", 1200),
+        (9, "Zé", 700),
+        (10, "xixi", 1400);
+        
 
 insert into pergunta (
 	idPergunta,
