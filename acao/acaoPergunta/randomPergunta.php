@@ -1,31 +1,30 @@
 <pre>
 <?php
-include "../bancoOuterSpace/banco.php";
+include "../../bancoOuterSpace/banco.php";
 
 onConexao();
 
-//$pergunta = selecionar("SELECT pergunta.idPergunta, pergunta.descricaoPergunta, alternativa.descricaoAlternativa, alternativa.opcaoCorreta FROM pergunta, alternativa ORDER BY rand() limit 1");
-
-//print_r ($pergunta);
-
-$pergunta = selecionar("SELECT idPergunta, descricaoPergunta FROM pergunta ORDER BY rand() limit 1");
-
-$tema = selecionar("SELECT descricaoTema FROM tema");
-//print_r ($pergunta);
-
 $arrayPergunta = selecionar("SELECT * FROM pergunta");
-
-$idpergunta = $pergunta[0]["idPergunta"];
-
-$alternativas = selecionar("SELECT descricaoAlternativa, opcaoCorreta FROM alternativa WHERE pergunta_idPergunta = $idpergunta ");
 
 offconexao();
 
-//echo $idpergunta;
+$n = count($arrayPergunta);
 
-//print_r ( $alternativas );
-
-//print_r ($arrayPergunta);
+$rand = rand(1, $n);
+    
+if($n == 0) {
+    echo "Não há nenhuma pergunta cadastrada";
+    header("Location: ../../paginas/jogo.php");
+} else {
+    onConexao();
+    $perguntaSelecionada = selecionar("SELECT * FROM pergunta WHERE idPergunta = '$rand'");
+    $alternativa = selecionar("SELECT * FROM alternativa WHERE pergunta_idPergunta = '$rand'");
+    offConexao();
+    $pergunta = array($perguntaSelecionada, $alternativa);
+    print_r($pergunta);
+    $_SESSION["pergunta"] = $pergunta;
+    header("Location: ../../interacaoJogo/telaPergunta.php");
+}
 
 
 
@@ -45,14 +44,7 @@ foreach($arrayPergunta as $array) {
             $pergunta[] = $chave[$valor];
         }
     }
-}
+}*/
 
-print_r($idPergunta);
-echo $random;
-
-//echo $pergunta["descricaoPergunta"];
-*/
-
-//header("Location: ../../interacaoJogo/telaPergunta.php");
 ?>
 </pre>

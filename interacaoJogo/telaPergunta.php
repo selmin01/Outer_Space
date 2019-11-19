@@ -1,5 +1,5 @@
 <?php
-include "../acao/acaoPergunta/randomPergunta.php";
+
 
 ?>
 <html>
