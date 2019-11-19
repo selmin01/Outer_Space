@@ -1,13 +1,18 @@
 <?php
-
-
+session_start();
+$resposta = isset($_POST["txtResposta"]);
 
 include "../bancoOuterSpace/banco.php";
 
+onConexao();
 
-//echo $_POST["resp"];
+$arrayResposta = selecionar("SELECT descricaoAlternativa, opcaoCorreta FROM alternativa  ");
 
-echo "olaaa";
+print_r ($arrayResposta);
+offConexao();
 
+//if($resposta == $arrayResposta["des"]){
+
+//}
 
 ?>

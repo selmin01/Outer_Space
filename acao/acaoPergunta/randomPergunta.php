@@ -1,7 +1,6 @@
 <pre>
 <?php
-
-include "../../bancoOuterSpace/banco.php";
+include "../bancoOuterSpace/banco.php";
 
 onConexao();
 
@@ -11,6 +10,7 @@ onConexao();
 
 $pergunta = selecionar("SELECT idPergunta, descricaoPergunta FROM pergunta ORDER BY rand() limit 1");
 
+$tema = selecionar("SELECT descricaoTema FROM tema");
 //print_r ($pergunta);
 
 $arrayPergunta = selecionar("SELECT * FROM pergunta");
@@ -53,6 +53,6 @@ echo $random;
 //echo $pergunta["descricaoPergunta"];
 */
 
-header("Location: ../../interacaoJogo/telaPergunta.php");
+//header("Location: ../../interacaoJogo/telaPergunta.php");
 ?>
 </pre>
