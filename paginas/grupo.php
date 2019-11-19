@@ -44,7 +44,7 @@ include "../acao/persistenciaUsuario.php";
             ?>
         </div>
         </center>
-
+        
         <!-- Tratamento de erro! -->
         <div id="Modal" class="modal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">

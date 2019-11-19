@@ -1,10 +1,7 @@
 <?php
 $msg= isset($_GET["msg"]) ? ($_GET["msg"]) :"";
-
-include("../../acao/navbar.php");
-
+include "../../acao/navbar.php";
 include "../../acao/persistenciaGrupo.php";
-
 ?>
 <html>
     <head>

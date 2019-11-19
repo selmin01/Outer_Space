@@ -16,10 +16,6 @@ body{
 }
 
 /*Tela de cadastro de Fase*/
-
-.vel{
-    width: 225px;
-}
 .botoes{
     margin-left: 375px;
 }
@@ -29,8 +25,4 @@ body{
     margin-bottom: 50px;
     margin-top: 25px;
     margin-left: 50px;
-}
-
-.meteoro{
-    width: 275px;
 }
