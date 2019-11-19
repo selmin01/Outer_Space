@@ -1,6 +1,6 @@
 body{
     overflow-x: hidden;
-    overflow-y: scroll !important;
+    overflow-y: hidden;
     background-image:url("../imgs/BackSpace.jpg");
 }
 
