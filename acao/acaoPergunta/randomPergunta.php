@@ -1,5 +1,6 @@
 <pre>
 <?php
+session_start();
 include "../../bancoOuterSpace/banco.php";
 
 onConexao();
@@ -25,8 +26,6 @@ if($n == 0) {
     $_SESSION["pergunta"] = $pergunta;
     header("Location: ../../interacaoJogo/telaPergunta.php");
 }
-
-
 
 /*
 foreach($arrayPergunta as $array) {
