@@ -1,11 +1,13 @@
+var pontuacao=0;
+
 var config = {
   type: Phaser.WEBGL,
   width: 1350,
-  height: 650,
+  height: 620,
   physics: {
       default: "arcade",
       arcade: {
-          fps: 60
+        fps: 60
       }
   },
   backgroundColor: '#2d2d2d',
@@ -35,7 +37,7 @@ function startJogo(){
 function preload ()
 {
   this.load.image('ship', '../estilo/imgs/nave.png');
-  this.load.image('bullet', '../estilo/imgs/tiro_top.png');
+  this.load.image('bullet', '../estilo/imgs/tiro.png');
   this.load.image('fundo', '../estilo/imgs/BackSpace.jpg');
   this.load.image('meteoro', '../estilo/imgs/meteoro_top.png');
 }
@@ -55,7 +57,7 @@ function create ()
       {
           Phaser.Physics.Arcade.Image.call(this, scene, 0, 0, 'bullet');
 
-          this.speed = Phaser.Math.GetSpeed(400, 1);
+          this.speed = Phaser.Math.GetSpeed(800, 1);
          
       },
 
@@ -97,11 +99,11 @@ function create ()
 
   this.physics.add.overlap(sprite, meteor, colisaoNave);
   this.physics.add.collider(meteor, bullets, colisaoBala, null);
-  timedEvent = this.time.addEvent({ delay: 500, callback: criarMeteoros, callbackScope: this, repeat: 130});
+  timedEvent = this.time.addEvent({ delay: 1000, callback: criarMeteoros, callbackScope: this, repeat: 130});
 }
 
 function criarMeteoros(){
-  var me = meteor.create(Phaser.Math.RND.between(0, 1000), 0, 'meteoro');
+  var me = meteor.create(Phaser.Math.RND.between(0, 2000), 0, 'meteoro');
 
   me.body.gravity.y = 100;
   this.physics.add.collider(me, bullets, colisaoBala);
@@ -109,9 +111,13 @@ function criarMeteoros(){
 
 function colisaoBala(me,bullets)
 {
-  console.log("entrou");
+  //console.log("entrou");
+  //O QUE VAI OCORRER QUANDO COLIDIR COM O METEORO
   me.disableBody(true, true);
-  //O QUE VAI OCORRER QUANDO COLIDIR COM A NAVE
+  pontuacao = pontuacao + 1;
+  console.log(pontuacao);
+  document.querySelector('.pontuacao').innerHTML = "Meteoros Destruídos: "+pontuacao;
+  bullets.disableBody(true,true);
 }
 
 function colisaoNave(sprite, meteor)
@@ -148,7 +154,7 @@ function update (time, delta)
     if (bullet)
     {
         bullet.fire(sprite.x, sprite.y);
-        lastFired = time + 50;
+        lastFired = time + 300;
     }
   }
 }
