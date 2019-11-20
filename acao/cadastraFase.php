@@ -4,11 +4,11 @@ include "../bancoOuterSpace/banco.php";
 
 $dados = $_POST;
 
-print_r($dados);
-
 onConexao();
 
 inserir('fase', $dados);
 
+echo "<script>alert('Cadastrado com sucesso!')</script>";
+header("Location: ../paginas/pagsAdm/menuAdm.php");
 ?>
 </pre>
