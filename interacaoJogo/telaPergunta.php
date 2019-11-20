@@ -1,7 +1,21 @@
+<pre>
 <?php
+session_start();
 
+include "../bancoOuterSpace/banco.php";
+
+$pergunta = $_SESSION["pergunta"];
+
+onConexao();
+
+$idtema = $pergunta[0][0]["tema_idTema"];
+
+$tema = selecionar("SELECT descricaoTema FROM tema WHERE idTema = $idtema");
+
+offConexao();
 
 ?>
+</pre>
 <html>
 
 <head>
@@ -14,16 +28,14 @@
 
     <script>
         $(document).ready(function(){
-            //$("#alter1").click(function(){
-                //$("#pergunta").fadeIn(500);
-            //});
-            $("#pergunta").click(function(){
-                var resposta = $("#txtResposta").val();
-
+            $("input").click(function(e){
+                e.preventDefault();
+                var resposta = $(this).val();
+                console.log(resposta);
                 $.ajax({
                     url: "../acao/validaResposta.php",
                     type: "POST",
-                    data: "pergunta&resp="+resposta,
+                    data: "resp="+resposta,
                     success: function(resp) {
                         console.log(resp);
                     }
@@ -43,25 +55,25 @@
                 <center><h1 class="font"><?php echo $tema[0]["descricaoTema"];?></h1></center>
                 <br>
                 <form class="font" action="" method="post">
-                    <center><div class="fontResposta" id="pergunta">
+                <center><div class="fontResposta" id="pergunta">
                         <?php
-                          echo $pergunta[0]["descricaoPergunta"]; 
+                          echo $pergunta[0][0]["descricaoPergunta"]; 
                         ?>
                     </div></center>
                     <div class="input-group mb-3">
-                        <input type="submit" class="form-control fontResposta" value="<?php echo $alternativas[0]["descricaoAlternativa"]; ?>" id="txtResposta">
+                        <input type="submit" class="form-control fontResposta" value="<?php echo $pergunta[1][0]["descricaoAlternativa"]; ?>">
                         
                     </div>
                     <div class="input-group mb-3">
-                        <input type="submit" class="form-control fontResposta" value="<?php echo $alternativas[1]["descricaoAlternativa"]; ?>" id="txtResposta"> 
+                        <input type="submit" class="form-control fontResposta" value="<?php echo $pergunta[1][1]["descricaoAlternativa"]; ?>"> 
                         
                     </div>
                     <div class="input-group mb-3">
-                        <input type="submit" class="form-control fontResposta" value="<?php echo $alternativas[2]["descricaoAlternativa"]; ?>" id="txtResposta"> 
+                        <input type="submit" class="form-control fontResposta" value="<?php echo $pergunta[1][2]["descricaoAlternativa"]; ?>"> 
                         
                     </div>
                     <div class="input-group mb-3">
-                        <input type="submit" class="form-control fontResposta" value="<?php echo $alternativas[3]["descricaoAlternativa"]; ?>" id="txtResposta"> 
+                        <input type="submit" class="form-control fontResposta" value="<?php echo $pergunta[1][3]["descricaoAlternativa"]; ?>"> 
                         
                     </div>
                 </form>
