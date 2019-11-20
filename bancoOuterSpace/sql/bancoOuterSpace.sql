@@ -9,7 +9,7 @@ create table usuario (
     nick varchar(20),
     email varchar(60),
     senha varchar(50),
-    maxPonto int,
+    maxPonto int not null,
     primary key (idUsuario)
 );
 create table fase (
@@ -138,10 +138,11 @@ insert into usuario (
     nome,
     nick,
     email,
-    senha
+    senha,
+    maxPonto
 )
 
-value (1, 1, "Administrador", "admin", "admin@mail.com", "123");
+value (1, 1, "Administrador", "admin", "admin@mail.com", "123", 1547);
     
 insert into usuarioGrupo (
 	idUsuarioGrupo
@@ -220,21 +221,4 @@ value	(1, "Distribui endereço de rede.", 1),
 		(2, "Tradução de enderço.", 0),
 		(3, "Controla o acesso a internet.", 0),
 		(4, "Imprimi arquivos.", 0);
-        
-        SELECT u.nick, g.descricaoGrupo
-                            FROM usuario u INNER JOIN usuariogrupo ug 
-                            ON u.idUsuario = ug.usuario_idUsuario 
-                            INNER JOIN grupo g 
-                            ON ug.grupo_idGrupo = g.idGrupo 
-                            WHERE g.idGrupo = 2;
-                            
-                            SELECT u.nick, g.descricaoGrupo, sum(rg.ponto)
-                            FROM usuario u INNER JOIN usuariogrupo ug 
-                            ON u.idUsuario = ug.usuario_idUsuario 
-                            INNER JOIN grupo g 
-                            ON ug.grupo_idGrupo = g.idGrupo
-                            INNER JOIN rankinggrupo rg 
-                            ON g.idGrupo = rg.grupo_idGrupo 
-                            WHERE g.idGrupo = 2 AND u.nick=rg.usuario
-                            ORDER BY rg.ponto;
                             
