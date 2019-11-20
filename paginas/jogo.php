@@ -35,7 +35,7 @@ offConexao();
         ?>
       </div>
 
-      <div>
+      <div class="maxponto">
         <?php
           echo "RECORDE: ".$recorde;
         ?>
