@@ -141,8 +141,11 @@ insert into usuario (
     senha
 )
 
-value (1, 1, "Administrador", "admin", "admin@mail.com", "123");
-    
+value (1, 1, "Administrador", "admin", "admin@gmail.com", "admin"),
+	  (2, 0, "Ricardo", "ricardin", "ricardo@gmail.com", "123"),
+      (3, 0, "Gabriel", "selmin", "gabriel@gmail.com", "123"),
+	  (4, 0, "Carlos", "carlao", "carlos@gmail.com", "123"),
+      (5, 0, "Henrique", "henriqueZika", "henrique@gmail.com", "123");
 insert into usuarioGrupo (
 	idUsuarioGrupo
 )
@@ -237,4 +240,5 @@ value	(1, "Distribui endereço de rede.", 1),
                             ON g.idGrupo = rg.grupo_idGrupo 
                             WHERE g.idGrupo = 2 AND u.nick=rg.usuario
                             ORDER BY rg.ponto;
+                        
                             
