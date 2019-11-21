@@ -169,23 +169,6 @@ insert into rankingGrupo (
 )
 value	(1);
 
-insert into ranking (
-	idRanking,
-    usuario,
-    ponto
-)
-value	(1, "ricardin", 300),
-		(2, "selmin", 600),
-		(3, "henrique zika", 400),
-        (4, "carlao", 500),
-        (5, "zikao", 800),
-        (6, "thor", 100),
-        (7, "Tonny", 900),
-        (8, "ricardao", 1200),
-        (9, "Zé", 700),
-        (10, "xixi", 1400);
-        
-
 insert into pergunta (
 	idPergunta,
     descricaoPergunta
@@ -221,4 +204,4 @@ value	(1, "Distribui endereço de rede.", 1),
 		(2, "Tradução de enderço.", 0),
 		(3, "Controla o acesso a internet.", 0),
 		(4, "Imprimi arquivos.", 0);
-                            
+        
