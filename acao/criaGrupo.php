@@ -44,7 +44,7 @@ if($sucesso >= 1) {
    $_SESSION["rankingGrupo"] = $dados;
    header("Location: rankingGrupo.php?id=$idGrupo");
  }else{
-    header("Location: ../acao/mensagem/msg_banco.php");
+   header("Location: ../acao/mensagem/msg_banco.php");
  }
 
 ?>
