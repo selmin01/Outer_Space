@@ -225,4 +225,3 @@ value	(1, "Distribui endereço de rede.", 1),
                             WHERE g.idGrupo = 2 AND u.nick=rg.usuario
                             ORDER BY rg.ponto;
                         
-                            
