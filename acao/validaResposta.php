@@ -1,9 +1,12 @@
 <?php
 session_start();
 
-$resposta = isset($_POST["resp"]);
-
 include "../bancoOuterSpace/banco.php";
+
+
+$resposta = $_POST["resp"];
+
+echo $resposta;
 
 onConexao();
 

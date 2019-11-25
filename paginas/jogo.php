@@ -10,7 +10,6 @@ onConexao();
 $pontos = selecionar("SELECT maxponto FROM usuario WHERE idUsuario = $idUsuario");
 $recorde = $pontos[0]["maxponto"];
 offConexao();
-
 ?>
 <html>
   <head>
@@ -35,7 +34,7 @@ offConexao();
         ?>
       </div>
 
-      <div>
+      <div class="maxponto">
         <?php
           echo "RECORDE: ".$recorde;
         ?>

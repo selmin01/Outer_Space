@@ -33,8 +33,8 @@ include "../acao/rankingGeral.php";
                                 $pos ++;
                                 echo "<tr>";
                                 echo "<th scope='row'>". $pos ."º</th>";
-                                echo "<td>". $ranking[$chave]['usuario']. "</td>";
-                                echo "<td>". $ranking[$chave]['ponto']. "</td>";
+                                echo "<td>". $ranking[$chave]['nick']. "</td>";
+                                echo "<td>". $ranking[$chave]['maxPonto']. "</td>";
                                 echo "</tr>";
                                 echo "<tr>";
                             }

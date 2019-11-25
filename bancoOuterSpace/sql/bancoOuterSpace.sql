@@ -9,7 +9,7 @@ create table usuario (
     nick varchar(20),
     email varchar(60),
     senha varchar(50),
-    maxPonto int,
+    maxPonto int not null,
     primary key (idUsuario)
 );
 create table fase (
@@ -138,7 +138,8 @@ insert into usuario (
     nome,
     nick,
     email,
-    senha
+    senha,
+    maxPonto
 )
 
 value (1, 1, "Administrador", "admin", "admin@gmail.com", "admin"),
@@ -170,23 +171,6 @@ insert into rankingGrupo (
 	idRankingGrupo
 )
 value	(1);
-
-insert into ranking (
-	idRanking,
-    usuario,
-    ponto
-)
-value	(1, "ricardin", 300),
-		(2, "selmin", 600),
-		(3, "henrique zika", 400),
-        (4, "carlao", 500),
-        (5, "zikao", 800),
-        (6, "thor", 100),
-        (7, "Tonny", 900),
-        (8, "ricardao", 1200),
-        (9, "Zé", 700),
-        (10, "xixi", 1400);
-        
 
 insert into pergunta (
 	idPergunta,
