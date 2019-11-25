@@ -54,7 +54,14 @@ include "../../acao/persistenciaGrupo.php";
                         <h5 class="modal-title">Outer Space Informa.</h5>
                     </div>
                     <div class="modal-body">
-                        <p>Já existe um grupo com esse nome ou esse usuário não existe.</p>
+                        <?php
+                            $msg= isset($_GET["msg"]) ? ($_GET["msg"]) :"";
+                            if($msg==1){
+                                echo "<p>Já existe um grupo com esse nome ou esse usuário não existe.</p>";
+                            }elseif($msg==2){
+                                echo "<p>O nick informado não é o seu.</p>";
+                            }
+                        ?>
                     </div>
                     <div class="modal-footer">
                         <a href="telaGrupo.php">
@@ -72,5 +79,7 @@ include "../../acao/persistenciaGrupo.php";
 <?php
 $msg= isset($_GET["msg"]) ? ($_GET["msg"]) :"";
 if($msg==1){
+    echo("<script>$(document).ready( function (){ $('#Modal').show(1); });</script>");
+} else if($msg==2) {
     echo("<script>$(document).ready( function (){ $('#Modal').show(1); });</script>");
 }

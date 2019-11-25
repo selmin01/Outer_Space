@@ -1,7 +1,12 @@
 <pre>
 <?php
 session_start();
+
 include "../bancoOuterSpace/banco.php";
+
+$userLogin = $_SESSION["usuario"];
+
+$userLogin = $userLogin["nick"];
 
 $dados = $_POST;
 
@@ -21,7 +26,9 @@ $nomeGrupo = $grupo[0]["descricaoGrupo"];
 
 if(($nomeGrupo == $descricaoGrupo) || empty($usuario)) {
     header("Location: ../paginas/auxGrupo/telaGrupo.php?msg=1");
-}else {
+} else if($userLogin <> $membro){
+    header("Location: ../paginas/auxGrupo/telaGrupo.php?msg=2");
+} else {
     $_SESSION["post"] = $_POST;
     header("Location: criaGrupo.php");
 }

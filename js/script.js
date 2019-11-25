@@ -1,9 +1,12 @@
+//Variaveis de fases (ciclos)
 var pontuacao=0;
+var velocidadeNave=900, velocidadeDisparo=300, velocidadeMeteoro=1000;
+var gravidade=100, totalMeteoro=100;
 
 var config = {
   type: Phaser.WEBGL,
   width: 1350,
-  height: 620,
+  height: 650,
   physics: {
       default: "arcade",
       arcade: {
@@ -28,11 +31,15 @@ var lastFired = 0;
 var sprite;
 var keyObj;
 var meteor;
+var game;
 
 function startJogo(){
-  var game = new Phaser.Game(config);
+  game = new Phaser.Game(config);
 }
-//startJogo();
+
+function geraMeteoro (){
+
+}
 
 function preload ()
 {
@@ -40,6 +47,7 @@ function preload ()
   this.load.image('bullet', '../estilo/imgs/tiro.png');
   this.load.image('fundo', '../estilo/imgs/BackSpace.jpg');
   this.load.image('meteoro', '../estilo/imgs/meteoro_top.png');
+  this.load.image('explosao', '../estilo/imgs/explosao.png');
 }
 
 function create ()
@@ -56,9 +64,7 @@ function create ()
       function Bullet (scene)
       {
           Phaser.Physics.Arcade.Image.call(this, scene, 0, 0, 'bullet');
-
           this.speed = Phaser.Math.GetSpeed(800, 1);
-         
       },
 
       fire: function (x, y)
@@ -90,40 +96,56 @@ function create ()
 
   sprite.setDamping(true);
   sprite.setDrag(0.99);
-  sprite.setMaxVelocity(200);
+  sprite.setMaxVelocity(velocidadeNave);
  
   sprite.setCollideWorldBounds(true)
   cursors = this.input.keyboard.createCursorKeys();
-  speed = Phaser.Math.GetSpeed(300, 1);
+  speed = Phaser.Math.GetSpeed(velocidadeNave, 1); //velocidadeNave
   keyObj = this.input.keyboard.addKey('space');
 
-  this.physics.add.overlap(sprite, meteor, colisaoNave);
-  this.physics.add.collider(meteor, bullets, colisaoBala, null);
-  timedEvent = this.time.addEvent({ delay: 1000, callback: criarMeteoros, callbackScope: this, repeat: 130});
+  this.physics.add.overlap(sprite, meteor, colisaoNave, null, this);
+  timedEvent = this.time.addEvent({ delay: velocidadeMeteoro, callback: criarMeteoros, callbackScope: this, repeat: totalMeteoro}); //velocidadeMeteoro totalMeteoro
 }
 
 function criarMeteoros(){
   var me = meteor.create(Phaser.Math.RND.between(0, 2000), 0, 'meteoro');
 
-  me.body.gravity.y = 100;
+  me.body.gravity.y = gravidade; //gravidade
   this.physics.add.collider(me, bullets, colisaoBala);
+}
+
+function colisaoMeteoro(bullet,meteoros)
+{
+   bullet.disableBody(true, true);
 }
 
 function colisaoBala(me,bullets)
 {
+  debugger;
   //console.log("entrou");
   //O QUE VAI OCORRER QUANDO COLIDIR COM O METEORO
   me.disableBody(true, true);
   pontuacao = pontuacao + 1;
   console.log(pontuacao);
   document.querySelector('.pontuacao').innerHTML = "Meteoros Destruídos: "+pontuacao;
-  bullets.disableBody(true,true);
 }
 
 function colisaoNave(sprite, meteor)
 {
   sprite.disableBody(true, true);
+  hitBomb();
   //O QUE VAI OCORRER QUANDO COLIDIR COM A NAVE
+}
+
+function hitBomb (sprite, bometeormb)
+{
+    this.game.pause();
+
+    sprite.setTint(0xff0000);
+
+    sprite.anims.play('turn');
+
+    gameOver = true;
 }
 
 function update (time, delta)
@@ -154,7 +176,7 @@ function update (time, delta)
     if (bullet)
     {
         bullet.fire(sprite.x, sprite.y);
-        lastFired = time + 300;
+        lastFired = time + velocidadeDisparo; //velocidadeDisparo 
     }
   }
 }

@@ -31,18 +31,20 @@ offConexao();
             $("input").click(function(e){
                 e.preventDefault();
                 var resposta = $(this).val();
-                console.log(resposta);
                 $.ajax({
                     url: "../acao/validaResposta.php",
                     type: "POST",
                     data: "resp="+resposta,
-                    success: function(resp) {
-                        console.log(resp);
-                    }
-                }); 
+                    dataType: "html"
+                }).done(function(resposta) {
+                    console.log(resposta);
+                }).fail(function(jqXHR, textStatus ) {
+                    console.log("Request failed: " + textStatus);
+                });
             }); 
         });
     </script>
+  
 </head>
 
 

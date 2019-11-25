@@ -9,7 +9,7 @@ create table usuario (
     nick varchar(20),
     email varchar(60),
     senha varchar(50),
-    maxPonto int,
+    maxPonto int not null,
     primary key (idUsuario)
 );
 create table fase (
@@ -138,7 +138,8 @@ insert into usuario (
     nome,
     nick,
     email,
-    senha
+    senha,
+    maxPonto
 )
 
 value (1, 1, "Administrador", "admin", "admin@gmail.com", "admin"),
@@ -146,6 +147,7 @@ value (1, 1, "Administrador", "admin", "admin@gmail.com", "admin"),
       (3, 0, "Gabriel", "selmin", "gabriel@gmail.com", "123"),
 	  (4, 0, "Carlos", "carlao", "carlos@gmail.com", "123"),
       (5, 0, "Henrique", "henriqueZika", "henrique@gmail.com", "123");
+
 insert into usuarioGrupo (
 	idUsuarioGrupo
 )
@@ -170,23 +172,6 @@ insert into rankingGrupo (
 	idRankingGrupo
 )
 value	(1);
-
-insert into ranking (
-	idRanking,
-    usuario,
-    ponto
-)
-value	(1, "ricardin", 300),
-		(2, "selmin", 600),
-		(3, "henrique zika", 400),
-        (4, "carlao", 500),
-        (5, "zikao", 800),
-        (6, "thor", 100),
-        (7, "Tonny", 900),
-        (8, "ricardao", 1200),
-        (9, "Zé", 700),
-        (10, "xixi", 1400);
-        
 
 insert into pergunta (
 	idPergunta,
@@ -223,6 +208,7 @@ value	(1, "Distribui endereço de rede.", 1),
 		(2, "Tradução de enderço.", 0),
 		(3, "Controla o acesso a internet.", 0),
 		(4, "Imprimi arquivos.", 0);
+
         
         SELECT u.nick, g.descricaoGrupo
                             FROM usuario u INNER JOIN usuariogrupo ug 
@@ -241,4 +227,4 @@ value	(1, "Distribui endereço de rede.", 1),
                             WHERE g.idGrupo = 2 AND u.nick=rg.usuario
                             ORDER BY rg.ponto;
                         
-                            
+
