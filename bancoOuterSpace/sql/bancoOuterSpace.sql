@@ -147,7 +147,6 @@ value (1, 1, "Administrador", "admin", "admin@gmail.com", "admin"),
       (3, 0, "Gabriel", "selmin", "gabriel@gmail.com", "123"),
 	  (4, 0, "Carlos", "carlao", "carlos@gmail.com", "123"),
       (5, 0, "Henrique", "henriqueZika", "henrique@gmail.com", "123");
-
 insert into usuarioGrupo (
 	idUsuarioGrupo
 )
@@ -208,7 +207,6 @@ value	(1, "Distribui endereço de rede.", 1),
 		(2, "Tradução de enderço.", 0),
 		(3, "Controla o acesso a internet.", 0),
 		(4, "Imprimi arquivos.", 0);
-
         
         SELECT u.nick, g.descricaoGrupo
                             FROM usuario u INNER JOIN usuariogrupo ug 
@@ -227,4 +225,3 @@ value	(1, "Distribui endereço de rede.", 1),
                             WHERE g.idGrupo = 2 AND u.nick=rg.usuario
                             ORDER BY rg.ponto;
                         
-
