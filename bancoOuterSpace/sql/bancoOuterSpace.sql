@@ -174,3 +174,4 @@ value	(1, 1, "adm", 1000);
 
 update grupo set rankingGrupo_idRankingGrupo = 1
 where idGrupo = 1;
+
