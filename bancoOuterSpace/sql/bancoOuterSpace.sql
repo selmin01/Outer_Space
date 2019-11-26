@@ -137,10 +137,16 @@ value	(1, "Tecnologia"),
 		(2, "Astronomia");
 
 insert into tipo (idTipo, descricaoTipo)
-value	(1, "XP");
+value	(1, "Ponto"),
+		(2, "Vida"),
+        (3, "VelocidadeTiro"),
+        (4, "VelocidadeMeteoro");
 
 insert into bonus (idBonus, tipo_idTipo, valor)
-value	(1, 1, "500");
+value	(1, 1, "500"),
+		(2, 2, "1"),
+        (3, 3, "500"),
+        (4, 4, "50");
 
 insert into pergunta (idPergunta, tema_idTema, bonus_idBonus, descricaoPergunta)
 value	( 1, 1, 1, "O que faz um servidor DHCP ?");
