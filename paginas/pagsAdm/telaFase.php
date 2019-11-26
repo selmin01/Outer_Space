@@ -13,7 +13,7 @@ include "../../acao/persistenciaGrupo.php";
 		<div class="container">
             <form action="../../acao/cadastraFase.php" method="post">
                 <div class="row">
-                    <div class="col-md-4 mt-2 mx-auto font">
+                    <div class="col-md-4 mx-auto font">
                        <center><div class="mx-auto titulo"><h2>Cadastro de Fase</h2></div></center>
                     </div>
                     <div class="col-md-12" >

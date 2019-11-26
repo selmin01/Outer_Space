@@ -126,7 +126,7 @@ references grupo (idGrupo)
 ON DELETE CASCADE
 ON UPDATE CASCADE;
 
-alter table rankinggrupo
+alter table rankingGrupo
 add constraint fk_grupo_RankingGrupo
 foreign key (grupo_idGrupo)
 references grupo (idGrupo)
@@ -162,7 +162,7 @@ insert into fase (idFase, pergunta_idPergunta, tempo, qtdMeteoro, velocidadeNave
 value (1, 1, '00:05', 10, 5);
 
 insert into usuario (idUsuario, fase_idFase, permissao, nome, nick, email, senha, maxPonto)
-value (1, 1, 1, "Administrador", "admin", "admin@mail.com", "123", 1547);
+value (1, 1, 1, "Administrador", "admin", "admin@gmail.com", "admin", 1547);
     
 insert into grupo (idGrupo, codigo, descricaoGrupo) 
 value	(1, 1, "Extreme");
