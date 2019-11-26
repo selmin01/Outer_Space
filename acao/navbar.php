@@ -14,7 +14,7 @@
             <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link letra" href="cadastraTema.php">Cadastrar Pergunta<span class="sr-only">(página atual)</span></a>
+                        <a class="nav-link letra" href="cadastraTema.php">Cadastrar Pergunta</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link letra" href="telaFase.php">Cadastrar Fase</a>
