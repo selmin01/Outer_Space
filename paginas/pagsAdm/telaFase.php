@@ -23,11 +23,11 @@ include "../../acao/persistenciaGrupo.php";
                                 <label for="formGroupExampleInput"><h5 class="font ">Velocidade da Nave</h5></label>
                                 <select name="velocidadeNave" class="form-control" required="">
                                     <option value=""> -- </option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
+                                    <option value="1">200</option>
+                                    <option value="2">400</option>
+                                    <option value="3">600</option>
+                                    <option value="4">800</option>
+                                    <option value="5">1000</option>
                                 </select>
                             </div>
                             <div class="form-group row">
