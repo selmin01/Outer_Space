@@ -34,7 +34,7 @@ include "../acao/rankingGeral.php";
                                 echo "<tr>";
                                 echo "<th scope='row'>". $pos ."º</th>";
                                 echo "<td>". $ranking[$chave]['nick']. "</td>";
-                                echo "<td>". $ranking[$chave]['maxPonto']. "</td>";
+                                echo "<td>". $ranking[$chave]['pontos']. "</td>";
                                 echo "</tr>";
                                 echo "<tr>";
                             }

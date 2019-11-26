@@ -129,6 +129,7 @@ function colisaoBala(me,bullets)
   console.log(pontuacao);
   document.querySelector('.pontuacao').innerHTML = "Meteoros Destruídos: "+pontuacao;
 }
+
 function requisicao() {
   debugger;
   $.ajax({
@@ -137,10 +138,10 @@ function requisicao() {
     data: {pont: pontuacao}
   });
 }
+
 function colisaoNave(sprite, meteor)
 {
   sprite.disableBody(true, true);
-  debugger;
   requisicao();
   //hitBomb();
   //O QUE VAI OCORRER QUANDO COLIDIR COM A NAVE
