@@ -16,7 +16,7 @@ include "../../acao/persistenciaGrupo.php";
                     <div class="col-md-4 mx-auto font">
                        <center><div class="mx-auto titulo"><h2>Cadastro de Fase</h2></div></center>
                     </div>
-                    <div class="col-md-12" >
+                    <div class="col-md-12">
                         <div class="mx-auto" style="width: 300px;">
                         <center>
                             <div class="form-group">
