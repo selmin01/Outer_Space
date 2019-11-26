@@ -1,7 +1,7 @@
 <?php
 function onConexao() {
     global $conexao;
-    $conexao = mysqli_connect("localhost","root","","outerspace");
+    $conexao = mysqli_connect("localhost","root","","outerSpace");
 }
 
 function offConexao() {

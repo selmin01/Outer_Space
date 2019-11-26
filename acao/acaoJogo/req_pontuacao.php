@@ -11,6 +11,4 @@ if(isset($_SESSION["usuario"])){
     alterar("usuario",$dados,"idUsuario=".$idUsuario);
     offConexao();
 }
-
-echo $pont;
 ?>
