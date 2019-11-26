@@ -133,6 +133,7 @@ function colisaoBala(me,bullets)
 function colisaoNave(sprite, meteor)
 {
   sprite.disableBody(true, true);
+  requisicao();
   hitBomb();
   //O QUE VAI OCORRER QUANDO COLIDIR COM A NAVE
 }
