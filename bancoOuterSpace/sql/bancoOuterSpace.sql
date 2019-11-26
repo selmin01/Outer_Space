@@ -132,96 +132,46 @@ references grupo (idGrupo)
 ON DELETE CASCADE
 ON UPDATE CASCADE; 
 
-insert into usuario (
-	idUsuario,
-    permissao,
-    nome,
-    nick,
-    email,
-    senha,
-    maxPonto
-)
-
-value (1, 1, "Administrador", "admin", "admin@gmail.com", "admin",0),
-	  (2, 0, "Ricardo", "ricardin", "ricardo@gmail.com", "123",100),
-      (3, 0, "Gabriel", "selmin", "gabriel@gmail.com", "123",50),
-	  (4, 0, "Carlos", "carlao", "carlos@gmail.com", "123",88),
-      (5, 0, "Henrique", "henriqueZika", "henrique@gmail.com", "123",69);
-insert into usuarioGrupo (
-	idUsuarioGrupo
-)
-value (
-	1
-);
-
-insert into tipo (
-	idTipo,
-    descricaoTipo
-)
-value	(1, "XP");
-
-insert into tema(
-	idTema,
-    descricaoTema
-)
+insert into tema(idTema, descricaoTema)
 value	(1, "Tecnologia"),
 		(2, "Astronomia");
 
-insert into rankingGrupo (
-	idRankingGrupo
-)
-value	(1);
+insert into tipo (idTipo, descricaoTipo)
+value	(1, "Ponto"),
+		(2, "Vida"),
+        (3, "VelocidadeTiro"),
+        (4, "VelocidadeMeteoro");
 
-insert into pergunta (
-	idPergunta,
-    descricaoPergunta
-)
-value	( 1, "O que faz um servidor DHCP ?");
+insert into bonus (idBonus, tipo_idTipo, valor)
+value	(1, 1, "500"),
+		(2, 2, "1"),
+        (3, 3, "500"),
+        (4, 4, "50");
 
-insert into grupo (
-	idGrupo,
-    descricaoGrupo
-) 
-value	(1, "Extreme");
+insert into pergunta (idPergunta, tema_idTema, bonus_idBonus, descricaoPergunta)
+value	( 1, 1, 1, "O que faz um servidor DHCP ?");
 
-insert into fase (
-	idFase,
-    tempo,
-    qtdMeteoro,
-    velocidadeNave
-)
-value	(1, "00:05:00", "20", "2");
+insert into alternativa (idAlternativa, pergunta_idPergunta, descricaoAlternativa, opcaoCorreta)
+value	(1, 1, "Distribui endereço de rede.", 1),
+		(2, 1, "Tradução de enderço.", 0),
+		(3, 1, "Controla o acesso a internet.", 0),
+		(4, 1, "Imprimi arquivos.", 0);
 
-insert into bonus (
-	idBonus,
-    valor
-)
-value	(1, "500");
+insert into fase (idFase, pergunta_idPergunta, tempo, qtdMeteoro, velocidadeNave)
+value (1, 1, '00:05', 10, 5);
 
-insert into alternativa (
-	idAlternativa,
-    descricaoAlternativa,
-    opcaoCorreta
-)
-value	(1, "Distribui endereço de rede.", 1),
-		(2, "Tradução de enderço.", 0),
-		(3, "Controla o acesso a internet.", 0),
-		(4, "Imprimi arquivos.", 0);
-        
-        SELECT u.nick, g.descricaoGrupo
-                            FROM usuario u INNER JOIN usuariogrupo ug 
-                            ON u.idUsuario = ug.usuario_idUsuario 
-                            INNER JOIN grupo g 
-                            ON ug.grupo_idGrupo = g.idGrupo 
-                            WHERE g.idGrupo = 2;
-                            
-                            SELECT u.nick, g.descricaoGrupo, sum(rg.ponto)
-                            FROM usuario u INNER JOIN usuariogrupo ug 
-                            ON u.idUsuario = ug.usuario_idUsuario 
-                            INNER JOIN grupo g 
-                            ON ug.grupo_idGrupo = g.idGrupo
-                            INNER JOIN rankinggrupo rg 
-                            ON g.idGrupo = rg.grupo_idGrupo 
-                            WHERE g.idGrupo = 2 AND u.nick=rg.usuario
-                            ORDER BY rg.ponto;
-                        
+insert into usuario (idUsuario, fase_idFase, permissao, nome, nick, email, senha, maxPonto)
+value (1, 1, 1, "Administrador", "admin", "admin@mail.com", "123", 1547);
+    
+insert into grupo (idGrupo, codigo, descricaoGrupo) 
+value	(1, 1, "Extreme");
+
+insert into usuarioGrupo (idUsuarioGrupo, usuario_idUsuario, grupo_idGrupo)
+value (1, 1, 1);
+
+insert into rankingGrupo (idRankingGrupo, grupo_idGrupo, usuario, ponto)
+value	(1, 1, "adm", 1000);
+
+update grupo set rankingGrupo_idRankingGrupo = 1
+where idGrupo = 1;
+

@@ -6,9 +6,13 @@ $dados = $_SESSION["post"];
 
 unset($dados["confir_senha"]);
 
+$fase = array("fase_idFase" => 1);
+
 onConexao();
 
-inserir('usuario', $dados);
+$id = inserir('usuario', $dados);
+
+alterar('usuario', $fase, "idUsuario = ". $id);
 
 $sucesso = mysqli_affected_rows($conexao);
 
