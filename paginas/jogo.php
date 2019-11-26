@@ -23,13 +23,7 @@ offConexao();
       $(document).ready(function(){
         startJogo();
       })
-      function requisicao() {
-        $.ajax({
-          method: "POST",
-          url: "../acao/acaoJogo/req_pontuacao.php",
-          ata: {pont: pontuacao}
-        })
-      }
+      
     </script>
   </head>
   <body>
