@@ -10,6 +10,7 @@ create table usuario (
     email varchar(60),
     senha varchar(50),
     maxPonto int not null,
+    pontos int not null,
     primary key (idUsuario)
 );
 create table fase (

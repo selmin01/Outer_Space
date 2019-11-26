@@ -23,6 +23,7 @@ offConexao();
       $(document).ready(function(){
         startJogo();
       })
+      
     </script>
   </head>
   <body>

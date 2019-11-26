@@ -1,7 +1,7 @@
 //Variaveis de fases (ciclos)
 var pontuacao=0;
 var velocidadeNave=900, velocidadeDisparo=300, velocidadeMeteoro=1000;
-var gravidade=100, totalMeteoro=100;
+var gravidade=20 /*100*/, totalMeteoro=100;
 
 var config = {
   type: Phaser.WEBGL,
@@ -129,11 +129,20 @@ function colisaoBala(me,bullets)
   console.log(pontuacao);
   document.querySelector('.pontuacao').innerHTML = "Meteoros Destruídos: "+pontuacao;
 }
-
+function requisicao() {
+  debugger;
+  $.ajax({
+    method: "POST",
+    url: "../acao/acaoJogo/req_pontuacao.php",
+    data: {pont: pontuacao}
+  });
+}
 function colisaoNave(sprite, meteor)
 {
   sprite.disableBody(true, true);
-  hitBomb();
+  debugger;
+  requisicao();
+  //hitBomb();
   //O QUE VAI OCORRER QUANDO COLIDIR COM A NAVE
 }
 
