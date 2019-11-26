@@ -54,6 +54,7 @@ function alterar($tabela, $dados, $condicao = null) {
     }
     $sql = substr($sql, 0, -2);
     $resultado = executar($sql,$condicao);
+    echo $sql;
     return $resultado;
 }
 

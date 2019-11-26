@@ -4,6 +4,8 @@ include "../bancoOuterSpace/banco.php";
 
 $dados = $_POST;
 
+$bonus = rand(1, 4);
+
 $tema = $dados["tema"];
 
 if($tema == "tecnologia") {
@@ -19,7 +21,7 @@ unset($dados["tema"]);
 $opcaoCorreta = $dados["resposta"];
 unset($dados["resposta"]);
 
-$pergunta = array("descricaoPergunta" => $dados["pergunta"]);
+$pergunta = array("descricaoPergunta" => $dados["pergunta"], "bonus_idBonus" => $bonus);
 unset($dados["pergunta"]);
 
 $alternativa = $dados;
