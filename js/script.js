@@ -1,7 +1,7 @@
 //Variaveis de fases (ciclos)
 var pontuacao=0;
 var velocidadeNave=900, velocidadeDisparo=300, velocidadeMeteoro=1000;
-var gravidade=100, totalMeteoro=100;
+var gravidade=20 /*100*/, totalMeteoro=100;
 
 var config = {
   type: Phaser.WEBGL,
