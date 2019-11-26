@@ -20,7 +20,7 @@ include "../acao/persistenciaUsuario.php";
                 <div class="col-sm-12">
                     <center>
                     <?php
-                        echo "<a class='linkbtn' href='auxGrupo/codigoGrupo.php'><button type='button' class='btn btn-dark btn-lg btn-block font botoes'>Grupo Existente</button></a>"
+                        echo "<a class='linkbtn' href='auxGrupo/codigoGrupo.php'><button type='button' class='btn btn-dark btn-lg btn-block font botoes'>Entrar num Grupo Existente</button></a>"
                     ?>
                     <br>
                     <?php
