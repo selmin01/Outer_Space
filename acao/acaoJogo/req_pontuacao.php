@@ -14,11 +14,14 @@ if(isset($_SESSION["usuario"])){
     $auxPont = $arrayPonto[0]["pontos"];
     //print_r($arrayDados);
     echo $maxPonto;
+    if($maxPonto<$pont){
+        $maxPonto=$pont;
+    }
     echo $auxPont;
     $pont+=$auxPont;
     echo " ", $pont;
 
-    $dados= array("idUsuario"=>$idUsuario, "pontos"=>$pont);
+    $dados= array("idUsuario"=>$idUsuario,"maxPonto"=>$maxPonto,"pontos"=>$pont);
 
     alterar("usuario",$dados,"idUsuario=".$idUsuario);
     
