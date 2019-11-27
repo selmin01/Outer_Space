@@ -107,6 +107,10 @@ function create ()
   timedEvent = this.time.addEvent({ delay: velocidadeMeteoro, callback: criarMeteoros, callbackScope: this, repeat: totalMeteoro}); //velocidadeMeteoro totalMeteoro
 }
 
+function fase() {
+    
+}
+
 function criarMeteoros(){
   var me = meteor.create(Phaser.Math.RND.between(0, 2000), 0, 'meteoro');
 
