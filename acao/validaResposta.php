@@ -13,10 +13,10 @@ offConexao();
 
 if($arrayResposta[0]["opcaoCorreta"] == 1) {
     echo "Você Acertou!";
-    header("Location: ../paginas/jogo.php?msg=1");
+    //header("Location: ../paginas/jogo.php?msg=1");
 } else {
     echo "Você Errou!";
-    header("Location: ../paginas/jogo.php?msg=0");
+    //header("Location: ../paginas/jogo.php?msg=0");
 }
 
 ?>
