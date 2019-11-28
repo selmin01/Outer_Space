@@ -37,8 +37,13 @@ offConexao();
                     data: "resp="+resposta,
                     dataType: "html"
                 }).done(function(resposta) {
-                    console.log(resposta);
-                    //window.location.href='./proximaFase.php';
+                    if (resposta == 1) {
+                        console.log(resposta, 'test');
+                        window.location.href='proximaFase.php';
+                    } else {
+                        console.log(resposta, 'deu ruim');
+                        // Página de erro
+                    }
                 }).fail(function(jqXHR, textStatus ) {
                     console.log("Request failed: " + textStatus);
                 });
