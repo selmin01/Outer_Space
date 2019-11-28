@@ -31,6 +31,7 @@ $arrayDados = selecionar("SELECT g.descricaoGrupo, g.idGrupo
                             ON ug.grupo_idGrupo = g.idGrupo
                             WHERE ug.usuario_idUsuario = '$idUsuario'");
 offConexao();
+
 ?>
 
 <html>
@@ -95,7 +96,7 @@ offConexao();
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
                         <?php
-                         echo "<a href='../../acao/deixarGrupo.php?id=$idGrupo'><button type='button' class='btn btn-primary'>Sair</button></a>";
+                            echo "<a href='../../acao/deixarGrupo.php?cod=$codGrupo'><button type='button' class='btn btn-primary'>Sair</button></a>";
                         ?>
                         </div>
                     </div>

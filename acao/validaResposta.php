@@ -11,13 +11,13 @@ $idPergunta = $pergunta[0][0]["idPergunta"];
 
 onConexao();
 
-$arrayResposta = selecionar("SELECT descricaoAlternativa, opcaoCorreta FROM alternativa WHERE descricaoAlternativa = '$resposta' AND pergunta_idPergunta = $idPergunta");
+$arrayResposta = selecionar("SELECT descricaoAlternativa, opcaoCorreta FROM alternativa WHERE descricaoAlternativa = '$resposta' AND pergunta_idPergunta = '$idPergunta'");
 
 offConexao();
 
 if($arrayResposta[0]["opcaoCorreta"] == 1) {
-    echo "Acertou";
+    echo 1;
 } else {
-    echo "Errou";
+    echo 2;
 }
 ?>

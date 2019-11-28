@@ -19,6 +19,7 @@ $arrayDados = selecionar("SELECT u.nick, g.descricaoGrupo, rg.ponto, g.codigo
                             ORDER BY rg.ponto DESC;");
 
 $sucesso = mysqli_affected_rows($conexao);
+
 offConexao();
 
 if($sucesso >= 1) {
