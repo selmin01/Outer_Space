@@ -16,9 +16,8 @@ $arrayResposta = selecionar("SELECT descricaoAlternativa, opcaoCorreta FROM alte
 offConexao();
 
 if($arrayResposta[0]["opcaoCorreta"] == 1) {
-    echo "Você Acertou!";
+    echo "Acertou";
 } else {
-    echo "Você Errou!";
+    echo "Errou";
 }
-
 ?>
