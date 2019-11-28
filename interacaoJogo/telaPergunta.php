@@ -38,6 +38,9 @@ offConexao();
                     dataType: "html"
                 }).done(function(resposta) {
                     console.log(resposta);
+                    if(this.resposta == "Você Acertou!") {
+                        window.location.href='./proximaFase.php';
+                    }
                 }).fail(function(jqXHR, textStatus ) {
                     console.log("Request failed: " + textStatus);
                 });
