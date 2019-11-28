@@ -150,8 +150,17 @@ value	(1, 1, "500"),
         (4, 4, "50");
 
 insert into pergunta (idPergunta, tema_idTema, bonus_idBonus, descricaoPergunta)
-value	( 1, 1, 1, "O que faz um servidor DHCP ?");
-
+value	( 1, 1, 1, "O que faz um servidor DHCP ?"),
+		( 2, 1, 1, "Quem criou o primeiro telescópio?"),
+        ( 3, 1, 1, "O que significa a sigla NASA?"),
+        ( 4, 1, 1, "Qual foi o primeiro computador digital eletrônico criado?"),
+        ( 5, 1, 1, "A NASA é uma agência espacial de qual país?"),
+        ( 6, 1, 1, "Qual o nome do primeiro android?"),
+        ( 7, 1, 1, " Qual foi a primeira rede social criada na internet?"),
+        ( 8, 1, 1, "O que significa a sigla “www” na internet?"),
+        ( 9, 1, 1, "Quando foi criado o primeiro smartphone da história?"),
+        ( 10, 1, 1, "Qual a resolução de uma imagem Full HD?"),
+        ( 11, 1, 1, "Qual desses passwords foi o mais usado na internet?")
 insert into alternativa (idAlternativa, pergunta_idPergunta, descricaoAlternativa, opcaoCorreta)
 value	(1, 1, "Distribui endereço de rede.", 1),
 		(2, 1, "Tradução de enderço.", 0),
