@@ -7,8 +7,10 @@ if(isset($_SESSION["usuario"])){
   $idUsuario = $usuario["idUsuario"];
 }
 onConexao();
-$pontos = selecionar("SELECT maxponto FROM usuario WHERE idUsuario = $idUsuario");
-$recorde = $pontos[0]["maxponto"];
+  $pontos = selecionar("SELECT maxponto FROM usuario WHERE idUsuario = $idUsuario");
+  $recorde = $pontos[0]["maxponto"];
+  $arrayFase = selecionar("SELECT tempo, qtdMeteoro, velocidadeNave  FROM fase 
+  INNER JOIN usuario WHERE idUsuario = '$idUsuario'");
 offConexao();
 ?>
 <html>
