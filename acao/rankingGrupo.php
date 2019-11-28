@@ -17,12 +17,12 @@ $arrayDados = selecionar("SELECT u.nick, g.descricaoGrupo, rg.ponto, g.codigo
                             ON g.idGrupo = rg.grupo_idGrupo 
                             WHERE g.idGrupo = $idGrupo AND u.nick = rg.usuario
                             ORDER BY rg.ponto DESC;");
-
 $sucesso = mysqli_affected_rows($conexao);
 offConexao();
 
 if($sucesso >= 1) {
     $_SESSION["rankingGrupo"] = $arrayDados;
+    //print_r($arrayDados);
     header("Location: ../paginas/auxGrupo/dadosGrupo.php");
 } else {
     header("Location: ../acao/mensagem/msg_banco.php");

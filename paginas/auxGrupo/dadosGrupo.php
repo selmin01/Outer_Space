@@ -1,7 +1,5 @@
 <?php
-
 include "../../acao/persistenciaGrupo.php";
-
 include "../../bancoOuterSpace/banco.php"; 
 
 if(isset($_SESSION["usuario"])){
@@ -31,8 +29,9 @@ $arrayDados = selecionar("SELECT g.descricaoGrupo, g.idGrupo
                             ON ug.grupo_idGrupo = g.idGrupo
                             WHERE ug.usuario_idUsuario = '$idUsuario'");
 offConexao();
-?>
 
+//print_r($dados);
+?>
 <html>
     <head>
         <meta charset="utf-8">
