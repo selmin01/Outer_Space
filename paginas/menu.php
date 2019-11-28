@@ -48,7 +48,7 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Outer Space Informa.</h5>
+                <h5 class="modal-title">Saudações Outer Space.</h5>
             </div>
             <div class="modal-body">
                 <?php
