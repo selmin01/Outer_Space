@@ -32,7 +32,6 @@ if(isset($_SESSION["usuario"])){
         print_r($dadosGrupo);
         alterar("rankinggrupo",$dadosGrupo,"usuario='$nick'");
     }
-
     offConexao();
 }
 ?>

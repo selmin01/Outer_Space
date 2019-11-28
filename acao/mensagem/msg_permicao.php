@@ -13,7 +13,8 @@
                 <center>
                     <h1 class="font">Outer Space Informa.</h1>
                     <br>
-                    <h5>Usuário não logado!</h5>
+                    <h5>Sessão inativa.</h5>
+                    <h5>Tente se logar novamente.</h5>
                     <br>
                 </center>
                 <a href="../../paginas/login.php" class="linkbtn">
