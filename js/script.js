@@ -140,6 +140,10 @@ function requisicao() {
     method: "POST",
     url: "../acao/acaoJogo/req_pontuacao.php",
     data: {pont: pontuacao}
+  }).done(function(resposta){
+    window.location.href='../interacaoJogo/gameOver.php';
+  }).fail(function(jqXHR, textStatus) {
+    console.log("Request failde: " + textStatus);  
   });
 }
 

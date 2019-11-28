@@ -34,7 +34,7 @@ function inserir($tabela, $dados){
     }
     $sql = substr($sql,0, -1);
     $sql.=")";
-    echo $sql;
+    //echo $sql;
     $resultado = executar($sql);
 
     $id = mysqli_insert_id($conexao);
@@ -53,6 +53,7 @@ function alterar($tabela, $dados, $condicao = null) {
         }
     }
     $sql = substr($sql, 0, -2);
+    echo $condicao;
     $resultado = executar($sql,$condicao);
     echo $sql;
     return $resultado;
