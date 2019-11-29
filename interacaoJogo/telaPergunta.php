@@ -36,10 +36,10 @@ offConexao();
                 }).done(function(resposta) {
                     if (resposta == 1) {
                         console.log(resposta, 'test');
-                        window.location.href='proximaFase.php';
+                        window.location.href='certaResposta.php';
                     } else {
                         console.log(resposta, 'deu ruim');
-                        // Página de erro
+                        window.location.href='erroResposta.php';
                     }
                 }).fail(function(jqXHR, textStatus ) {
                     console.log("Request failed: " + textStatus);
