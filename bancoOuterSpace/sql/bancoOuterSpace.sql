@@ -18,7 +18,7 @@ create table fase (
     pergunta_idPergunta int,
     tempo time,
     qtdMeteoro tinyint(100),
-    velocidadeNave tinyint(100),
+    velocidadeNave int,
     primary key (idFase)
 );
 create table pergunta (
@@ -178,7 +178,7 @@ value	(1, 1, "Distribui endereco de rede", 1),
         (20, 5, "Estados Unidos da America.", 1);
 
 insert into fase (idFase, pergunta_idPergunta, tempo, qtdMeteoro, velocidadeNave)
-value (1, 1, '00:05', 10, 5);
+value (1, 1, '00:05', 100, 900);
 
 insert into usuario (idUsuario, fase_idFase, permissao, nome, nick, email, senha, maxPonto)
 value (1, 1, 1, "Administrador", "admin", "admin@gmail.com", "admin", 1547);

@@ -1,7 +1,5 @@
 <?php
-
 include "../../acao/persistenciaGrupo.php";
-
 include "../../bancoOuterSpace/banco.php"; 
 
 if(isset($_SESSION["usuario"])){
