@@ -35,11 +35,12 @@ offConexao();
         <div class="container">
             <div class="mx-auto proxFase">
                 <center>
-                    <h1 class="font"> Você passou para a proxima fase!</h1>
+                    <h1 class="font"> Parabéns, você acertou a resposta!</h1>
+                    <h5>Você passou para a proxima fase</h5>
                     <br>
                     <h3>Seu Bonus: <?php print_r ($bonusPerg[0]["descricaoTipo"]);?></h3>
                     <br>
-                    <a href="../paginas/menu.php" class="linkbtn">
+                    <a href="../paginas/jogo.php" class="linkbtn">
                         <button type='button' class='btn btn-warning btn-block'>OK</button>
                     </a> 
                 </center>
