@@ -14,7 +14,7 @@
                     <h1 class="font"> Putz, você errou a resposta</h1>
                     <br>
                     <h5>Você passou para a proxima fase!</h5>
-                    <h5>Mas não terá nenhum bônus para ajuda-lo</h5>
+                    <h5>Mas não terá nenhum bônus para ajuda-lo.</h5>
                     <br>
                 </center>
                 <a href="../paginas/jogo.php" class="linkbtn">

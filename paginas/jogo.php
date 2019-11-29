@@ -9,9 +9,18 @@ if(isset($_SESSION["usuario"])){
 onConexao();
   $pontos = selecionar("SELECT maxponto FROM usuario WHERE idUsuario = $idUsuario");
   $recorde = $pontos[0]["maxponto"];
-  $arrayFase = selecionar("SELECT tempo, qtdMeteoro, velocidadeNave  FROM fase 
+  $arrayFase = selecionar("SELECT idFase, qtdMeteoro, velocidadeNave  FROM fase 
   INNER JOIN usuario WHERE idUsuario = '$idUsuario'");
 offConexao();
+
+$idFase = $arrayFase[0]["idFase"];
+$qtdMeteoro = $arrayFase[0]["qtdMeteoro"];
+$velocidadeNave = $arrayFase[0]["velocidadeNave"];
+
+//print_r($arrayFase);
+echo" <script>
+var idFase=".$idFase.", totalMeteoro=".$qtdMeteoro.", velocidadeNave=".$velocidadeNave." 
+</script> ";
 ?>
 <html>
   <head>

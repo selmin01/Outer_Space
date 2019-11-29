@@ -1,4 +1,3 @@
-<pre>
 <?php 
 
 session_start(); 
@@ -20,7 +19,6 @@ offConexao();
 
 //print_r ($bonusPerg);
 ?>
-</pre>
 
 <html>
     <head>
@@ -36,7 +34,7 @@ offConexao();
             <div class="mx-auto proxFase">
                 <center>
                     <h1 class="font"> Parabéns, você acertou a resposta!</h1>
-                    <h5>Você passou para a proxima fase</h5>
+                    <h5>Você passou para a proxima fase.</h5>
                     <br>
                     <h3>Seu Bonus: <?php print_r ($bonusPerg[0]["descricaoTipo"]);?></h3>
                     <br>
