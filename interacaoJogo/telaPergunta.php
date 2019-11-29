@@ -21,28 +21,41 @@ offConexao();
         <link rel="stylesheet" href="../estilo/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="../estilo/css/interacaojogo.css"/>
         <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet"/>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script>
-            $(document).ready(function(){
-                $("input").click(function(e){
-                    e.preventDefault();
-                    var resposta = $(this).val();
-                    $.ajax({
-                        url: "../acao/validaResposta.php",
-                        type: "POST",
-                        data: "resp="+resposta,
-                        dataType: "html"
-                    }).done(function(resposta) {
-                        console.log(resposta);
-                    }).fail(function(jqXHR, textStatus ) {
-                        console.log("Request failed: " + textStatus);
-                    });
-                }); 
-            });
-        </script>
-    </head>
-    <body>
-    <div class="container">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("input").click(function(e){
+                e.preventDefault();
+                var resposta = $(this).val();
+                $.ajax({
+                    url: "../acao/validaResposta.php",
+                    type: "POST",
+                    data: "resp="+resposta,
+                    dataType: "html"
+                }).done(function(resposta) {
+                    if (resposta == 1) {
+                        console.log(resposta, 'test');
+                        window.location.href='proximaFase.php';
+                    } else {
+                        console.log(resposta, 'deu ruim');
+                        // Página de erro
+                    }
+                }).fail(function(jqXHR, textStatus ) {
+                    console.log("Request failed: " + textStatus);
+                });
+            }); 
+        });
+    </script>
+  
+</head>
+
+
+<body>
+
+
+<div class="container">
+
 
                 <div class="mx-auto font resposta">
                     <center><h1 class="font"><?php echo $tema[0]["descricaoTema"];?></h1></center>

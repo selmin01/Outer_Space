@@ -5,18 +5,19 @@ include "../bancoOuterSpace/banco.php";
 
 $resposta = $_POST["resp"];
 
+$pergunta = $_SESSION["pergunta"];
+
+$idPergunta = $pergunta[0][0]["idPergunta"];
+
 onConexao();
 
-$arrayResposta = selecionar("SELECT descricaoAlternativa, opcaoCorreta FROM alternativa WHERE descricaoAlternativa = '$resposta'");
+$arrayResposta = selecionar("SELECT descricaoAlternativa, opcaoCorreta FROM alternativa WHERE descricaoAlternativa = '$resposta' AND pergunta_idPergunta = '$idPergunta'");
 
 offConexao();
 
 if($arrayResposta[0]["opcaoCorreta"] == 1) {
-    echo "Você Acertou!";
-    //header("Location: ../paginas/jogo.php?msg=1");
+    echo 1;
 } else {
-    echo "Você Errou!";
-    //header("Location: ../paginas/jogo.php?msg=0");
+    echo 2;
 }
-
 ?>

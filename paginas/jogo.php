@@ -28,8 +28,6 @@ offConexao();
     </script>
   </head>
   <body>
-
-    
       <div class="pontuacao">
         <?php
           echo "Meteoros Destruídos: 0";
@@ -41,7 +39,5 @@ offConexao();
           echo "RECORDE: ".$recorde;
         ?>
       </div>
-    
-    
   </body>
 </html>

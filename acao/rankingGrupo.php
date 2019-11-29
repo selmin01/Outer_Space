@@ -18,6 +18,7 @@ $arrayDados = selecionar("SELECT u.nick, g.descricaoGrupo, rg.ponto, g.codigo
                             WHERE g.idGrupo = $idGrupo AND u.nick = rg.usuario
                             ORDER BY rg.ponto DESC;");
 $sucesso = mysqli_affected_rows($conexao);
+
 offConexao();
 
 if($sucesso >= 1) {

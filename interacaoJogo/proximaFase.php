@@ -5,7 +5,7 @@ session_start();
 
 include "../bancoOuterSpace/banco.php";
 
-$pergunta = $_SESSION["pergunta"];
+$pergunta = $_SESSION ["pergunta"];
 
 $idBonus = $pergunta[0][0]["bonus_idBonus"];
 
@@ -39,7 +39,7 @@ offConexao();
                     <br>
                     <h3>Seu Bonus: <?php print_r ($bonusPerg[0]["descricaoTipo"]);?></h3>
                     <br>
-                    <a href="" class="linkbtn">
+                    <a href="../paginas/menu.php" class="linkbtn">
                         <button type='button' class='btn btn-warning btn-block'>OK</button>
                     </a> 
                 </center>
