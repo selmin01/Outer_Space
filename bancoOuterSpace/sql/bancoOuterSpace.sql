@@ -151,17 +151,17 @@ value	(1, 1, "500"),
 
 insert into pergunta (idPergunta, tema_idTema, bonus_idBonus, descricaoPergunta)
 value	( 1, 1, 1, "O que faz um servidor DHCP ?"),
-		( 2, 1, 2, "Quem criou o primeiro telescópio?"),
+		( 2, 1, 2, "Quem criou o primeiro telescopio?"),
         ( 3, 1, 3, "O que significa a sigla NASA?"),
-        ( 4, 1, 4, "Qual foi o primeiro computador digital eletrônico criado?"),
-        ( 5, 1, 1, "A NASA é uma agência espacial de qual país?");
+        ( 4, 1, 4, "Qual foi o primeiro computador digital eletronico criado?"),
+        ( 5, 1, 1, "A NASA e uma agencia espacial de qual pais?");
 insert into alternativa (idAlternativa, pergunta_idPergunta, descricaoAlternativa, opcaoCorreta)
 value	(1, 1, "Distribui endereco de rede", 1),
 		(2, 1, "Traducao de endereco", 0),
 		(3, 1, "Controla o acesso a internet", 0),
 		(4, 1, "Imprimi arquivos", 0),
         (5, 2, "Galileu Galilei", 0),
-        (6, 2, "Nicolau Copérnico", 0),
+        (6, 2, "Nicolau Copernico", 0),
         (7, 2, "Hans Lipperhey", 1),
         (8, 2, "Elias howe", 0),
         (9, 3, "National Aeronautics and Space Administration", 1),
@@ -174,8 +174,8 @@ value	(1, 1, "Distribui endereco de rede", 1),
         (16, 4, "Windows XP", 0),
         (17, 5, " Brasil", 0),
         (18, 5, "China", 0),
-        (19, 5, "Rússia", 0),
-        (20, 5, "Estados Unidos da América.", 1);
+        (19, 5, "Russia", 0),
+        (20, 5, "Estados Unidos da America.", 1);
 
 insert into fase (idFase, pergunta_idPergunta, tempo, qtdMeteoro, velocidadeNave)
 value (1, 1, '00:05', 10, 5);
@@ -194,13 +194,3 @@ value	(1, 1, "adm", 1000);
 
 update grupo set rankingGrupo_idRankingGrupo = 1
 where idGrupo = 1;
-
-SELECT g.descricaoGrupo, g.idGrupo
-FROM usuario u
-INNER JOIN usuariogrupo ug
-ON u.idUsuario = ug.usuario_idUsuario
-INNER JOIN grupo g
-ON ug.grupo_idGrupo = g.idGrupo
-WHERE ug.usuario_idUsuario = 2;
-
-SELECT idGrupo FROM grupo WHERE codigo = 837;
