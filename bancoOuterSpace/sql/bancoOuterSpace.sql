@@ -16,8 +16,8 @@ create table usuario (
 create table fase (
 	idFase int AUTO_INCREMENT,
     pergunta_idPergunta int,
-    tempo time,
-    qtdMeteoro tinyint(100),
+    maxPontFase int,
+    qtdMeteoro int,
     velocidadeNave int,
     primary key (idFase)
 );
@@ -177,8 +177,8 @@ value	(1, 1, "Distribui endereco de rede", 1),
         (19, 5, "Russia", 0),
         (20, 5, "Estados Unidos da America.", 1);
 
-insert into fase (idFase, pergunta_idPergunta, tempo, qtdMeteoro, velocidadeNave)
-value (1, 1, '00:05', 100, 900);
+insert into fase (idFase, pergunta_idPergunta, maxPontFase, qtdMeteoro, velocidadeNave)
+value (1, 1, 20, 100, 900);
 
 insert into usuario (idUsuario, fase_idFase, permissao, nome, nick, email, senha, maxPonto)
 value (1, 1, 1, "Administrador", "admin", "admin@gmail.com", "admin", 1547);
