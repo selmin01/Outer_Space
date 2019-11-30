@@ -14,7 +14,7 @@
                     <h1 class="font">Outer Space Informa.</h1>
                     <br>
                     <h5>Fim de jogo!</h5>
-                    <h5>Sua nave foi destruída .</h5>
+                    <h5>Sua nave foi destruída.</h5>
                     <br>
                 </center>
                 <a href="../paginas/menu.php" class="linkbtn">

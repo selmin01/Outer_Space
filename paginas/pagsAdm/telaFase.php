@@ -33,16 +33,16 @@ include "../../acao/persistenciaGrupo.php";
                             <div class="form-group row">
                                 <label class="col-sm-12 col-form-label"><h5 class="font">Quantidade de meteoros</h5></label>
                                 <div class="col-sm-12">
-                                    <input type="number" class="form-control" max="100" maxlength="3" name="qtdMeteoro" required="">
+                                    <input type="number" class="form-control" maxlength="3" name="qtdMeteoro" required="">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-12 col-form-label"><h5 class="font">Tempo da Fase</h5></label>
-                                <div class="col-sm-6 md-12">
-                                    <input type="time" class="form-control" name="tempo" min="00:01:00" max="00:30:00" required="">
-                                <br>
+                                <label class="col-sm-12 col-form-label"><h5 class="font">Pontuação Máxima</h5></label>
+                                <div class="col-sm-12">
+                                    <input type="number" class="form-control" maxlength="3" name="maxPontFase" required="">
                                 </div>
                             </div>
+                            <br>
                         </div>
                     </center>
                     </div>

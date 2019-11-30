@@ -1,20 +1,15 @@
 <?php 
-
 session_start(); 
-
 include "../bancoOuterSpace/banco.php";
 
 $pergunta = $_SESSION ["pergunta"];
-
 $idBonus = $pergunta[0][0]["bonus_idBonus"];
 
 onConexao();
-
 $bonusPerg = selecionar("SELECT b.valor, t.descricaoTipo
                         FROM bonus b INNER JOIN tipo t
                         ON b.tipo_idTipo = t.idTipo
                         WHERE b.idBonus = $idBonus");
-
 offConexao();
 
 //print_r ($bonusPerg);
@@ -33,13 +28,13 @@ offConexao();
         <div class="container">
             <div class="mx-auto proxFase">
                 <center>
-                    <h1 class="font"> Parabéns, você acertou a resposta!</h1>
-                    <h5>Você passou para a proxima fase.</h5>
+                    <h1 class="fontAcertou">Parabéns!!</h1>
+                    <h2 class="fontAcertou">Você acertou a resposta.</h2>
                     <br>
-                    <h3>Seu Bonus: <?php print_r ($bonusPerg[0]["descricaoTipo"]);?></h3>
+                    <h3 class="fontPreta">Seu bônus para a próxima fase: <?php print_r ($bonusPerg[0]["descricaoTipo"]);?></h3>
                     <br>
                     <a href="../paginas/jogo.php" class="linkbtn">
-                        <button type='button' class='btn btn-warning btn-block'>OK</button>
+                        <button type='button' class='btn btn-success btn-block'>OK</button>
                     </a> 
                 </center>
             </div>

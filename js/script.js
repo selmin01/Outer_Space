@@ -7,7 +7,7 @@ var gravidade=20 /*100*/;
 var config = {
   type: Phaser.WEBGL,
   width: 1350,
-  height: 650,
+  height: 600,
   physics: {
       default: "arcade",
       arcade: {
@@ -36,10 +36,6 @@ var game;
 
 function startJogo(){
   game = new Phaser.Game(config);
-}
-
-function geraMeteoro (){
-
 }
 
 function preload ()
@@ -109,11 +105,21 @@ function create ()
 }
 
 function fase() {
-    
+  //alert("IRADO!");
+  
+  $.ajax({
+    method: "POST",
+    url: "../acao/acaoJogo/req_fase.php",
+    data: {pont: pontuacao}
+  }).done(function(resposta){
+    window.location.href='../acao/acaoPergunta/randomPergunta.php';
+  }).fail(function(jqXHR, textStatus) {
+    console.log("Request failde: " + textStatus);  
+  });
 }
 
 function criarMeteoros(){
-  var me = meteor.create(Phaser.Math.RND.between(0, 2000), 0, 'meteoro');
+  var me = meteor.create(Phaser.Math.RND.between(0, 1350), 0, 'meteoro');
 
   me.body.gravity.y = gravidade; //gravidade
   this.physics.add.collider(me, bullets, colisaoBala);
@@ -198,4 +204,9 @@ function update (time, delta)
         lastFired = time + velocidadeDisparo; //velocidadeDisparo 
     }
   }
+
+  if(pontuacao>pontFase){
+    fase();
+  }
+
 }
