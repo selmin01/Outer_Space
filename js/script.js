@@ -45,12 +45,24 @@ function preload ()
   this.load.image('fundo', '../estilo/imgs/BackSpace.jpg');
   this.load.image('meteoro', '../estilo/imgs/meteoro_top.png');
   this.load.image('explosao', '../estilo/imgs/explosao.png');
+  this.load.audio('WorldBackground', '../estilo/sounds/naveEspacial.mp3');
 }
 
 function create ()
 {
   var mainGround = this.add.tileSprite(350, 0, 2300, 2000, 'fundo');
   this.physics.add.existing(mainGround, true);
+
+  var music = this.sound.add('WorldBackground');
+  var musicConfig = {
+        mute: false,
+        volume: 1,
+        rate: 1,
+        detune: 0,
+        seek: 0,
+        loop: true,
+        delay: 0
+  }
 
   var Bullet = new Phaser.Class({
 
@@ -60,8 +72,8 @@ function create ()
 
       function Bullet (scene)
       {
-          Phaser.Physics.Arcade.Image.call(this, scene, 0, 0, 'bullet');
-          this.speed = Phaser.Math.GetSpeed(800, 1);
+        Phaser.Physics.Arcade.Image.call(this, scene, 0, 0, 'bullet');
+        this.speed = Phaser.Math.GetSpeed(800, 1);
       },
 
       fire: function (x, y)
@@ -81,6 +93,8 @@ function create ()
           }
       }
   });
+
+  music.play(musicConfig);
 
   bullets = this.physics.add.group({
       classType: Bullet,
@@ -106,7 +120,7 @@ function create ()
 
 function fase() {
   //alert("IRADO!");
-  
+
   $.ajax({
     method: "POST",
     url: "../acao/acaoJogo/req_fase.php",
