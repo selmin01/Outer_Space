@@ -11,8 +11,8 @@ onConexao();
   $pontos = selecionar("SELECT maxponto FROM usuario WHERE idUsuario = $idUsuario");
   $recorde = $pontos[0]["maxponto"];
 offConexao();
-include "../acao/acaoJogo/req_fase.php";
 
+include "../acao/acaoJogo/req_fase.php";
 
 //print_r($arrayFase);
 echo" <script>
