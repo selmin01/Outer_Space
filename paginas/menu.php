@@ -4,7 +4,7 @@
 ?>
 <html>
   <head>
-    <title>JOGO</title>
+    <title>Outer Space</title>
     <link rel="stylesheet" href="../estilo/css/bootstrap.min.css" />
     <link rel="stylesheet" href="../estilo/css/menu.css"/>
     <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet"/>

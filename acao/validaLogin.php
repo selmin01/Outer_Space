@@ -29,7 +29,8 @@ if(empty($arrayUsu)) {
     if($usuario["permissao"] == 1) {
         header("Location: ../paginas/pagsAdm/menuAdm.php");
     }else {
-        header("Location: ../paginas/menu.php?msg=saudacoes");
+        header("Location: ../paginas/saudacoes.php");
+        //header("Location: ../paginas/menu.php?msg=saudacoes");
     }
 }
 ?>
