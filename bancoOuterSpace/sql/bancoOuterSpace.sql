@@ -178,7 +178,7 @@ value	(1, 1, "Distribui endereco de rede", 1),
         (20, 5, "Estados Unidos da America.", 1);
 
 insert into fase (idFase, pergunta_idPergunta, maxPontFase, qtdMeteoro, velocidadeNave)
-value (1, 1, 20, 100, 900);
+value (1, 1, 20, 1000, 600);
 
 insert into usuario (idUsuario, fase_idFase, permissao, nome, nick, email, senha, maxPonto)
 value (1, 1, 1, "Administrador", "admin", "admin@gmail.com", "admin", 1547);
