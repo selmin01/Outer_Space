@@ -154,7 +154,12 @@ value	( 1, 1, 1, "O que faz um servidor DHCP ?"),
 		( 2, 1, 2, "Quem criou o primeiro telescopio?"),
         ( 3, 1, 3, "O que significa a sigla NASA?"),
         ( 4, 1, 4, "Qual foi o primeiro computador digital eletronico criado?"),
-        ( 5, 1, 1, "A NASA e uma agencia espacial de qual pais?");
+        ( 5, 1, 1, "A NASA e uma agencia espacial de qual pais?"),
+        ( 6, 2, 2, "Ciência natural que estuda corpos celestes? "),
+        ( 7, 2, 3, "Quem é considerado como o pai da ciência moderna?"),
+        ( 8, 2, 4, "Qual a data de criação da NASA?"),
+        ( 9, 2, 1, "Qual o nome do primeiro astronauta a pisar na lua?"),
+        ( 10, 2, 2, "Constelação que pode ser vista no Brasil?");
 insert into alternativa (idAlternativa, pergunta_idPergunta, descricaoAlternativa, opcaoCorreta)
 value	(1, 1, "Distribui endereco de rede", 1),
 		(2, 1, "Traducao de endereco", 0),
@@ -175,7 +180,27 @@ value	(1, 1, "Distribui endereco de rede", 1),
         (17, 5, " Brasil", 0),
         (18, 5, "China", 0),
         (19, 5, "Russia", 0),
-        (20, 5, "Estados Unidos da America.", 1);
+        (20, 5, "Estados Unidos da America.", 1),
+        (21, 6, "Biologia", 0),
+        (22, 6, "Astronomia", 1),
+        (23, 6, "Geologia", 0),
+        (24, 6, "Fisíca", 0),
+        (25, 7, "Nicolau Copernico", 0),
+        (26, 7, " Ptolemeu", 0),
+        (27, 7, "Galileu Galilei", 1),
+        (28, 7, "Isaac Newton", 0),
+		(29, 8, "29 de junho de 1960", 0),
+        (30, 8, "28 de julho de 1958", 0),
+        (31, 8, "29 de julho de 1958", 1),
+        (32, 8, "29 de agosto de 1958", 0),
+        (33, 9, "Neil Alden Armstrong", 1),
+        (34, 9, "Yuri Gagarin", 0),
+        (35, 9, "Sergei Krikalev", 0),
+        (36, 9, "Marcos Pontes", 0),
+        (37, 10, "Orion", 1),
+        (38, 10, "Ursa Maior", 0),
+        (39, 10, "Cruzeiro do Sul", 0),
+        (40, 10, "Androida.", 0);
 
 insert into fase (idFase, pergunta_idPergunta, maxPontFase, qtdMeteoro, velocidadeNave)
 value (1, 1, 20, 1000, 600);
