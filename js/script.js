@@ -46,6 +46,12 @@ function preload ()
   this.load.image('meteoro', '../estilo/imgs/meteoro_top.png');
   this.load.image('explosao', '../estilo/imgs/explosao.png');
   this.load.audio('WorldBackground', '../estilo/sounds/naveEspacial.mp3');
+  this.anims.create({
+    key: 'left',
+    frames: this.anims.generateFrameNumbers('dude', { start: 0, end: 3 }),
+    frameRate: 10,
+    repeat: -1
+  });
 }
 
 function create ()
@@ -55,13 +61,13 @@ function create ()
 
   var music = this.sound.add('WorldBackground');
   var musicConfig = {
-        mute: false,
-        volume: 1,
-        rate: 1,
-        detune: 0,
-        seek: 0,
-        loop: true,
-        delay: 0
+    mute: false,
+    volume: 1,
+    rate: 1,
+    detune: 0,
+    seek: 0,
+    loop: true,
+    delay: 0
   }
 
   var Bullet = new Phaser.Class({
@@ -222,5 +228,4 @@ function update (time, delta)
   if(pontuacao>pontFase){
     fase();
   }
-
 }
