@@ -11,6 +11,7 @@ create table usuario (
     senha varchar(50),
     maxPonto int not null,
     pontos int not null,
+    pontuacao int not null,
     primary key (idUsuario)
 );
 create table fase (

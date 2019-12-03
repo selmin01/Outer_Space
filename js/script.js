@@ -1,5 +1,5 @@
 //Variaveis de fases (ciclos)
-var pontuacao=0;
+var pont=0;
 var velocidadeDisparo=300, velocidadeMeteoro=1000;
 var gravidade=20 /*100*/;
 
@@ -124,20 +124,6 @@ function create ()
   timedEvent = this.time.addEvent({ delay: velocidadeMeteoro, callback: criarMeteoros, callbackScope: this, repeat: totalMeteoro}); //velocidadeMeteoro totalMeteoro
 }
 
-function fase() {
-  //alert("IRADO!");
-
-  $.ajax({
-    method: "POST",
-    url: "../acao/acaoJogo/req_fase.php",
-    data: {pont: pontuacao}
-  }).done(function(resposta){
-    window.location.href='../acao/acaoPergunta/randomPergunta.php';
-  }).fail(function(jqXHR, textStatus) {
-    console.log("Request failde: " + textStatus);  
-  });
-}
-
 function criarMeteoros(){
   var me = meteor.create(Phaser.Math.RND.between(0, 1350), 0, 'meteoro');
 
@@ -152,7 +138,6 @@ function colisaoMeteoro(bullet,meteoros)
 
 function colisaoBala(me,bullets)
 {
-  //debugger;
   //console.log("entrou");
   //O QUE VAI OCORRER QUANDO TIRO COLIDIR COM O METEORO
   me.disableBody(true, true);
@@ -178,21 +163,9 @@ function colisaoNave(sprite, meteor)
 {
   sprite.disableBody(true, true);
   requisicao();
-  //hitBomb();
   //O QUE VAI OCORRER QUANDO COLIDIR COM A NAVE
 }
-/*
-function hitBomb (sprite, bometeormb)
-{
-    this.game.pause();
 
-    sprite.setTint(0xff0000);
-
-    sprite.anims.play('turn');
-
-    gameOver = true;
-}
-*/
 function update (time, delta)
 {
   if (cursors.up.isDown){
@@ -225,7 +198,8 @@ function update (time, delta)
     }
   }
 
-  if(pontuacao>pontFase){
-    fase();
+  if(pont>=pontFase){
+    this.scene.pause();
+    window.location.href='../acao/acaoPergunta/randomPergunta.php?pont='+pontuacao+'&fase='+idFase;
   }
 }

@@ -2,8 +2,38 @@
 <?php
 session_start();
 include "../../bancoOuterSpace/banco.php";
+if(isset($_SESSION["usuario"])){
+    $usuario = $_SESSION["usuario"];
+    $idUsuario = $usuario["idUsuario"];
+    $nick = $usuario["nick"];
+    $pont = $_GET["pont"];
+    $id_fase = $_GET["fase"];
+    $id_fase++;
+}
+echo $id_fase;
+echo $pont;
 
 onConexao();
+
+$arrayPonto = selecionar("SELECT maxPonto, pontos, pontuacao FROM usuario WHERE idUsuario = '$idUsuario'");
+$maxPonto = $arrayPonto[0]["maxPonto"];
+$auxPont = $arrayPonto[0]["pontos"];
+$pontuacao = $arrayPonto[0]["pontuacao"];
+
+if($maxPonto<$pont){
+    $maxPonto=$pont;
+}
+
+$auxPont+=$pont;
+$pontuacao+=$pont;
+$dados= array("idUsuario"=>$idUsuario, "fase_idFase"=>$id_fase,"maxPonto"=>$maxPonto,"pontos"=>$auxPont,"pontuacao"=>$pontuacao);
+alterar("usuario",$dados,"idUsuario=".$idUsuario);
+
+
+
+//ATUALIZA FASE
+//ATUALIZA PONTUAÇÃO
+
 
 $arrayPergunta = selecionar("SELECT * FROM pergunta");
 

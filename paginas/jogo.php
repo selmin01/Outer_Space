@@ -8,15 +8,16 @@ if(isset($_SESSION["usuario"])){
   $idUsuario = $usuario["idUsuario"];
 }
 onConexao();
-  $pontos = selecionar("SELECT maxponto FROM usuario WHERE idUsuario = $idUsuario");
+  $pontos = selecionar("SELECT maxponto, fase_idFase, pontuacao FROM usuario WHERE idUsuario = $idUsuario");
   $recorde = $pontos[0]["maxponto"];
+  $pontuacao = $pontos[0]["pontuacao"];
 offConexao();
 
 include "../acao/acaoJogo/req_fase.php";
 
 //print_r($arrayFase);
 echo" <script>
-var idFase=".$idFase.",pontFase=".$pontFase.",totalMeteoro=".$qtdMeteoro.",velocidadeNave=".$velocidadeNave." 
+var idFase=".$idFase.",pontFase=".$pontFase.",totalMeteoro=".$qtdMeteoro.",velocidadeNave=".$velocidadeNave.",pontuacao=".$pontuacao." 
 </script> ";
 ?>
 <html>
@@ -36,7 +37,7 @@ var idFase=".$idFase.",pontFase=".$pontFase.",totalMeteoro=".$qtdMeteoro.",veloc
   <body>
       <div class="pontuacao">
         <?php
-          echo "Meteoros Destruídos: 0";
+          echo "Meteoros Destruídos: ".$pontuacao;
         ?>
       </div>
 
