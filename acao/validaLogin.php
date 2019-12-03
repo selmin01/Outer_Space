@@ -30,7 +30,6 @@ if(empty($arrayUsu)) {
         header("Location: ../paginas/pagsAdm/menuAdm.php");
     }else {
         header("Location: ../paginas/saudacoes.php");
-        //header("Location: ../paginas/menu.php?msg=saudacoes");
     }
 }
 ?>

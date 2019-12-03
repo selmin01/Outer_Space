@@ -138,10 +138,10 @@ function colisaoMeteoro(bullet,meteoros)
 
 function colisaoBala(me,bullets)
 {
-  //console.log("entrou");
   //O QUE VAI OCORRER QUANDO TIRO COLIDIR COM O METEORO
   me.disableBody(true, true);
   pontuacao = pontuacao + 1;
+  pont++;
   console.log(pontuacao);
   document.querySelector('.pontuacao').innerHTML = "Meteoros Destruídos: "+pontuacao;
 }
