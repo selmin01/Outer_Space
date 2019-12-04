@@ -40,18 +40,13 @@ function startJogo(){
 
 function preload ()
 {
-  this.load.image('ship', '../estilo/imgs/nave.png');
+  this.load.spritesheet('ship1', '../estilo/imgs/Explodir.png',  { frameWidth: 60, frameHeight: 75 });
   this.load.image('bullet', '../estilo/imgs/tiro.png');
   this.load.image('fundo', '../estilo/imgs/BackSpace.jpg');
   this.load.image('meteoro', '../estilo/imgs/meteoro_top.png');
-  this.load.image('explosao', '../estilo/imgs/explosao.png');
+  //this.load.spritesheet('meteoro', '../estilo/imgs/meteoro.png',  { frameWidth: 60, frameHeight: 54 });
   this.load.audio('WorldBackground', '../estilo/sounds/naveEspacial.mp3');
-  this.anims.create({
-    key: 'left',
-    frames: this.anims.generateFrameNumbers('dude', { start: 0, end: 3 }),
-    frameRate: 10,
-    repeat: -1
-  });
+
 }
 
 function create ()
@@ -109,13 +104,30 @@ function create ()
   });
 
   meteor = this.physics.add.group();
-  sprite = this.physics.add.image(675, 450, 'ship');
-
+  sprite = this.physics.add.sprite(675, 450, 'ship1');
+  //sprite.setBounce(0.2);
   sprite.setDamping(true);
   sprite.setDrag(0.99);
   sprite.setMaxVelocity(velocidadeNave);
  
-  sprite.setCollideWorldBounds(true)
+  sprite.setCollideWorldBounds(true);
+
+
+  this.anims.create({
+    key: 'explosao',
+    frames: this.anims.generateFrameNumbers('ship1', { start: 2, end: 8 }),
+    frameRate: 10,
+    repeat: -1
+  });
+/*
+  this.anims.create({
+    key: 'explosaoMeteoro',
+    frames: this.anims.generateFrameNumbers('meteoro', { start: 1, end: 2 }),
+    frameRate: 10,
+    repeat: -1
+  });
+*/
+
   cursors = this.input.keyboard.createCursorKeys();
   speed = Phaser.Math.GetSpeed(velocidadeNave, 1); //velocidadeNave
   keyObj = this.input.keyboard.addKey('space');
@@ -134,12 +146,20 @@ function criarMeteoros(){
 function colisaoMeteoro(bullet,meteoros)
 {
    bullet.disableBody(true, true);
+  
 }
 
 function colisaoBala(me,bullets)
 {
   //O QUE VAI OCORRER QUANDO TIRO COLIDIR COM O METEORO
+  
+  //me.anims.play('explosaoMeteoro', true);
   me.disableBody(true, true);
+  /*
+  me.once('animationcomplete', (me)=>{debugger;
+  me.disableBody(true, true);
+  })
+  */
   pontuacao = pontuacao + 1;
   pontu = pontu + 1; 
   console.log(pontuacao);
@@ -161,9 +181,10 @@ function requisicao() {
 
 function colisaoNave(sprite, meteor)
 {
-  sprite.disableBody(true, true);
-  requisicao();
   //O QUE VAI OCORRER QUANDO COLIDIR COM A NAVE
+  //sprite.disableBody(true, true);
+  sprite.anims.play('explosao', true);
+  requisicao();
 }
 
 function update (time, delta)
