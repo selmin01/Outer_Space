@@ -12,7 +12,9 @@ $bonusPerg = selecionar("SELECT b.valor, t.descricaoTipo
                         WHERE b.idBonus = $idBonus");
 offConexao();
 
-//print_r ($bonusPerg);
+$valor = $bonusPerg[0]["valor"];
+$bonus = $bonusPerg[0]["descricaoTipo"];
+
 ?>
 
 <html>
@@ -33,9 +35,11 @@ offConexao();
                     <br>
                     <h3 class="fontPreta">Seu bônus para a próxima fase: <?php print_r ($bonusPerg[0]["descricaoTipo"]);?></h3>
                     <br>
-                    <a href="../paginas/jogo.php" class="linkbtn">
-                        <button type='button' class='btn btn-success btn-block'>OK</button>
-                    </a> 
+                    <?php
+                        echo "<a href='../paginas/jogo.php?bonus=$bonus&valor=$valor' class='linkbtn'>";
+                        echo "<button type='button' class='btn btn-success btn-block'>OK</button>";
+                        echo "</a>"; 
+                    ?>
                 </center>
             </div>
         </div>
