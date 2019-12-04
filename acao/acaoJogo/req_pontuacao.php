@@ -6,8 +6,8 @@ if(isset($_SESSION["usuario"])){
     $usuario = $_SESSION["usuario"];
     $idUsuario = $usuario["idUsuario"];
     $nick = $usuario["nick"];
-    $pont = $_REQUEST["pont"];
-   
+    $pont = $_POST["pont"];
+    //echo $pont;
     onConexao();
     $arrayPonto = selecionar("SELECT maxPonto, pontos FROM usuario WHERE idUsuario = '$idUsuario'");
     $maxPonto = $arrayPonto[0]["maxPonto"];
@@ -16,7 +16,7 @@ if(isset($_SESSION["usuario"])){
     if($maxPonto<$pont){
         $maxPonto=$pont;
     }
-    $auxPont+=$pont;
+    $auxPont = $auxPont + $pont;
     $id_fase=1;
     $pontuacao=0;
     $dados= array("idUsuario"=>$idUsuario,"fase_idFase"=>$id_fase,"maxPonto"=>$maxPonto,"pontos"=>$auxPont,"pontuacao"=>$pontuacao);

@@ -1,5 +1,5 @@
 //Variaveis de fases (ciclos)
-var pont=0;
+var pontu=0;
 var velocidadeDisparo=300, velocidadeMeteoro=1000;
 var gravidade=20 /*100*/;
 
@@ -141,7 +141,7 @@ function colisaoBala(me,bullets)
   //O QUE VAI OCORRER QUANDO TIRO COLIDIR COM O METEORO
   me.disableBody(true, true);
   pontuacao = pontuacao + 1;
-  pont++;
+  pontu = pontu + 1; 
   console.log(pontuacao);
   document.querySelector('.pontuacao').innerHTML = "Meteoros Destruídos: "+pontuacao;
 }
@@ -198,7 +198,7 @@ function update (time, delta)
     }
   }
 
-  if(pont>=pontFase){
+  if(pontu>=pontFase){
     this.scene.pause();
     window.location.href='../acao/acaoPergunta/randomPergunta.php?pont='+pontuacao+'&fase='+idFase;
   }
