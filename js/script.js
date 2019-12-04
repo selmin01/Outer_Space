@@ -184,6 +184,7 @@ function colisaoNave(sprite, meteor)
   //O QUE VAI OCORRER QUANDO COLIDIR COM A NAVE
   //sprite.disableBody(true, true);
   sprite.anims.play('explosao', true);
+  this.scene.pause();
   requisicao();
 }
 
