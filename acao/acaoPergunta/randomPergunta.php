@@ -17,15 +17,15 @@ onConexao();
 
 $arrayPonto = selecionar("SELECT maxPonto, pontos, pontuacao FROM usuario WHERE idUsuario = '$idUsuario'");
 $maxPonto = $arrayPonto[0]["maxPonto"];
-//$auxPont = $arrayPonto[0]["pontos"];
+$auxPont = $arrayPonto[0]["pontos"];
 $pontuacao = $arrayPonto[0]["pontuacao"];
 
 if($maxPonto<$pont){
     $maxPonto=$pont;
 }
 
-//$auxPont=$pont;
-$pontuacao=$pont;
+$auxPont+=$pont;
+$pontuacao+=$pont;
 //"maxPonto"=>$maxPonto,
 $dados= array("idUsuario"=>$idUsuario, "fase_idFase"=>$id_fase,"maxPonto"=>$maxPonto,"pontos"=>$auxPont,"pontuacao"=>$pontuacao);
 alterar("usuario",$dados,"idUsuario=".$idUsuario);
