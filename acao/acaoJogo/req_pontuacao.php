@@ -16,7 +16,7 @@ if(isset($_SESSION["usuario"])){
     if($maxPonto<$pont){
         $maxPonto=$pont;
     }
-    $auxPont = $auxPont + $pont;
+    $auxPont+=$pont;
     $id_fase=1;
     $pontuacao=0;
     $dados= array("idUsuario"=>$idUsuario,"fase_idFase"=>$id_fase,"maxPonto"=>$maxPonto,"pontos"=>$auxPont,"pontuacao"=>$pontuacao);
